@@ -1,0 +1,72 @@
+name: AOI Guard
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure allowlist exists
+        run: test -f .aoi-allowlist
+
+      - name: Enforce allowlist (changed files)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import re, subprocess, sys, pathlib
+
+          allow = pathlib.Path('.aoi-allowlist')
+          rules = [l.strip() for l in allow.read_text().splitlines() if l.strip() and not l.strip().startswith('#')]
+          if not rules:
+            print('Empty .aoi-allowlist')
+            sys.exit(1)
+
+          pats=[]
+          for r in rules:
+            if r.endswith('/'):
+              pats.append(re.compile('^'+re.escape(r)))
+            else:
+              pats.append(re.compile('^'+re.escape(r)+'$'))
+
+          def has_origin_main():
+            return subprocess.call(['git','show-ref','--verify','--quiet','refs/remotes/origin/main'])==0
+
+          if has_origin_main():
+            base = subprocess.check_output(['git','merge-base','HEAD','origin/main']).decode().strip()
+            args = ['git','diff','--name-only', f'{base}..HEAD']
+          else:
+            # fallback for repos without origin/main
+            args = ['git','diff','--name-only','HEAD~1..HEAD']
+
+          files = subprocess.check_output(args).decode().splitlines()
+          bad=[]
+          for f in files:
+            if not any(p.search(f) for p in pats):
+              bad.append(f)
+
+          if bad:
+            print('Blocked (outside allowlist):')
+            for f in bad:
+              print(' -', f)
+            sys.exit(1)
+
+          print('Allowlist OK')
+          PY
+
+      - name: Secret scan (diff)
+        shell: bash
+        run: |
+          set +e
+          git diff | grep -Eiq "(BEGIN (RSA|EC|OPENSSH) PRIVATE KEY|xox[baprs]-|ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,})"
+          rc=$?
+          if [ $rc -eq 0 ]; then
+            echo "Blocked: potential secret found in diff"
+            exit 1
+          fi
+          exit 0
