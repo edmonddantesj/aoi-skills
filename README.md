@@ -18,3 +18,31 @@ Public-safe OpenClaw skills published by **Aoineco & Co.**
 ## Policy
 - No secrets in issues (keys/tokens/private URLs/internal paths).
 - Public-safe scope for free releases.
+
+---
+
+## AOI Guard Cheat Sheet (When commits are blocked)
+
+This repo uses **AOI Guard** (default-deny). If a commit/push is blocked:
+
+1) See what you staged:
+```bash
+git status
+```
+
+2) If you added a new file/folder intentionally, allow it (with Edmond approval):
+```bash
+# edit allowlist
+nano .aoi-allowlist
+
+# then
+git add .aoi-allowlist
+```
+
+3) Re-stage only what you want, then commit:
+```bash
+git add <files>
+git commit -m "..."
+```
+
+Rule of thumb: **new paths must be added to `.aoi-allowlist` first**, otherwise commits will be blocked.
