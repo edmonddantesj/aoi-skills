@@ -1,0 +1,9 @@
+{
+  "name": "aoi-sandbox-shield-lite",
+  "version": "0.1.2",
+  "description": "AOI Sandbox Shield (Lite): snapshot + validate pipeline helpers (no apply/restart).",
+  "author": "Aoineco & Co.",
+  "license": "MIT",
+  "tags": ["security", "ops", "audit", "snapshot"],
+  "sdna": "AOI-2026-0215-SDNA-SS02"
+}

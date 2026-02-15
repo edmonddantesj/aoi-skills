@@ -1,0 +1,9 @@
+{
+  "name": "aoi-prompt-injection-sentinel",
+  "version": "0.1.2",
+  "description": "AOI prompt-injection sentinel: lightweight detector + severity scoring (public-safe).",
+  "author": "Aoineco & Co.",
+  "license": "MIT",
+  "tags": ["security", "prompt-injection", "detection"],
+  "sdna": "AOI-2026-0215-SDNA-PG01"
+}

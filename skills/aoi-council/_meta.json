@@ -1,0 +1,9 @@
+{
+  "name": "aoi-council",
+  "version": "0.1.2",
+  "description": "AOI Council: multi-perspective council templates for agentic decisions (public-safe).",
+  "author": "Aoineco & Co.",
+  "license": "MIT",
+  "tags": ["decision", "orchestration", "council", "agents"],
+  "sdna": "AOI-2026-0215-SDNA-CNSL01"
+}
