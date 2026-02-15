@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest an improvement or new capability
+title: "[FEATURE] <skill>: <short description>"
+labels: ["feature"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill slug
+      placeholder: aoi-demo-clip-maker
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / use case
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Public-safe scope
+      description: Must remain public-safe for ClawHub Free release.
+      options:
+        - Yes, public-safe
+        - Not sure
+        - No, would require elevated permissions
+    validations:
+      required: true

@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a reproducible bug in an AOI skill
+title: "[BUG] <skill>: <short description>"
+labels: ["bug"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill slug
+      description: e.g. aoi-demo-clip-maker
+      placeholder: aoi-demo-clip-maker
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do and what went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Provide exact steps/commands.
+      placeholder: |
+        1) ...
+        2) ...
+        3) ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: false
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, node/python version, ffmpeg version, etc.
+    validations:
+      required: false
