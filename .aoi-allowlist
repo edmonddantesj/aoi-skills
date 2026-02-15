@@ -1,13 +1,7 @@
-# AOI Guard allowlist (default-deny)
-# Auto-generated. Edit only with Edmond approval.
+# AOI Guard allowlist (tightened)
 
-# Root allowlist file
 .aoi-allowlist
-
-# GitHub automation
 .github/
 
-# Existing root entries
 README.md
 skills/
-SECURITY.md
