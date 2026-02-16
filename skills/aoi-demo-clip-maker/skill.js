@@ -39,7 +39,15 @@ function runAllowed(bin, args) {
 }
 
 function parseArgs(argv) {
-  const [cmd, sub, ...rest] = argv;
+  let [cmd, sub, ...rest] = argv;
+
+  // Most commands here are single-level (e.g. `record --out ...`).
+  // If the second token starts with `--`, it is not a subcommand.
+  if (sub && sub.startsWith('--')) {
+    rest = [sub, ...rest];
+    sub = undefined;
+  }
+
   const args = {};
   for (let i = 0; i < rest.length; i++) {
     const a = rest[i];
