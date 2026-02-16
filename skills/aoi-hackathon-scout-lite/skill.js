@@ -103,6 +103,21 @@ function readShortlist() {
   return { file, text };
 }
 
+function parseDeadlineTs(deadlineStr) {
+  // Best-effort parsing.
+  // Strong preference: ISO-8601 with timezone (e.g., 2026-07-07T23:59:00-12:00)
+  // Fallback: anything Date.parse understands.
+  if (!deadlineStr) return { ts: null, parseable: false };
+  const s = String(deadlineStr).trim();
+
+  // Extract ISO-like substring if present
+  const iso = s.match(/\d{4}-\d{2}-\d{2}(?:[ T]\d{2}:\d{2}(?::\d{2})?)?(?:Z|[\+\-]\d{2}:?\d{2})?/);
+  const candidate = iso ? iso[0].replace(' ', 'T') : s;
+  const t = Date.parse(candidate);
+  if (Number.isFinite(t)) return { ts: t, parseable: true };
+  return { ts: null, parseable: false };
+}
+
 function extractShortlistItems(text) {
   // Very lightweight parser for the existing markdown template blocks.
   // Extracts: Name, URL, Location, Apply deadline, Status.
@@ -113,12 +128,38 @@ function extractShortlistItems(text) {
     const url = (b.match(/\- \*\*URL:\*\*\s*(https?:\/\/\S+)/) || [])[1];
     if (!name || !url) continue;
     const location = (b.match(/\- \*\*Location:\*\*\s*(.+)/) || [])[1] || '';
-    const deadline = (b.match(/\- \*\*Apply deadline:\*\*\s*(.+)/) || [])[1] || '';
+    // IMPORTANT: use [ \t]* instead of \s* so we don't accidentally consume newlines.
+    const deadlineHuman = (b.match(/\- \*\*Apply deadline \(human\):\*\*[ \t]*(.+)/) || [])[1]
+      || (b.match(/\- \*\*Apply deadline:\*\*[ \t]*(.+)/) || [])[1]
+      || '';
+    const deadlineIso = (b.match(/\- \*\*Apply deadline \(ISO\+TZ\):\*\*[ \t]*(.+)/) || [])[1] || '';
+    const verifiedRaw = (b.match(/\- \*\*Deadline verified\?:\*\*[ \t]*(.+)/) || [])[1] || '';
+    const verified = String(verifiedRaw).trim().toLowerCase().startsWith('yes') ? 'yes' : String(verifiedRaw).trim().toLowerCase().startsWith('no') ? 'no' : String(verifiedRaw).trim();
     const status = (b.match(/\- \*\*Status:\*\*\s*(.+)/) || [])[1] || '';
+
     const isRejected = /rejected/i.test(status);
     const onlineEligible = /online/i.test(location) && !/offline/i.test(location);
-    const isHot = /🔥/.test(b) || /asap/i.test(deadline.toLowerCase());
-    items.push({ name: name.trim(), url, location: location.trim(), deadline: deadline.trim(), status: status.trim(), onlineEligible, isHot, isRejected });
+    const isHot = /🔥/.test(b) || /asap/i.test(String(deadlineHuman).toLowerCase());
+
+    const d = parseDeadlineTs((deadlineIso || deadlineHuman).trim());
+    const now = Date.now();
+    const isExpired = d.ts !== null ? d.ts < now : false;
+
+    items.push({
+      name: name.trim(),
+      url,
+      location: location.trim(),
+      deadline: String(deadlineHuman).trim(),
+      deadlineIso: String(deadlineIso).trim(),
+      deadlineVerified: String(verified).trim(),
+      deadlineTs: d.ts,
+      deadlineParseable: d.parseable,
+      isExpired,
+      status: status.trim(),
+      onlineEligible,
+      isHot,
+      isRejected,
+    });
   }
   return items;
 }
@@ -127,15 +168,26 @@ function recommend({ n }) {
   const limit = Number(n || 5);
   const { file, text } = readShortlist();
   let items = extractShortlistItems(text);
+
+  // Exclude rejected and (if parseable) expired deadlines.
   items = items.filter(i => !i.isRejected);
+  items = items.filter(i => !(i.deadlineParseable && i.isExpired));
+
   // Prefer online-eligible; if none, still show.
   const online = items.filter(i => i.onlineEligible);
   const pool = online.length ? online : items;
 
   pool.sort((a, b) => {
-    // hot first, then status priority
+    // 1) hot first
     const hot = (b.isHot ? 1 : 0) - (a.isHot ? 1 : 0);
     if (hot) return hot;
+
+    // 2) earliest known deadline first (so we don't miss near due)
+    const ad = a.deadlineTs ?? Number.POSITIVE_INFINITY;
+    const bd = b.deadlineTs ?? Number.POSITIVE_INFINITY;
+    if (ad !== bd) return ad - bd;
+
+    // 3) status priority
     const rank = (s) => /applying/i.test(s) ? 0 : /watching/i.test(s) ? 1 : /new/i.test(s) ? 2 : 3;
     return rank(a.status) - rank(b.status);
   });
