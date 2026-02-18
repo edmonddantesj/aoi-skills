@@ -1,6 +1,6 @@
 ---
 name: aoi-hackathon-scout-lite
-version: 0.1.5
+version: 0.1.6
 description: Public-safe hackathon source registry + filtering output (no crawling, no submissions).
 author: Aoineco & Co.
 license: MIT
@@ -15,10 +15,12 @@ S-DNA: `AOI-2026-0215-SDNA-HACK01`
 # 1) install
 clawhub install aoi-hackathon-scout-lite
 
-# 2) list sources
-aoi-hackathon sources
+# 2) shortlist view / best-effort recommendations
+# (reads context/HACKATHON_SHORTLIST.md)
+aoi-hackathon recommend --n 5
 
-# 3) quick browser-based triage (no API keys)
+# 3) browse sources (no API keys)
+aoi-hackathon sources
 openclaw browser start
 openclaw browser open https://devpost.com/c/artificial-intelligence
 openclaw browser snapshot --efficient
