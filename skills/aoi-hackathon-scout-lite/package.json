@@ -1,6 +1,6 @@
 {
   "name": "aoi-hackathon-scout-lite",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "type": "module",
   "bin": {
