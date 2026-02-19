@@ -1,0 +1,65 @@
+name: AOI Security Gate (Policy→Gate)
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  security-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run ClawShield gate (fail-closed)
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p aoi-core/state/ci_artifacts
+
+          # Gate report
+          python3 aoi-core/scripts/clawshield_gate_poc.py \
+            --repo . \
+            --commit HEAD \
+            --out aoi-core/state/ci_artifacts/gate_report.json
+
+          # Parse signal deterministically
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('aoi-core/state/ci_artifacts/gate_report.json')
+          j=json.loads(p.read_text(encoding='utf-8'))
+          res=j.get('result') or {}
+          signal=res.get('signal')
+          score=res.get('score')
+          max_sev=res.get('max_severity')
+          print('signal', signal)
+          print('score', score)
+          print('max_severity', max_sev)
+          if signal == 'red':
+              raise SystemExit('❌ BLOCKED: gate signal=red')
+          PY
+
+      - name: Upload gate report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aoi-security-gate
+          path: |
+            aoi-core/state/ci_artifacts/gate_report.json
+
+      # Optional (future): quick-validator / unit tests / semgrep / osv-scanner

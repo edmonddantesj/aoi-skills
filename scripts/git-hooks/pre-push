@@ -1,0 +1,8 @@
+#!/bin/sh
+# AOI pre-push gate (fail-closed)
+# Runs: Gate -> Approval -> Proof. Blocks push on red.
+
+set -e
+REPO_ROOT=$(git rev-parse --show-toplevel)
+
+python3 "$REPO_ROOT/aoi-core/scripts/pre_push_gate.py" --repo "$REPO_ROOT" --commit HEAD

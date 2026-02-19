@@ -1,0 +1,56 @@
+{
+  "version": "v0.1",
+  "updated_at": "2026-02-20T04:12:00+09:00",
+  "timezone": "Asia/Seoul",
+  "defaults": {
+    "action_mode": "execute_if_preapproved",
+    "risk_posture": "GUARDED_MICRO",
+    "max_usd_per_tx": 2,
+    "max_usd_per_day": 7,
+    "allowed_assets": ["USDC"],
+    "allowed_providers": ["privy", "coinbase"],
+    "allow_onchain": true,
+    "allow_signing": true,
+    "allow_external_posting": false
+  },
+  "routing": {
+    "buy": "queue_for_approval",
+    "swap": "execute_if_preapproved",
+    "transfer": "queue_for_approval",
+    "register_offering": "queue_for_approval",
+    "update_offering": "queue_for_approval",
+    "market_research": "report_only"
+  },
+  "preapproval_guards": {
+    "require_cost_estimate": true,
+    "require_dry_run_when_possible": true,
+    "require_proof_plan": true,
+    "block_if_external_posting": true,
+    "block_if_unknown_asset": true,
+    "block_if_unknown_provider": true
+  },
+  "approval": {
+    "store_dir": "aoi-core/state/approvals",
+    "id_prefix": "acp",
+    "expires_hours": 72,
+    "required_fields": [
+      "id",
+      "created_at",
+      "status",
+      "action",
+      "provider",
+      "why_now",
+      "risk_level",
+      "cost_estimate",
+      "required_inputs",
+      "proof_plan"
+    ]
+  },
+  "notes": [
+    "GUARDED_MICRO posture: small-amount preapproved automation only.",
+    "Only USDC is allowed by default; anything else is forced into queue_for_approval.",
+    "Only swap is eligible for execute_if_preapproved; buy/transfer/offering changes always require approval.",
+    "External posting stays disabled; anything that might post externally is blocked/queued.",
+    "If limits are hit (per-tx or per-day), actions are queued for approval instead of executed."
+  ]
+}
