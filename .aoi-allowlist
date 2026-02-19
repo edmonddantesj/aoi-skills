@@ -5,3 +5,9 @@
 
 README.md
 skills/
+
+# AOI security gate (CI + local)
+.gitignore
+scripts/
+aoi-core/
+aoi_core/
