@@ -18,11 +18,38 @@ Goal: Topic별 대화/저장/자동화 룰을 가볍게 고정해서, 멘션 없
 ## maintenance
 - 목적: 리그레션/정리/의존성 업데이트/잡다한 수리.
 
+## adp
+- 목적: ADP 대시보드(UI/데이터/배포) 관련.
+
+## acp
+- 목적: ACP 연동/잡 실행/마켓플레이스 에이전트.
+
+## bazaar
+- 목적: NEXUS Bazaar / The Archive 상품화/리스트/스캔/레지스트리.
+
+## github
+- 목적: 외부 GitHub 소스 인입 → 분석 → ‘도입해줘’ 루트 전환.
+
+## longform
+- 목적: 장문/문서/PDF/DOCX/대화 덤프 인입.
+
+## ralph-loop
+- 목적: WIP 제한 기반의 실행 루프(작은 작업 빠르게 Done).
+
+## hackathons
+- 목적: 해커톤/대회 인입/트래킹/제출 패키징(SOP).
+
+## inbox-dev
+- 목적: 개발 인입/이관/트리아지 허브. 어디 토픽인지 애매하면 일단 여기.
+
+## handoff
+- 목적: 결정/컨텍스트/다음 액션 박제(토픽 이동 시 끊김 방지).
+
 ## random
 - 목적: 애매한 대화/임시 메모/잡담.
 
 ---
 
 ## Calibration procedure (one-time)
-- 각 토픽에서 1회: `@<bot_username> ping`
-- 그 메시지의 `message_thread_id`를 확인해 `thread_id → topic_slug` 매핑에 등록.
+- 각 토픽에서 1회: `ping` 같은 아무 메시지나 전송
+- 그 메시지의 `message_thread_id`(=topic_id)를 확인해 `thread_topic_map.json`에 등록

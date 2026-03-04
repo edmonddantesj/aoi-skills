@@ -28,7 +28,7 @@ def main() -> int:
     topics_def = ctx_dir / "TOPICS_DEFINITION_V0_1.md"
     map_path = ctx_dir / "thread_topic_map.json"
 
-    template = (ROOT / "skills" / "public" / "openclaw-telegram-topics-router" / "references" / "TOPICS_DEFINITION_TEMPLATE_V0_1.md").read_text(
+    template = (ROOT / "repos" / "openclaw-telegram-topics-router" / "openclaw-telegram-topics-router" / "references" / "TOPICS_DEFINITION_TEMPLATE_V0_1.md").read_text(
         encoding="utf-8"
     )
 
@@ -38,13 +38,23 @@ def main() -> int:
     if not map_path.exists() or args.force:
         payload = {
             "schema": "openclaw.telegram.thread_topic_map.v0_1",
-            "notes": "Map Telegram forum message_thread_id (thread_id) -> topic slug.",
+            "chat_id": None,
+            "notes": "Map Telegram forum message_thread_id (topic_id) -> topic slug.",
             "topics": {
                 "announcements": None,
                 "ops": None,
                 "maintenance": None,
-                "random": None,
-            },
+                "adp": None,
+                "acp": None,
+                "bazaar": None,
+                "github": None,
+                "longform": None,
+                "ralph-loop": None,
+                "hackathons": None,
+                "inbox-dev": None,
+                "handoff": None,
+                "random": None
+            }
         }
         map_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 

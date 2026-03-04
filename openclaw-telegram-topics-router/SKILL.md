@@ -21,7 +21,7 @@ Created/used under your workspace:
    - Run: `python3 skills/public/openclaw-telegram-topics-router/scripts/init_topics_ssot.py`
 
 2) Create Telegram forum topics (manual in Telegram UI)
-   - Create topics like: `announcements`, `ops`, `maintenance`, `random`.
+   - Recommended starter set: `announcements`, `ops`, `maintenance`, `adp`, `acp`, `bazaar`, `github`, `longform`, `ralph-loop`, `hackathons`, `inbox-dev`, `handoff`, `random`.
 
 3) Calibrate mapping (one-time per topic)
    - In each topic/thread, send a message like: `@<your_bot_username> ping`
