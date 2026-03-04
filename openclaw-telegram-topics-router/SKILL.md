@@ -16,6 +16,7 @@ Created/used under your workspace:
 - `context/telegram_topics/TOPICS_DEFINITION_V0_1.md`
 - `context/telegram_topics/thread_topic_map.json`
 - `context/telegram_topics/thread_workstream_map.json` (optional: per-thread friendly name)
+- `context/telegram_topics/thread_agent_map.json` (optional: per-thread primary agent + collaborators)
 
 ## Quick start
 1) Initialize SSOT files:
@@ -40,6 +41,19 @@ Created/used under your workspace:
 
 ## Workstream naming (recommended)
 If you want to declare a topic as a dedicated workstream ("이 토픽을 'xx' 작업 스레드로 고정/명명"), store a friendly name per thread.
+
+## Topic → Primary agent routing (recommended)
+If you want one default sub-agent (role) per topic/thread, store primary agent per thread.
+
+1) Initialize (one-time):
+- `python3 skills/public/openclaw-telegram-topics-router/scripts/init_agent_map_ssot.py --chat-id telegram:-100...`
+
+2) Set primary agent:
+- `python3 skills/public/openclaw-telegram-topics-router/scripts/set_agent_for_thread.py --thread-id 38 --primary Blue-Gear --collab Blue-Blade`
+
+3) Attendance parser helper:
+- `python3 skills/public/openclaw-telegram-topics-router/scripts/parse_attendance_command.py --text "#call Blue-Blade Oracle"`
+- `python3 ... --text "#council all"`
 
 1) Initialize (one-time):
 - `python3 skills/public/openclaw-telegram-topics-router/scripts/init_workstream_ssot.py --chat-id telegram:-100...`
