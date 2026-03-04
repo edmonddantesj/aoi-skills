@@ -45,6 +45,11 @@ If you want to declare a topic as a dedicated workstream ("이 토픽을 'xx' �
 ## Topic → Primary agent routing (recommended)
 If you want one default sub-agent (role) per topic/thread, store primary agent per thread.
 
+## Delegation mode (ops policy)
+- A-mode (manual): delegate only when `#delegate` is present.
+- **B-mode (default): auto-delegate** to the primary agent when a message arrives, with noise filters + cooldown + L3 fail-closed.
+- Suggested SSOT: `context/telegram_topics/DELEGATION_POLICY_V0_1.md`
+
 1) Initialize (one-time):
 - `python3 skills/public/openclaw-telegram-topics-router/scripts/init_agent_map_ssot.py --chat-id telegram:-100...`
 
