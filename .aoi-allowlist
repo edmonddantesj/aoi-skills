@@ -1,0 +1,5 @@
+# AOI GUARD allowlist (default-deny)
+# Keep this tight; add paths as needed.
+
+context/
+.aoi-allowlist
