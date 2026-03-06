@@ -49,6 +49,43 @@ If you want one default sub-agent (role) per topic/thread, store primary agent p
 When multiple topics run in parallel, tasks can overlap (same file/pipeline) and cause conflicts.
 This skill can maintain a lightweight **exclusive lock registry** (SSOT) keyed by lock strings.
 
+## Cross-topic task handoff + queue (NEW)
+You can hand off tasks from one topic to another by registering them into a lightweight **task queue SSOT**.
+This enables priority-based dispatch with a configurable concurrency limit (default 3) and lock-aware scheduling.
+
+### SSOT
+- `context/ops/task_queue.json`
+
+### Initialize queue SSOT
+```bash
+python3 skills/public/openclaw-telegram-topics-router/scripts/init_task_queue_ssot.py --chat-id telegram:-100...
+```
+
+### Enqueue a task (handoff)
+```bash
+python3 skills/public/openclaw-telegram-topics-router/scripts/enqueue_task.py \
+  --title "Notion mirror incremental upsert" \
+  --target-slug inbox-dev \
+  --priority P1 \
+  --policy L2 \
+  --ledger-id RL-20260306-023
+```
+
+### Dispatch (select next work)
+```bash
+# plan only (marks in_progress and/or blocked based on locks/policy)
+python3 skills/public/openclaw-telegram-topics-router/scripts/dispatch_queue.py
+
+# optional: execute tasks that have exec_cmd set
+python3 skills/public/openclaw-telegram-topics-router/scripts/dispatch_queue.py --execute
+```
+
+### Chat command parsing (optional)
+```bash
+python3 skills/public/openclaw-telegram-topics-router/scripts/parse_handoff_command.py \
+  --text "#handoff ops P1 Fix inbound watcher"
+```
+
 ### SSOT
 - `context/telegram_topics/workstream_lock_map.json`
 
