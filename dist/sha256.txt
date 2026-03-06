@@ -1,1 +1,1 @@
-bb4cf7d7ba224e1c2225b9ce367243809afec637e7241225cb5bbfb27ad035e1  dist/openclaw-telegram-topics-router.skill
+254a16b55381de8bb498b35eead09fdc033a4bc5ce6869de0ef756d11504c20a  dist/openclaw-telegram-topics-router.skill
