@@ -13,6 +13,7 @@ import argparse
 import os
 import subprocess
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 
 def run(cmd: list[str]) -> str:
@@ -22,14 +23,15 @@ def run(cmd: list[str]) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", default=None, help="YYYY-MM-DD (defaults to today UTC)")
+    ap.add_argument("--date", default=None, help="YYYY-MM-DD (defaults to today Asia/Seoul)")
+    ap.add_argument("--force", action="store_true", help="overwrite existing report file")
     ap.add_argument("--wip-limit", type=int, default=5)
     ap.add_argument("--sla-h", type=int, default=24)
     args = ap.parse_args()
 
     d = args.date
     if not d:
-        d = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        d = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d")
 
     # Prefer SSOT path under context/, but keep legacy ops/ path if it exists.
     report_dir = "context/ops/reports/ralph_loop_daily"
@@ -63,6 +65,10 @@ Generated: {now}
 ## Next Actions
 - If `stale>0`, triage in-progress items: split / mark blocked / return to backlog.
 """
+
+    if os.path.exists(report_path) and not args.force:
+        print(report_path)
+        return 0
 
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(content)
