@@ -137,8 +137,11 @@ def main() -> int:
 
     cur_files = pre["files"]
 
+    # We do NOT treat content changes in reports/items as drift.
+    # Those are expected to evolve daily (reports) or as work progresses (items).
     IGNORE_CHANGED_PREFIXES = [
         "context/ops/reports/",
+        "context/ops/items/",
     ]
 
     for path, old_hash in prev_files.items():
@@ -175,7 +178,14 @@ def main() -> int:
 
         if args.aggressive:
             # overwrite changed files from snapshot (best-effort)
+            # IMPORTANT: never overwrite ops/items or ops/reports automatically.
+            # Aggressive overwrite is reserved for state/config drift only.
+            OVERWRITE_ALLOWED_PREFIXES = [
+                "context/state/",
+            ]
             for rel in changed:
+                if not any(rel.startswith(pfx) for pfx in OVERWRITE_ALLOWED_PREFIXES):
+                    continue
                 src = snap_path / rel
                 dst = ROOT / rel
                 if src.exists() and dst.exists():
