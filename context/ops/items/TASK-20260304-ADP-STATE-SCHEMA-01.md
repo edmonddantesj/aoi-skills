@@ -2,7 +2,9 @@
 
 labels: adp, ralph-loop, schema, ssot, rebuild
 priority: P0
-status: TODO
+status: in-progress
+assignee: 청정
+updated: 2026-03-08T08:13:19+09:00
 
 ## Goal
 Lock the minimal ADP agent state schema v0.1 so UI + downstream tasks use the same contract.
