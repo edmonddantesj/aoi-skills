@@ -15,3 +15,7 @@
 - `HF_v6_invest_live_restart_202603.md` — v6-invest(1029): 실투 재개발/운영 복구 SSOT 및 반복업무 자동화
 - `HF_x-post.md` — x-post(956): 브라우저 기반 후보발굴/본문추출 파이프라인 안정화 + 3회/일 산출 루틴 고정
 - `HF_moltbook_ops_202603.md` — moltbook(1114): 운영 복구(키/스크립트/SSOT) + Daily/Weekly 루프 자동화
+- `HF_topic81_basebatches_submission_package_202603.md` — topic81: Base Batches 제출 패키지(500 words + 인터뷰 + 데모) SSOT 합본
+- `HF_aoi_pro_install_quickstart_preflight_202603.md` — aoi-pro: 설치/퀵스타트 Preflight(노드/경로/라이선스)로 성공률 개선
+- `HF_render_502_warmup_retry_policy_202603.md` — render: 502 워밍업/재시도 정책 SSOT 확정
+- `HF_aoi_pro_lite_lifetime_spec_202603.md` — aoi-pro: Lite 평생권($0.01) 스펙/가드레일 숫자 확정
