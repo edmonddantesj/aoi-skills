@@ -1,6 +1,6 @@
 {
   "schema": "ralph-loop.drift.checksums.v0.1",
-  "generated_at": "2026-03-07T215731Z",
+  "generated_at": "2026-03-07T231532Z",
   "scope": {
     "md": "context/ralph_loop/DRIFT_CANONICAL_SCOPE_V0_1.md",
     "dirs": [
@@ -13,16 +13,17 @@
     "context/state/STATE_REQUIRED_FILES_V0_1.json": "10582e7ed271535905e70ae2a21cd20140aec959dd59cbbe8cbb37d6f137e927",
     "context/state/knowledge_index.state.json": "32aeef547868146de186dac16aac3de15efa038ec1c0e08b146f13f284cdafef",
     "context/state/notion_mirror.state.json": "32aeef547868146de186dac16aac3de15efa038ec1c0e08b146f13f284cdafef",
-    "context/state/ralph_loop_drift.checksums.json": "f04bda82b1c6e4cdc169d0d4fc1bb6e9f6c3dc4aadf06f3d7585725d32634fb9",
     "context/state/ralph_loop_sync.state.json": "32aeef547868146de186dac16aac3de15efa038ec1c0e08b146f13f284cdafef",
-    "context/ops/items/TASK-20260304-ADP-BUBBLE-UX-01.md": "de4627daa230e4d2668c14496fdb1f0e0e98b1467aff04e805205ce359918829",
+    "context/ops/reports/ralph_loop_daily/REPORT_2026-03-07.md": "640d86a64c66b5e34709927729e6308c6c29c98604c41c8f6d524c304acd9a22",
+    "context/ops/reports/ralph_loop_daily/REPORT_2026-03-08.md": "2883992b4df148d664b73ad02654ea8d91c8299462004c4f2058aa178e87b102",
+    "context/ops/items/TASK-20260304-ADP-BUBBLE-UX-01.md": "de4bc19de278cbc650a0f97f1e99cdc4499d146c378ade1ecb9002ddd14ece6a",
     "context/ops/items/TASK-20260304-ADP-COST-TOKENS-PANEL-01.md": "89acd1e5692ffb11eaedd4981cd4c05cc52a87af140f52a3e8a99cb829435e88",
-    "context/ops/items/TASK-20260304-ADP-MC-OVERVIEW-01.md": "2fab45aa503fa8df67dd10ba9e36a4d33cd816a70a1497b9cf5bbdf130c82c9e",
+    "context/ops/items/TASK-20260304-ADP-MC-OVERVIEW-01.md": "4c7040978f33c669dcce40f3fae98acf347e73b153bc44a42683161574ba73f0",
     "context/ops/items/TASK-20260304-ADP-OFFLINE-01.md": "84d81d1e516ce050e0522a5f32512abd47ed88d5ad47c58334eddbe82bb2aaac",
-    "context/ops/items/TASK-20260304-ADP-PIXEL-MOVE-01.md": "e35f5c35223f1acf3e1738f4d0a1afbf4fe88cd7407426559956dbe2e722e556",
+    "context/ops/items/TASK-20260304-ADP-PIXEL-MOVE-01.md": "5f0ace3b8fd36dc4b80da62ad967c7d682dd0b60c00fa8b928975ee4da782e9f",
     "context/ops/items/TASK-20260304-ADP-QUALITY-GATE-01.md": "2febd24bb35b587fa13124ed2f37f3f16b7f4c64e985d3a49cc2cca8726ef3b9",
-    "context/ops/items/TASK-20260304-ADP-RBAC-L123-01.md": "db5942d0299cc59ea68a2e3e40e89cf88a450243c3c7fb634b1fd1e7632f6616",
-    "context/ops/items/TASK-20260304-ADP-STATE-SCHEMA-01.md": "e2bd54fd351d5db123b02d266785f1c8dd76bcfb895a6ce3b60e83a98b35e8ba",
+    "context/ops/items/TASK-20260304-ADP-RBAC-L123-01.md": "390627a34676d15185317c54fc0da0f45bc48aae9a255e63fb6d6e9052e737b8",
+    "context/ops/items/TASK-20260304-ADP-STATE-SCHEMA-01.md": "a947cd3149de996d53e1c7ea802a40ed6ea5c87e623b4bda923244203a98f206",
     "context/ops/items/TASK-20260304-ADP-WEBHOOK-RELIABILITY-01.md": "9f55540587177732307611c5e339e2be91fbaf0a456c8a1d2bc2ddbd486e1464",
     "context/ops/items/TASK-20260304-ADP-YESTERDAY-MEMO-01.md": "d99e188ad046b6d4951e1f5385c2c60ff2600af7956aad5db20ca21fb56ee139"
   }

@@ -56,6 +56,9 @@ def list_files(base: Path) -> list[Path]:
             # ignore transient/large dirs if any
             if "/.git/" in str(p):
                 continue
+            # avoid self-referential drift: the checksum file changes when written
+            if p.resolve() == CHECKSUMS_PATH.resolve():
+                continue
             out.append(p)
     return sorted(out)
 
@@ -78,7 +81,15 @@ def copy_to_snapshot(ts: str, files: list[Path]) -> Path:
 
 def load_prev() -> dict:
     if CHECKSUMS_PATH.exists():
-        return json.loads(CHECKSUMS_PATH.read_text(encoding="utf-8"))
+        d = json.loads(CHECKSUMS_PATH.read_text(encoding="utf-8"))
+        # Migration guard: older baselines may have included the checksum file itself.
+        try:
+            files = d.get("files", {}) if isinstance(d, dict) else {}
+            if isinstance(files, dict):
+                files.pop(str(CHECKSUMS_PATH.relative_to(ROOT)), None)
+        except Exception:
+            pass
+        return d
     return {}
 
 
@@ -107,7 +118,7 @@ def main() -> int:
         snap_path = copy_to_snapshot(ts, files)
         did_snapshot = True
 
-    current = {
+    pre = {
         "schema": "ralph-loop.drift.checksums.v0.1",
         "generated_at": ts,
         "scope": {
@@ -124,7 +135,7 @@ def main() -> int:
     changed = []
     new_files = []
 
-    cur_files = current["files"]
+    cur_files = pre["files"]
 
     for path, old_hash in prev_files.items():
         if path not in cur_files:
@@ -165,8 +176,20 @@ def main() -> int:
                     shutil.copy2(src, dst)
                     repaired["overwritten"].append(rel)
 
-    # Save current as new baseline
-    save_now(current)
+    # Save POST-repair state as new baseline (important: if we repaired files,
+    # the baseline must reflect the repaired content, not the pre-repair hashes).
+    post_files: list[Path] = []
+    for d in CANONICAL_DIRS:
+        post_files.extend(list_files(d))
+
+    post = {
+        "schema": "ralph-loop.drift.checksums.v0.1",
+        "generated_at": ts,
+        "scope": pre["scope"],
+        "files": {str(p.relative_to(ROOT)): sha256_file(p) for p in post_files},
+    }
+
+    save_now(post)
 
     out = {
         "ok": (len(missing_in_current) == 0 and len(changed) == 0),
