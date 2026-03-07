@@ -11,3 +11,6 @@
 
 ## ACTIVE
 - `HF_inbox_dev_urgent_202603.md` — Inbox-dev(585) 긴급개발: DB/State loss 복구 + Base Batches(3/9) 데모
+- `HF_handoff_compact_reminder_202603.md` — handoff(586): DAILY COMPACT 스냅샷 리마인더 자동화(09:30 KST)
+- `HF_v6_invest_live_restart_202603.md` — v6-invest(1029): 실투 재개발/운영 복구 SSOT 및 반복업무 자동화
+- `HF_x-post.md` — x-post(956): 브라우저 기반 후보발굴/본문추출 파이프라인 안정화 + 3회/일 산출 루틴 고정
