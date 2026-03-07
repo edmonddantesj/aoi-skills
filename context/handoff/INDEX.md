@@ -14,3 +14,4 @@
 - `HF_handoff_compact_reminder_202603.md` — handoff(586): DAILY COMPACT 스냅샷 리마인더 자동화(09:30 KST)
 - `HF_v6_invest_live_restart_202603.md` — v6-invest(1029): 실투 재개발/운영 복구 SSOT 및 반복업무 자동화
 - `HF_x-post.md` — x-post(956): 브라우저 기반 후보발굴/본문추출 파이프라인 안정화 + 3회/일 산출 루틴 고정
+- `HF_moltbook_ops_202603.md` — moltbook(1114): 운영 복구(키/스크립트/SSOT) + Daily/Weekly 루프 자동화

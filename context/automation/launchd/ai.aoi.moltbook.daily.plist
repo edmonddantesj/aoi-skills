@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>ai.aoi.moltbook.daily</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/silkroadcat/.openclaw/workspace/scripts/moltbook_daily_tick.sh</string>
+  </array>
+
+  <!-- KST 09:00 daily -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd/moltbook-daily.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd/moltbook-daily.err.log</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>OPENCLAW_BIN</key>
+    <string>/opt/homebrew/bin/openclaw</string>
+    <key>CHAT_ID</key>
+    <string>-1003732040608</string>
+    <key>THREAD_ID</key>
+    <string>1114</string>
+  </dict>
+</dict>
+</plist>
