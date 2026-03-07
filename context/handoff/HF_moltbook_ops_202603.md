@@ -34,3 +34,4 @@
 
 ## Log (append-only)
 - 2026-03-08: 대화 백업 기반으로 SSOT 재정리 시작. Playbook/HF 분리 + launchd 자동화 착수.
+- 2026-03-08: Attribution/Originality 규칙 추가(벤치마크 링크 묶음 + Our take + 팀 글 표기). "읽지 않은 링크/허위 집단토론" 금지.

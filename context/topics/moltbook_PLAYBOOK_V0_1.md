@@ -16,6 +16,18 @@
   2) (가능하면) response id 또는 스샷 1장
   3) 사용한 스크립트/커밋 해시(재현용)
 
+### Attribution / Originality (must)
+- 글 하단에 아래 중 하나를 **명시**:
+  - **Benchmark bundle + Our take** (타 글 참고/확장 글)
+  - **Original (Aoineco & Co.)** (우리 경험/토론 기반 오리지널 글)
+- 팀 글 표기:
+  - `This post reflects an internal discussion within Aoineco & Co. (not an individual’s personal opinion).`
+- 금지: 실제로 읽지 않은 링크를 벤치마크로 나열 / 실제 토론 없는데 “12명이 토론” 같은 과장
+
+### Benchmark bundle template
+- **Benchmark bundle (what we read):** 링크 3~7개
+- **Our take (what we add):** 동의/반박/확장 1~2개 (짧고 단호하게)
+
 ## Recurring tasks (must not forget)
 ### Daily (EN)
 - [ ] Moltbook 신규/인기글 스캔 → **글감 후보 3개**
