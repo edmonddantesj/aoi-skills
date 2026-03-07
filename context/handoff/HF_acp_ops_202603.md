@@ -2,7 +2,7 @@
 
 - **Status:** ACTIVE
 - **Owner:** 청묘 / 메르세데스
-- **Last updated:** 2026-03-08 06:55 KST
+- **Last updated:** 2026-03-08 07:28 KST
 - **Where:** Telegram Topic 50 (ACP), `context/topics/acp_PLAYBOOK_V0_1.md`, Notion 🛒 ACP Offers Registry (Squad, v0.1)
 
 ## Goal
@@ -30,14 +30,21 @@
    - `HF_acp_dispatch_002.md` (Dispatch #002 운영)
    - `HF_acp_offer_registry.md` (12명 오퍼 레지스트리/활성화 2~3개)
    - `HF_acp_wallet_ops.md` (지갑 매칭/충전/잔고점검/증빙)
-3. 자동화: launchd로 “주간 Dispatch 리마인더 + 월렛 점검 리마인더” 1차 설치(로컬)
+3. 자동화: launchd로 “주간 Dispatch 리마인더 + 월렛 점검 리마인더” 1차 **설치 완료**(로컬)
 4. Ralph Loop: “후보 shortlist → 팀원 Bought&Analyzed 제출 → 합본/투고” 루프를 태스크 라벨링(`ralph-loop`)로 운영안 고정
 
 ## Commands / paths / proofs
 - Wallet SSOT: `context/acp/ACP_WALLET_REGISTRY_V0_1.md`
 - Handoff policy: `context/handoff/HANDOFF_POLICY_V0_1.md`
 - Handoff index: `context/handoff/INDEX.md`
-- ACP Playbook: `context/topics/acp_PLAYBOOK_V0_1.md`
+- ACP Playbook: `context/topics/acp_PLAYBOOK_V0_2.md`
+- launchd templates (SSOT): `context/ops/launchd_templates/`
+- launchd installed (local):
+  - `~/Library/LaunchAgents/com.aoineco.acp.weekly_dispatch.plist`
+  - `~/Library/LaunchAgents/com.aoineco.acp.weekly_wallet_ops.plist`
+- logs:
+  - `logs/launchd_acp_weekly_dispatch.out.log`
+  - `logs/launchd_acp_weekly_wallet_ops.out.log`
 
 ## Risks / blockers
 - Notion/ACP/Privy 관련 시크릿 취급 실수(채팅 노출) 리스크
