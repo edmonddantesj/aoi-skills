@@ -19,4 +19,5 @@
 - `HF_aoi_pro_install_quickstart_preflight_202603.md` — aoi-pro: 설치/퀵스타트 Preflight(노드/경로/라이선스)로 성공률 개선
 - `HF_render_502_warmup_retry_policy_202603.md` — render: 502 워밍업/재시도 정책 SSOT 확정
 - `HF_aoi_pro_lite_lifetime_spec_202603.md` — aoi-pro: Lite 평생권($0.01) 스펙/가드레일 숫자 확정
+- `HF_acp_ops_202603.md` — ACP(topic 50): Playbook 규칙 영구화 + 진행작업 HF 분리 + launchd/Ralph 자동화
 - `HF_ralph_loop_drift_integrity_restore_20260308.md` — ralph-loop: 스캔/크론 상태저장 + drift 무결성 체크/자동복구(L2)

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.aoineco.acp.weekly_wallet_ops</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/silkroadcat/.openclaw/workspace/scripts/acp_wallet_ops_reminder.sh</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>1</integer>
+    <key>Hour</key><integer>9</integer>
+    <key>Minute</key><integer>30</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd_acp_weekly_wallet_ops.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd_acp_weekly_wallet_ops.err.log</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>

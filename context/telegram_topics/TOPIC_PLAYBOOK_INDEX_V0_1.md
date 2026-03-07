@@ -11,7 +11,7 @@
 - announcements(32): `context/topics/announcements_PLAYBOOK_V0_1.md`
 - ops(38): `context/topics/ops_PLAYBOOK_V0_1.md`
 - adp(45): `context/topics/adp_PLAYBOOK_V0_1.md`
-- acp(50): `context/topics/acp_PLAYBOOK_V0_1.md`
+- acp(50): `context/topics/acp_PLAYBOOK_V0_2.md` (latest)
 - bazaar(55): `context/topics/bazaar_PLAYBOOK_V0_1.md`
 - github(60): `context/topics/github_PLAYBOOK_V0_1.md`
 - longform(65): `context/topics/longform_PLAYBOOK_V0_1.md`
