@@ -20,3 +20,11 @@ Add 1-line status bubble UI to each agent (mobile-safe).
 ## Acceptance
 - Bubble never expands layout vertically beyond 1 line.
 - Works on mobile widths.
+## Next Actions (decompose)
+- [ ] Bubble text source = `message` from `context/adp/ADP_AGENT_STATE_SCHEMA_V0_1.md`
+- [ ] Truncation rule (N chars) + line clamp rule (mobile)
+- [ ] Error status styling rule (color/priority)
+- [ ] Add screenshot proof requirements for Done
+
+## Exit Criteria
+- Bubble renders 1-line safely on mobile + screenshot proof attached

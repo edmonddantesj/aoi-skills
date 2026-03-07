@@ -18,3 +18,11 @@ Lock the minimal ADP agent state schema v0.1 so UI + downstream tasks use the sa
 
 ## Notes
 Reconstructed from Telegram topic 45 after DB loss.
+## Next Actions (decompose)
+- [ ] Confirm schema file is canonical: `context/adp/ADP_AGENT_STATE_SCHEMA_V0_1.md`
+- [ ] Add/verify a minimal JSON example payload in SSOT (1 agent, 4 statuses)
+- [ ] Define OFFLINE_THRESHOLD default + where it lives (SSOT constant)
+- [ ] Add boundary mapping rule section (non-canonical statuses → 4-state)
+
+## Exit Criteria
+- SSOT updated + referenced by Bubble/Offline/Pixel Move/MC Overview tasks

@@ -25,3 +25,11 @@ Create an ADP Ops Overview page/panel that shows (at minimum):
 ## Acceptance
 - One screen that gives operator situational awareness in <10s.
 - Works even with stub data.
+## Next Actions (decompose)
+- [ ] Define MVP cards: Sessions / Agents / Tasks / Errors (exact fields)
+- [ ] Decide data sources (state files vs live API) and refresh interval
+- [ ] Add empty-state + degraded-mode behavior (no data / partial data)
+- [ ] Write a minimal mock JSON fixture for UI dev
+
+## Exit Criteria
+- SSOT spec section exists + a stub UI can render from fixture

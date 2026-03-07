@@ -28,3 +28,11 @@ Implement "status → zone → (x,y)" movement for pixel agents.
 
 ## Notes
 Originally implemented in PixelOfficeMap.tsx in the lost workspace; now tracked for rebuild.
+## Next Actions (decompose)
+- [ ] Confirm status→zone mapping (rest/desk/server/bug) from SSOT
+- [ ] Define slot coordinates per zone (static list) + collision rule
+- [ ] Decide deterministic placement (hash(agent_id)→slot) vs first-free
+- [ ] Add offline handling (freeze vs send to rest)
+
+## Exit Criteria
+- Given a fixture of agent states, positions are deterministic and stable across refresh
