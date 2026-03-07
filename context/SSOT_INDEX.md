@@ -16,6 +16,11 @@ This is a lightweight index of canonical SSOT docs in `context/`.
 - Delegation policy (MODE B default) (SSOT): `context/telegram_topics/DELEGATION_POLICY_V0_1.md`
 - Router output style (SSOT): `context/telegram_topics/ROUTER_OUTPUT_STYLE_V0_1.md`
 
+## Handoff (Context durability)
+- Handoff Index (active work): `context/handoff/INDEX.md`
+- Handoff Template: `context/handoff/_TEMPLATE.md`
+- Handoff Policy V0.1: `context/handoff/HANDOFF_POLICY_V0_1.md`
+
 ## Research / External Benchmarks
 - Arkham Intel API integration plan: `context/research/ARKHAM_INTEL_API_INTEGRATION_PLAN_V0_1.md`
 - Arkham rate limits + credit pricing SSOT: `context/research/ARKHAM_RATE_LIMITS_AND_CREDIT_PRICING_SSOT_20260224.md`
