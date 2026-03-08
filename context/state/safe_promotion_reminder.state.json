@@ -1,0 +1,10 @@
+{
+  "schema": "safe_promo_reminder.state.v0.1",
+  "last": {
+    "Sprint 1 (DONE → awaiting ADOPT/HOLD/CONFLICT replies)::ops::3190": "2026-03-08T12:13:59+09:00",
+    "Sprint 1 (DONE → awaiting ADOPT/HOLD/CONFLICT replies)::github::3191": "2026-03-08T12:13:59+09:00",
+    "Sprint 1 (DONE → awaiting ADOPT/HOLD/CONFLICT replies)::maintenance::3192": "2026-03-08T12:13:59+09:00",
+    "Sprint 1 (DONE → awaiting ADOPT/HOLD/CONFLICT replies)::inbox-dev::3193": "2026-03-08T12:13:59+09:00"
+  },
+  "updated_at": "2026-03-08T12:13:59+09:00"
+}
