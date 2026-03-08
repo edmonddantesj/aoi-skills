@@ -52,6 +52,10 @@
 - 주간 Dispatch 리마인더
 - 주간 Wallet/Ops 점검 리마인더
 
+### Tailscale (관측/접속, ADP 방식 복제)
+- ACP 원격 상태 파악은 **Tailscale 기반**으로 고정
+- 복제 플랜(SSOT): `context/acp/ACP_TAILSCALE_SETUP_FROM_ADP_V0_1.md`
+
 ### Ralph Loop (2차: 실행 루프)
 - shortlist → 구매/분석 → 합본 → 투고까지를 `ralph-loop` 라벨로 태스크화하고,
   루프 상태(이번주 후보/미제출/완료/보류)를 HF에 누적.
