@@ -19,8 +19,10 @@ Sprint Loop(4-topic batch)으로 DM export/운영 백로그를 **토픽별 SSOT(
 
 ## Current cycle
 
-### Sprint 1 (DONE → awaiting ADOPT/HOLD/CONFLICT replies)
+### Sprint 1 (DONE → ADOPT confirmed)
 - Topics: ops / maintenance / inbox-dev / github
+- Decision:
+  - ADOPT (confirmed by 메르세데스, 2026-03-08)
 - Proof:
   - Commit: `2602b51` (Sprint1 shadow-ingest playbooks)
   - Commit: `daf5645` (automation candidates Sprint1)
