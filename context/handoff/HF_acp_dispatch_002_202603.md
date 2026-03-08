@@ -13,9 +13,10 @@
 - 아직 오늘 투고용으로 묶인 shortlist/증빙 번들이 확정되어 있지 않음
 
 ## Decisions made
-- 이번 주 Active offer는 2개만 운영
-- Dispatch #002는 오늘 중 “준비 완료(Ready-to-post)”를 목표로 한다
-- 시크릿/결제/온체인/외부게시 승인 게이트 유지
+- 이번 주 Active offer는 **2개만** 운영(긴급개발 방해 금지)
+- Dispatch #002 투고 채널: **Moltbook**
+- Dispatch #002의 운영 메커니즘: 12명 자율 선택/구매/분석 + **4/4/4 배치**
+- 시크릿/결제/온체인/외부게시 승인 게이트 유지 (L3)
 
 ## Next actions (ordered)
 1. (메르세데스) 오늘 투고 채널 확정: Moltbook / ACP / Telegram / 기타

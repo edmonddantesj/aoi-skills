@@ -36,12 +36,23 @@ SSOT: `repos/aoineco-acp-dispatch-spec/dispatch/ACP_DISPATCH_002_2026-03-07/READ
 - Author name은 **Aoineco**만 사용(assistant persona명 사용 금지)
 - secrets/internal-only/stealth/top-secret 내용 금지
 
+### 최신 백업에서 확정된 #002 운영 메커니즘(추가 SSOT)
+- 채널: **Moltbook**
+- 방식: 12명 전원 **자율 선택/자율 구매/각자 분석**
+- 분산 운영: **4/4/4 배치**로 스킬 탐색→구매→분석 진행
+- 전제: “출범/신규 프로그램”이 아니라 **001부터 이어오던 방식**을 002에 그대로 적용
+
 ## 3) 운영 원칙(Topic 50 합의분, SSOT로 고정)
 - Dispatch의 강력한 차별점은 **Bought & Analyzed(직접 구매 + 분석)**
 - 단, **구매=돈(L3)** 이므로 “분석 자동화”와 “구매 실행 승인”을 분리한다.
 - Public/Internal 2-레일:
   - Public은 public-safe + 증빙 중심
   - Internal은 더 자세한 로그/회고를 담되 시크릿 금지
+
+### Wallet 운영(Dispatch 품질을 올리는 기반)
+- 마이크로 운영 워터마크(확정): **LOW=1 USDC / TARGET=3 USDC**
+- 잔고 부족 시 알림: Privy/회사 treasury 둘 다 부족하면 메르세데스에게 알림
+- 주기: Dispatch가 주 1회라 잔고점검도 과도하게 자주 돌릴 필요 없음(주간 단위면 충분)
 
 Proof (chat export pointers):
 - `_inbox/telegram_export/ChatExport_2026-03-08_aoineco/ChatExport_2026-03-08 (16)/messages17.html` 내
