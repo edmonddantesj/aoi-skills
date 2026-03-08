@@ -35,6 +35,12 @@
 - L3(돈/키/서명/온체인/외부게시/비가역/권한변경) = 즉시 STOP 후 인간 승인.
 
 ## 2) Recurring tasks (must not forget)
+
+### Sprint Loop (4-topic batch) — 운영 엔진
+- Sprint Loop backlog SSOT: `context/ralph_loop/SPRINT_LOOP_BACKLOG_V0_1.md`
+- Rule: 1 Sprint=4 topics, Shadow Ingest→Automation candidates→Safe Promotion(ADOPT/HOLD/CONFLICT 회신 수집)
+- Gate: L1/L2 자동 진행, L3만 승인
+
 ### Daily (기본)
 1) **Ralph Loop Daily Scan**
    - 입력: `context/ops/items/` (WIP/stale) + cron 상태 + drift 상태
