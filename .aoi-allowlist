@@ -1,10 +1,14 @@
-# AOI GUARD allowlist (default-deny)
-# Keep this tight; add paths as needed.
+# AOI GUARD / Security Gate allowlist
+# Keep this tight; default-deny.
 
+.aoi-allowlist
+README.md
+LICENSE
 context/
 scripts/
 skills/private/
 artifacts/skill_builds/
 memory/
-.aoi-allowlist
 launchd/ai.aoi.v6-invest-routine.plist
+openclaw-telegram-topics-router/
+dist/
