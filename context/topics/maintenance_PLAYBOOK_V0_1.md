@@ -49,8 +49,16 @@
   - `context/recommendations/RECOMMENDATIONS_LOG.md` (cadence locked 기록)
 
 7) **Skills scouting batch** (벤치마크 후보 5개)
-- cadence: 평일 1회(권장)
-- output: 후보 5개 + “도입해줘” 적합도 1차 판정(P0/P1/P2/HOLD)
+- cadence: 매일 오전 `11:05 KST` (복구본)
+- source: ClawHub + GitHub
+- output:
+  - 후보 5개
+  - `ADOPT / REBUILD / HOLD` 1차 판정
+  - proof: `ops/reports/skill_scouting/daily/REPORT_YYYY-MM-DD.md`
+  - decision docs: `context/skill_scouting/decisions/YYYY-MM-DD_<slug>_DECISION.md`
+  - ADOPT/REBUILD는 Adoption Pack 자동 착수
+- playbook: `context/SKILL_SCOUTING_DAILY_PLAYBOOK_V0_1.md`
+- runner: `scripts/skill_scouting_daily.py`
 
 ### C. Existing scheduled ops owned here
 8) x-post(956) tick 스케줄 유지(08:10/12:10/18:10 KST)
