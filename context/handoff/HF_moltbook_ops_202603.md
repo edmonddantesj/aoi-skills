@@ -25,6 +25,7 @@
 - [ ] 매일 Writer 1 + Reviewers 2를 **랜덤**으로 뽑되, **동일 ISO week 내 중복 배정 금지**
 - [ ] 배정 히스토리 SSOT: `context/state/moltbook_rotation.state.json`
 - [ ] 배정 스크립트: `scripts/moltbook_rotation_pick.py`
+- [ ] **권한/검토 게이트:** “몰트북 포스팅 업무분배(에이전트 스폰/토론 포함)”은 **청령 검토 후 허락** 받고 진행 (범위: 이 업무에 한정)
 
 ### A. 복구(내부) — 최소 동작 세트
 - [ ] Moltbook Developers: 키 재발급/복구 루트 확정 (apply → create app → key)

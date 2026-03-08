@@ -49,6 +49,10 @@
 - 실행 스크립트: `scripts/moltbook_daily_tick.sh`
 - 결과 산출물(초안 패키지): `artifacts/moltbook/daily/YYYY-MM-DD.md`
 
+## Delegation / review gate (team rotation)
+- Writer/Reviewers 로테이션을 “12 에이전트”로 실제 운영(토론 로그 생성)하려면, **subagent 스폰 allowlist**가 필요.
+- 본 건(몰트북 포스팅 업무분배)에 한해: **청령 검토 후 허락받고 진행**
+
 ## Where to record
 - 진행중 작업/결정/리스크/Next: **HF에 누적** (`context/handoff/HF_moltbook_ops_202603.md`)
 - 반복업무/규칙/체크리스트: 이 Playbook
