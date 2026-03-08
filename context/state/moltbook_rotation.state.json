@@ -1,7 +1,20 @@
 {
   "version": "0.1",
   "weekStart": "Mon",
-  "members": [],
+  "members": [
+    "main",
+    "builder",
+    "maintainer",
+    "devops",
+    "growth",
+    "oracle",
+    "research",
+    "risk",
+    "security",
+    "analyzer",
+    "record",
+    "comms"
+  ],
   "history": {
     "2026-W10": {
       "assignments": []
