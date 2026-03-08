@@ -22,13 +22,13 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timezone, timedelta
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATUS_RE = re.compile(r"^\s*status\s*:\s*([a-zA-Z0-9_-]+)\s*$", re.IGNORECASE)
 UPDATED_RE = re.compile(r"^\s*(updated|last_update|last-updated)\s*:\s*(.+?)\s*$", re.IGNORECASE)
 
 
 def parse_dt(s: str) -> datetime | None:
     s = s.strip()
-    # common formats
     fmts = [
         "%Y-%m-%d %H:%M %Z",
         "%Y-%m-%d %H:%M",
@@ -90,6 +90,12 @@ def sweep(items_glob: str, limit: int, sla_h: int, now: datetime) -> SweepResult
     return SweepResult(wip=wip, stale=stale, limit=limit, sla_h=sla_h)
 
 
+def normalize_items_glob(pattern: str) -> str:
+    if os.path.isabs(pattern):
+        return pattern
+    return os.path.join(ROOT, pattern)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -103,11 +109,13 @@ def main() -> int:
 
     now = datetime.now(timezone.utc)
 
-    globs = []
     if args.items:
-        globs = [args.items]
+        globs = [normalize_items_glob(args.items)]
     else:
-        globs = ["context/ops/items/*.md", "ops/items/*.md"]
+        globs = [
+            os.path.join(ROOT, "context/ops/items/*.md"),
+            os.path.join(ROOT, "ops/items/*.md"),
+        ]
 
     wip = 0
     stale = 0
