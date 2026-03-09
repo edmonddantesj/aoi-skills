@@ -9,6 +9,7 @@ scripts/
 skills/private/
 artifacts/skill_builds/
 memory/
+TOOLS.md
 launchd/ai.aoi.v6-invest-routine.plist
 openclaw-telegram-topics-router/
 dist/
