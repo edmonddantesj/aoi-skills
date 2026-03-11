@@ -46,6 +46,7 @@
 ## Routing references
 - Governing spec: `context/AOINECO_ROUTER_SPEC_V0_1.md`
 - Owner logic: `context/AOINECO_ROUTER_OWNER_SELECTION_LOGIC_V0_1.md`
+- Edgecase log: `context/AOINECO_ROUTER_EDGECASE_LOG_V0_1.md`
 
 ## Where to record
 - 반복 규칙/운영 원칙: 이 Playbook
