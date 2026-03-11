@@ -24,6 +24,7 @@
 - `v6-invest.md`
 - `x-post.md`
 - `moltbook.md`
+- `cat-strategic.md`
 
 ## Paused topics
 - `announcements.md`

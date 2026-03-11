@@ -24,3 +24,4 @@
 - x-post(956): `context/topics/x-post_PLAYBOOK_V0_1.md`
 - v6-invest(1029): `context/topics/v6-invest_PLAYBOOK_V0_1.md`
 - moltbook(1114): `context/topics/moltbook_PLAYBOOK_V0_1.md`
+- cat-strategic(6062): `context/topics/cat-strategic_PLAYBOOK_V0_1.md`

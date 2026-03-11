@@ -33,9 +33,12 @@
 ## Status
 - current_topic_truth_confirmed: yes
 - local_export_present: yes
+- drive_export_present: yes
 - current SSOT present: yes
+- A1_vs_A2_identical: no
+- A1_likely_newer_or_more_complete_than_A2: yes
 - direct_apply_performed: no
 
 ## Uncertain
-- User-provided Drive export(A1)와 로컬 export(A2)가 완전히 동일본인지 아직 미검증.
+- A1이 A2를 완전 포함하는 strict superset인지는 아직 미검증.
 - x402 PoC 후속 구현/완료 여부는 이 structured 추출 범위에서 미확인.
