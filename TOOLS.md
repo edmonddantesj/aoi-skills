@@ -78,17 +78,18 @@ PY
 
 ## OpenClaw media / downloads storage
 
-### External media storage root
-- OpenClaw media root is moved to the external drive via symlink:
-  - `~/.openclaw/media` → `/Volumes/Bitcoin Core Qt/OpenClawMedia/state-media`
-  - `~/workspace/media` → `/Volumes/Bitcoin Core Qt/OpenClawMedia/workspace-media`
-- Existing media was migrated on `2026-03-10`.
+### Current operating state (rolled back)
+- On `2026-03-12`, OpenClaw media storage was rolled back from the external drive to the internal SSD after suspected stability issues.
+- Current live paths are local directories again:
+  - `~/.openclaw/media`
+  - `~/workspace/media`
+- Working hypothesis: moving live OpenClaw media I/O onto the external SSD may have contributed to host instability / repeated disconnects, so keep live media on internal storage unless revalidated later.
 
-### Preferred download targets
+### External-drive download targets
 - General downloaded files: `/Volumes/Bitcoin Core Qt/OpenClawMedia/downloads`
 - Workspace-related downloads/staging: `/Volumes/Bitcoin Core Qt/OpenClawMedia/workspace-media/downloads`
 
 ### Operating rule
+- Keep **live OpenClaw media/inbound/browser storage on internal SSD** for stability.
 - For user-requested downloads (e.g. Google Drive links, direct file URLs), prefer saving explicitly into the external-drive download folders above instead of the internal SSD.
-- Inbound channel attachments that route through OpenClaw media storage should now land on the external drive automatically because the media paths are symlinked.
-- Keep the external drive mounted before handling large media/files.
+- Treat the external SSD as download/archive storage, not primary live runtime media storage, unless future testing proves it stable.
