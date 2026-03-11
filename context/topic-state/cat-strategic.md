@@ -2,7 +2,8 @@
 
 - Topic: `cat-strategic`
 - Status: ACTIVE
-- Last saved: 2026-03-12 00:31 KST
+- Last saved: 2026-03-12 01:03 KST
+- Governing spec: `context/AOINECO_ROUTER_SPEC_V0_1.md`
 
 ## Current objective
 - 청묘·흑묘·에드몽 3자 전략 대화 토픽의 발화 규칙과 범위를 SSOT로 고정.
@@ -20,10 +21,28 @@
 - 에드몽이 다시 메시지를 보내면 즉시 사람 우선 모드로 복귀.
 - 밤에는 자율 대화가 허용돼도 꼭 필요한 논의만 짧게 하고 결론이 나면 종료.
 
+## Current mode
+- Default: 일반 대화
+- Autonomous trigger: `둘이 논의해` / `둘이 얘기해`
+- Exit trigger: 에드몽이 다시 메시지 전송
+- Night mode window: 23:00~08:00 KST
+- Night mode limit: 자율대화 최대 3턴
+
+## Recent question
+- 여러 명으로 확장해도 부담 없이 활용 가능한 운영 구조는 무엇인가?
+
+## Recent conclusion
+- 장기적으로는 공유 SSOT만으로 버티는 구조보다 **라우터/중재자(B안)** 가 확장성·비용통제·중복방지 측면에서 우위.
+- 현재 `cat-strategic` 토픽은 Router Spec v0 실험 토픽으로 운영.
+
+## Open threads
+- Router Spec을 실제 토픽 운영에 어떻게 단계적으로 연결할지
+- 이후 반자동 라우터를 어떤 방식으로 구현할지
+
 ## Next actions
-1. 이후 실제 대화에서 발화 규칙이 안정적으로 지켜지는지 확인.
-2. 필요 시 청묘/흑묘 역할 분담을 더 세분화.
-3. 전략 아이디어가 쌓이면 별도 구조화 문서 또는 HF로 승격.
+1. `cat-strategic` 문서를 Router Spec에 연결한 상태로 실전 운영하며 규칙 충돌 패턴을 관찰.
+2. 태그/답글/무태그/야간 모드에서 오작동 사례를 모아 v0 적용 플랜에 반영.
+3. 필요 시 반자동 owner 선택 로직 초안 작성.
 
 ## Key files
 - Playbook: `context/topics/cat-strategic_PLAYBOOK_V0_1.md`
