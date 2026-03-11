@@ -43,6 +43,10 @@
 - 목표: 토론보다 정리/결론/다음 액션
 - 금지: 같은 논점 반복, 긴 잡담, 의미 없는 핑퐁
 
+## Routing references
+- Governing spec: `context/AOINECO_ROUTER_SPEC_V0_1.md`
+- Owner logic: `context/AOINECO_ROUTER_OWNER_SELECTION_LOGIC_V0_1.md`
+
 ## Where to record
 - 반복 규칙/운영 원칙: 이 Playbook
 - 현재 재개 포인트: `context/topic-state/cat-strategic.md`
