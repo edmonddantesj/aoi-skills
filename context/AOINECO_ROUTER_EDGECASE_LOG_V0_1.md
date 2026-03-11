@@ -73,6 +73,25 @@
 
 ---
 
+### EDGE-20260312-03
+- **Date/Time:** 2026-03-12 01:22 KST
+- **Topic:** cat-strategic (6062)
+- **Message type:** explicit-multi-call
+- **Expected behavior:** `둘이 논의해` 트리거 후 청묘와 흑묘가 각각 짧게 자율대화에 참여
+- **Actual behavior:** 청묘만 응답했고 흑묘는 응답하지 않음
+- **Impact:**
+  - silent failure
+  - ambiguity
+- **Probable cause:** 자율대화 트리거는 문서상 합의되었지만, 흑묘 측에 동일 강도의 실시간 발화 보장이 없음
+- **Rule touched:**
+  - Router Spec
+  - Semi-auto rollout plan
+  - Topic Playbook
+- **Suggested fix:** 당분간 `둘이 논의해`만으로는 dual 보장을 기대하지 말고, 필요 시 자율대화 트리거 + 직접 태그를 병행. 이후 반자동 라우터에서 explicit-multi-call 처리 강화를 검토
+- **Status:** open
+
+---
+
 ## Review cadence
 - 엣지케이스 3~5개 쌓일 때마다 검토
 - 반복 패턴이 보이면 v0.2 규칙으로 승격
