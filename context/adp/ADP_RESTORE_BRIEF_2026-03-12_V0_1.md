@@ -92,6 +92,7 @@
 4. Search broader workspace/backups for hidden asset archives or prior export bundles.
 5. If local asset originals are not found, request/reingest the original ZIP from Telegram and normalize into:
    - `public/pixel/roles/<roleId>/{idle,walk,work,error}.png`
+6. Recreate a minimal `agents_summary` recovered fixture so ADP can proceed before live runtime state files are restored.
 
 ## Decision-ready summary
 - There is **not yet** a restored full ADP site in the current active repo; only a skeleton exists.

@@ -1,0 +1,19 @@
+{
+  "source": "recovered-from-backup-and-restored-ui-shell",
+  "generated_at": "2026-03-12T22:04:00+09:00",
+  "version": "v0.1-recovered",
+  "agents": [
+    {"agent_id":"aoineco","display_name":"Aoineco","status":"writing","message":"Rebuilding ADP structure from backup evidence.","role_id":"aoineco"},
+    {"agent_id":"oracle","display_name":"Oracle","status":"syncing","message":"Tracking restore scope and routing next work.","role_id":"oracle"},
+    {"agent_id":"blue_sound","display_name":"Blue Sound","status":"idle","message":"Waiting for next outward-facing narrative pass.","role_id":"blue_sound"},
+    {"agent_id":"blue_blade","display_name":"Blue Blade","status":"error","message":"Watching asset/license boundaries during rebuild.","role_id":"blue_blade"},
+    {"agent_id":"blue_eye","display_name":"Blue Eye","status":"syncing","message":"Scanning references and prior layout patterns.","role_id":"blue_eye"},
+    {"agent_id":"blue_brain","display_name":"Blue Brain","status":"writing","message":"Refining restore plan into implementation slices.","role_id":"blue_brain"},
+    {"agent_id":"blue_flash","display_name":"Blue Flash","status":"writing","message":"Recovering roster-first ADP home screen.","role_id":"blue_flash"},
+    {"agent_id":"blue_record","display_name":"Blue Record","status":"syncing","message":"Pinning restore findings into SSOT.","role_id":"blue_record"},
+    {"agent_id":"blue_gear","display_name":"Blue Gear","status":"syncing","message":"Preparing private internal serving path over Tailscale.","role_id":"blue_gear"},
+    {"agent_id":"blue_growth","display_name":"Blue Growth","status":"idle","message":"Standing by until ADP shell is back online.","role_id":"blue_growth"},
+    {"agent_id":"blue_med","display_name":"Blue Med","status":"idle","message":"Monitoring blockers and fallback routes.","role_id":"blue_med"},
+    {"agent_id":"blue_maintainer","display_name":"Blue Maintainer","status":"writing","message":"Applying backup-derived assets into the active repo.","role_id":"blue_maintainer"}
+  ]
+}
