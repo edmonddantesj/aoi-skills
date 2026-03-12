@@ -79,8 +79,12 @@ Purpose: quick shared search layer so any agent can find current topic status, c
 ## random
 - topic id: `81`
 - role: mixed issue room / temporary holding before playbook+HF split
+- owner: 청묘
 - state path: `context/topic-state/random.md`
-- recurring emphasis: promote repeatable rules quickly and push large issues into HF/new main topics
+- playbook: `context/topics/random_PLAYBOOK_V0_1.md`
+- handoff: `context/handoff/HF_random_playbook_hardening_20260312.md`
+- linked Ralph Loop split: L1 fixed / L2 not yet fixed
+- recurring emphasis: promote repeatable rules quickly, leave only short pointers in-topic, and push large issues into HF / Ralph Loop / new main topics
 
 ## inbox-dev
 - topic id: `585`
