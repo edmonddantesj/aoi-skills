@@ -42,7 +42,25 @@ Therefore:
 - Provided current topology hint:
   - Notion reference: `Heukmyo Squad` (`3219c616de868171ab5ee6bebba83a96`)
 
-Note: direct text extraction from the shared Notion link was not available from lightweight fetch in this session, so exact roster details remain pending until a readable mirror/export/API path is attached.
+Update: lightweight fetch failed, but Notion API access succeeded in the same session.
+
+Confirmed page:
+- `Heukmyo Squad` (`3219c616-de86-8171-ab5e-e6bebba83a96`)
+- Parent page: `3049c616-de86-81a3-8420-e9a6188d96f6`
+
+Confirmed text from the page body:
+- Heukmyo Squad is **not a replacement** for the Cheongmyo 12-person system.
+- It is a **rear-guard continuity squad** meant to preserve order during incidents / downtime / operating gaps.
+- The page explicitly references the **Cheongmyo 12-person system** (`청묘 12명 체계`).
+- Visible listed roles on the page are currently 4 named Heukmyo roles:
+  - Fang
+  - Inkeye
+  - Ash
+  - Thread
+
+Therefore the current evidence supports:
+- `12` is not speculative; it is explicitly referenced on the Notion page.
+- `17` is still a plausible expanded total if combining the 12-person Cheongmyo system with the currently visible 4-role Heukmyo continuity squad plus leadership framing, but that total is **not yet explicitly stated on-page** and should remain a derived/working estimate until corroborated elsewhere.
 
 ---
 
