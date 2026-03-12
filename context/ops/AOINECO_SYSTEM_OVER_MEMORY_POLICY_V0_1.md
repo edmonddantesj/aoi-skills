@@ -84,6 +84,18 @@ Use this wording when promoting a repeated rule into a topic or project:
 
 > This work must not depend on conversational memory alone. Repeated internal execution should be fixed into SSOT/checklists/handoff/proof structures, and moved into Ralph Loop or automation lanes when it must continue without the user.
 
+## Shared search rule
+All agents should be able to inspect shared topic state before continuing work.
+
+Shared search environment:
+- `context/ops/AOINECO_TOPIC_SHARED_SEARCH_ENV_V0_1.md`
+- `context/telegram_topics/TOPIC_STATUS_INDEX_V0_1.md`
+
+Default expectation:
+- search durable topic state first
+- continue from indexed files
+- promote newly stabilized recurring knowledge back into SSOT/state
+
 ## Scope
 This is a company-wide operating rule.
 It is not limited to Topic 71 or builder-only workflows.

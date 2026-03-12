@@ -115,15 +115,29 @@
 - moltbook = 1114
 - cat-strategic = 6062
 
-### 8) 이번에 같이 고정되는 공용 문서
+### 8) 공유 검색 환경도 같이 고정한다
+모든 에이전트는 필요할 때 각 topic/project의 진행상황을 검색으로 확인하고, 그 상태를 기반으로 추가 응용 업무를 진행할 수 있어야 한다.
+
+이를 위해 아래를 공용 검색 레이어로 사용한다.
+- `context/ops/AOINECO_TOPIC_SHARED_SEARCH_ENV_V0_1.md`
+- `context/telegram_topics/TOPIC_STATUS_INDEX_V0_1.md`
+
+기본 규칙:
+- 먼저 topic-state / playbook / handoff / index를 검색한다
+- 기억만으로 이어붙이지 않는다
+- 새로 안정화된 반복 규칙/요점은 다시 SSOT/state로 승격한다
+
+### 9) 이번에 같이 고정되는 공용 문서
 - `context/ops/AOINECO_SYSTEM_OVER_MEMORY_POLICY_V0_1.md`
 - `context/ops/AOINECO_EXECUTION_LANE_SPLIT_STANDARD_V0_1.md`
 - `context/ops/AOINECO_REPEATABLE_WORK_TEMPLATE_V0_1.md`
 - `context/ops/AOINECO_RALPH_LOOP_TOPIC_EXECUTION_STANDARD_V0_1.md`
+- `context/ops/AOINECO_TOPIC_SHARED_SEARCH_ENV_V0_1.md`
 - `context/ops/RALPH_LOOP_BUSINESS_WIDE_APPLICATION_POLICY_V0_1.md`
+- `context/telegram_topics/TOPIC_STATUS_INDEX_V0_1.md`
 - `context/telegram_topics/thread_topic_map.json`
 
-### 9) 각 토픽/프로젝트에 바로 적용할 최소 규칙
+### 10) 각 토픽/프로젝트에 바로 적용할 최소 규칙
 각 topic playbook/project 운영문서에는 최소한 아래를 넣는다.
 1. 반복 규칙은 기억이 아니라 playbook/SSOT로 승격
 2. 반복 내부 실행은 Ralph Loop 또는 automation 후보로 분리
@@ -132,5 +146,7 @@
 5. 인간 개입은 manual/external gate에서만
 6. 제출형 업무는 preparation-first packet을 먼저 준비
 7. 상태는 STATUS/HANDOFF/DECISIONS 또는 동급 tracked artifact에 남김
+8. 기존 memory/handoff/playbook/state를 훑어 role/recurring/key points/current state를 durable로 승격
+9. 필요할 때는 shared topic index를 검색 기반 진입점으로 사용
 
 끝.
