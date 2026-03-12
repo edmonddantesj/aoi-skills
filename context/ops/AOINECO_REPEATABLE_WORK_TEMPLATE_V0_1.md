@@ -65,10 +65,31 @@ Before submit/apply/operate, prepare:
 
 ---
 
-## E. Migration prompts
+## E. Ralph Loop execution split template
+If a topic/project sends work into Ralph Loop, define at minimum:
+- source topic:
+- target lane: `ralph-loop`
+- L1 approved?:
+- L2 approved?:
+- recurring task shapes:
+- cadence/trigger:
+- proof/artifact path:
+- return rule to source topic:
+- escalation rule to main-session/human gate:
+
+Rule:
+- L1 = candidate routing approval
+- L2 = actual recurring execution activated
+- If cadence/trigger/packet/proof/return are missing, the split is incomplete
+
+---
+
+## F. Migration prompts
 Use these questions when migrating an existing topic/project:
 1. 무엇이 반복되는가?
 2. 무엇이 아직 기억/대화에만 남아 있는가?
 3. 무엇을 Ralph Loop로 보내야 하는가?
 4. 인간은 정확히 어느 수동/외부 게이트에서만 들어오면 되는가?
 5. 제출 전에 미리 준비해둘 패키지는 무엇인가?
+6. Ralph Loop로 보냈다면 L1/L2 중 어디까지 승인됐는가?
+7. L2라면 실제 cadence/trigger/packet/proof/return rule이 정의됐는가?
