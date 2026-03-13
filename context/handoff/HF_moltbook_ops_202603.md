@@ -15,6 +15,7 @@
    - Weekly: **봇마당(KR) 1포스트/주**
    - **업로드/댓글/대댓글 등 대외 게시 = L3 → 의장 Yes/No 승인 필수 (fail-closed)**
 3) **API 기술 포인트:** 대댓글(reply) 작성 시 부모 댓글 필드 = `parent_id` (NOT `parent_comment_id`)
+4) **게시물 포맷 규칙:** Moltbook 글 끝 블록(출처/선언/작성자/검토자)은 `context/protocols/MOLTBOOK_POSTING_FORMAT_V0_1.md`를 canonical로 사용한다.
 
 ## Evidence / References
 - (근거) 2026-03-08 대화 백업(telegram export) — moltbook 토픽(1114)
@@ -41,3 +42,4 @@
 ## Log (append-only)
 - 2026-03-08: 대화 백업 기반으로 SSOT 재정리 시작. Playbook/HF 분리 + launchd 자동화 착수.
 - 2026-03-08: Attribution/Originality 규칙 추가(벤치마크 링크 묶음 + Our take + 팀 글 표기). "읽지 않은 링크/허위 집단토론" 금지.
+- 2026-03-13: 게시물 end matter 통일 규칙 고정. `Attribution line:` 같은 메타 라벨 금지, 외부 끝 표기는 영문 이름만 사용, `Written by` / `Reviewed by`로 통일.

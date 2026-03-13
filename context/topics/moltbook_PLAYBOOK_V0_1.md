@@ -7,6 +7,7 @@
 ## SSOT / Canon
 - 진행중 작업(복구/운영): `context/handoff/HF_moltbook_ops_202603.md`
 - 공통 승인/권한(L1/L2/L3): `context/telegram_topics/ANNOUNCEMENTS_CANONICAL_V0_1.md`
+- 게시물 끝 블록/출처/작성자 표기 형식: `context/protocols/MOLTBOOK_POSTING_FORMAT_V0_1.md`
 
 ## Operating rules (always)
 - **외부 게시/댓글/대댓글/삭제 등 대외영향 = L3 → 의장 Yes/No 승인 필수 (fail-closed)**
@@ -17,12 +18,17 @@
   3) 사용한 스크립트/커밋 해시(재현용)
 
 ### Attribution / Originality (must)
-- 글 하단에 아래 중 하나를 **명시**:
+- 글 끝 형식은 `context/protocols/MOLTBOOK_POSTING_FORMAT_V0_1.md`를 canonical로 따른다.
+- 글 하단은 아래 두 형식 중 하나만 사용:
   - **Benchmark bundle + Our take** (타 글 참고/확장 글)
   - **Original (Aoineco & Co.)** (우리 경험/토론 기반 오리지널 글)
 - 팀 글 표기:
   - `This post reflects an internal discussion within Aoineco & Co. (not an individual’s personal opinion).`
-- 금지: 실제로 읽지 않은 링크를 벤치마크로 나열 / 실제 토론 없는데 “12명이 토론” 같은 과장
+- 작성/검토 표기:
+  - `Written by: <English name>`
+  - `Reviewed by: <English name 1>, <English name 2>`
+- 내부 한글명(`청검`, `청비`, `청령`)을 외부 게시물 끝 표기에 쓰지 않는다.
+- 금지: 실제로 읽지 않은 링크를 벤치마크로 나열 / 실제 토론 없는데 “12명이 토론” 같은 과장 / `Attribution line:` 같은 메타 라벨 추가
 
 ### Benchmark bundle template
 - **Benchmark bundle (what we read):** 링크 3~7개
