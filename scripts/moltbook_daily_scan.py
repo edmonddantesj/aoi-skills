@@ -31,6 +31,8 @@ WORKSPACE = Path("/Users/silkroadcat/.openclaw/workspace")
 OUT_DIR = WORKSPACE / "artifacts" / "moltbook" / "daily"
 HF_PATH = WORKSPACE / "context" / "handoff" / "HF_moltbook_ops_202603.md"
 PLAYBOOK_PATH = WORKSPACE / "context" / "topics" / "moltbook_PLAYBOOK_V0_1.md"
+WRITER_SEED_PATH = WORKSPACE / "context" / "state" / "moltbook_writer_profiles.seed.json"
+ROTATION_STATE_PATH = WORKSPACE / "context" / "state" / "moltbook_rotation.state.json"
 
 
 def http_get_json(url: str, timeout: int = 20) -> Any:
@@ -227,12 +229,37 @@ def build_body(primary: dict[str, str], refs: list[dict[str, str]], directives: 
     return "\n\n".join(paras)
 
 
+def load_writer_context() -> dict[str, Any]:
+    try:
+        seed = json.loads(WRITER_SEED_PATH.read_text(encoding="utf-8"))
+        members = {m["member"]: m for m in seed.get("members", [])}
+    except Exception:  # noqa: BLE001
+        members = {}
+    try:
+        state = json.loads(ROTATION_STATE_PATH.read_text(encoding="utf-8"))
+        hist = state.get("history", {})
+        latest = None
+        for week_data in hist.values():
+            for a in week_data.get("assignments", []):
+                if latest is None or a.get("date", "") > latest.get("date", ""):
+                    latest = a
+        if latest:
+            writer = latest.get("writer")
+            return {"writer": writer, "profile": members.get(writer, {})}
+    except Exception:  # noqa: BLE001
+        pass
+    return {"writer": None, "profile": {}}
+
+
 def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -> str:
     directives = extract_operator_directives()
     primary = choose_primary(posts)
     refs = select_reference_posts(posts)
     titles = title_variants(primary)
     body = build_body(primary, refs, directives)
+    writer_ctx = load_writer_context()
+    writer = writer_ctx.get("writer")
+    profile = writer_ctx.get("profile") or {}
 
     lines: list[str] = []
     lines.append(f"# Moltbook Daily Draft Package — {today}")
@@ -269,32 +296,48 @@ def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -
                 lines.append(f"   - {url}")
     lines.append("")
 
-    lines.append("## 3) Recommended angle")
+    lines.append("## 3) Today’s writer")
+    if writer:
+        lines.append(f"- Today’s writer: **{writer}** / {profile.get('englishName', '<unknown>')}")
+        lines.append(f"- Role axis: {profile.get('roleAxis', '<unknown>')}")
+        pref = ', '.join(profile.get('preferenceAxis', [])) or '<unknown>'
+        lines.append(f"- Preference axis: {pref}")
+        lines.append("- Why today: rotation slot + current topic fit")
+        lines.append(f"- Avoided repeats: {profile.get('avoidTopics', ['<not set>'])[0]}")
+    else:
+        lines.append("- Today’s writer: <not assigned>")
+        lines.append("- Role axis: <not assigned>")
+        lines.append("- Preference axis: <not assigned>")
+        lines.append("- Why today: <not assigned>")
+        lines.append("- Avoided repeats: <not assigned>")
+    lines.append("")
+
+    lines.append("## 4) Recommended angle")
     lines.append(f"- Primary angle: **{primary['label']}**")
     lines.append(f"- Working thesis: {primary['thesis']}")
     lines.append("- Why this one: strongest overlap between current feed signals and current operating directives.")
     lines.append("")
 
-    lines.append("## 4) Title variants")
+    lines.append("## 5) Title variants")
     for t in titles:
         lines.append(f"- {t}")
     lines.append("")
 
-    lines.append("## 5) Picked title")
+    lines.append("## 6) Picked title")
     lines.append(f"- {titles[0]}")
     lines.append("")
 
-    lines.append("## 6) TL;DR (ready to paste)")
+    lines.append("## 7) TL;DR (ready to paste)")
     lines.append(f"- {primary['thesis']}")
     lines.append("- Reliability comes more from explicit operating boundaries and repeatable handoffs than from raw context accumulation alone.")
     lines.append("- Trust grows when commitments, escalation points, and follow-up behavior are visible in the workflow.")
     lines.append("")
 
-    lines.append("## 7) Full draft (near-post-ready)")
+    lines.append("## 8) Draft (near-post-ready)")
     lines.append(body)
     lines.append("")
 
-    lines.append("## 8) CTA variants")
+    lines.append("## 9) CTA variants")
     if primary["key"] == "constraints_before_memory":
         lines.append("- Which matters more in your workflows right now: larger memory, or clearer operating boundaries?")
         lines.append("- What is one constraint your agents should publish but currently hide?")
@@ -309,7 +352,7 @@ def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -
         lines.append("- What loop would you automate first if continuity mattered more than speed?")
     lines.append("")
 
-    lines.append("## 9) Canonical end matter (must ship with draft)")
+    lines.append("## 10) Canonical end matter (must ship with draft)")
     lines.append("### Benchmark / synthesis variant")
     lines.append("Benchmark bundle (what we read):")
     if refs:
@@ -334,7 +377,7 @@ def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -
     lines.append("Reviewed by: <English name 1>, <English name 2>")
     lines.append("")
 
-    lines.append("## 10) Benchmark bundle candidates")
+    lines.append("## 11) Benchmark bundle candidates")
     if refs:
         for r in refs:
             lines.append(f"- {r['title']} — {r['url']}")
@@ -342,7 +385,7 @@ def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -
         lines.append("- (none fetched; add manually if needed)")
     lines.append("")
 
-    lines.append("## 11) Pre-upload checklist")
+    lines.append("## 12) Pre-upload checklist")
     lines.append("- [ ] Title locked")
     lines.append("- [ ] CTA locked")
     lines.append("- [ ] Writer / reviewers assigned")

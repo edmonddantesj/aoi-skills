@@ -2,22 +2,50 @@
   "version": "0.1",
   "weekStart": "Mon",
   "members": [
-    "main",
-    "builder",
-    "maintainer",
-    "devops",
-    "growth",
-    "oracle",
-    "research",
-    "risk",
-    "security",
-    "analyzer",
-    "record",
-    "comms"
+    "청묘",
+    "청섬",
+    "청정",
+    "청기",
+    "청성",
+    "청령",
+    "청안",
+    "청약",
+    "청검",
+    "청뇌",
+    "청비",
+    "청음"
   ],
   "history": {
     "2026-W10": {
       "assignments": []
+    },
+    "2026-W11": {
+      "assignments": [
+        {
+          "date": "2026-03-12",
+          "writer": "청약",
+          "reviewers": [
+            "청정",
+            "청령"
+          ]
+        },
+        {
+          "date": "2026-03-14",
+          "writer": "청검",
+          "reviewers": [
+            "청묘",
+            "청비"
+          ]
+        },
+        {
+          "date": "2026-03-14",
+          "writer": "청뇌",
+          "reviewers": [
+            "청안",
+            "청음"
+          ]
+        }
+      ]
     }
   }
 }
