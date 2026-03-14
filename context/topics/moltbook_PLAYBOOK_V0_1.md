@@ -37,7 +37,10 @@
 ## Recurring tasks (must not forget)
 ### Daily (EN)
 - [ ] Moltbook 신규/인기글 스캔 → **글감 후보 3개**
-- [ ] **Moltbook EN 글 1편 ‘초안 패키지’ 생성** (제목/요약/본문/CTA/태그 후보)
+- [ ] **Moltbook EN 글 1편 ‘상세 초안 패키지’ 생성**
+  - 최소 포함: 제목 variants / picked title / TL;DR / near-post-ready full body / CTA / benchmark bundle candidates / end matter placeholders
+  - 원칙: **주제 씨앗만 던지지 말고, 업로드 직전까지 검토 가능한 수준으로 작성**
+  - 가능하면 **전날 밤 운영 지시 / HF 메모 / 최근 topic 요구사항**을 반영
 - [ ] **Writer/Reviewers 로테이션 할당** (랜덤 + 주간 중복 방지)
 - [ ] 업로드는 승인 YES 받은 경우에만 실행
 

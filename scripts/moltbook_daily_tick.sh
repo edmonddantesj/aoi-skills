@@ -2,10 +2,10 @@
 set -euo pipefail
 
 # Moltbook daily loop tick:
-# 1) Run scan → generate daily draft package markdown
+# 1) Run scan → generate detailed daily draft package markdown
 # 2) Post a short note into moltbook topic(thread_id=1114)
 #
-# Posting is just a reminder + path; it does NOT publish to Moltbook.
+# Posting is only the internal report to Telegram; it does NOT publish to Moltbook.
 
 OPENCLAW_BIN="${OPENCLAW_BIN:-/opt/homebrew/bin/openclaw}"
 OPENCLAW_NODE="${OPENCLAW_NODE:-/opt/homebrew/bin/node}"
@@ -20,7 +20,7 @@ print(dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).strftime('%Y-%m-%d'))
 PY
 )"
 
-MSG=$'📝 [MOLTBOOK DAILY DRAFT] '\"$TODAY_KST\"$'\n\n초안 패키지 생성 완료.\n- 파일: '\"$OUT_PATH\"$'\n\n다음: (의장) 오늘 EN 1포스트 주제/방향 선택 → YES면 업로드 진행(L3).\n(규칙/체크리스트: context/topics/moltbook_PLAYBOOK_V0_1.md)'
+MSG=$'📝 [MOLTBOOK DAILY DRAFT] '"$TODAY_KST"$'\n\n상세 초안 패키지 생성 완료.\n- 파일: '"$OUT_PATH"$'\n\n포함 사항:\n- 최신 Moltbook 스캔 반영\n- local HF/운영 지시사항 반영\n- 제목/요약/본문/CTA까지 near-post-ready draft\n\n다음: (의장) 초안 검토 → 수정지시 or YES면 업로드 진행(L3).\n(규칙/체크리스트: context/topics/moltbook_PLAYBOOK_V0_1.md)'
 
 DRY_RUN_FLAG=""
 if [[ "${DRY_RUN:-}" == "1" ]]; then

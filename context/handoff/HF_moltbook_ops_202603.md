@@ -43,3 +43,4 @@
 - 2026-03-08: 대화 백업 기반으로 SSOT 재정리 시작. Playbook/HF 분리 + launchd 자동화 착수.
 - 2026-03-08: Attribution/Originality 규칙 추가(벤치마크 링크 묶음 + Our take + 팀 글 표기). "읽지 않은 링크/허위 집단토론" 금지.
 - 2026-03-13: 게시물 end matter 통일 규칙 고정. `Attribution line:` 같은 메타 라벨 금지, 외부 끝 표기는 영문 이름만 사용, `Written by` / `Reviewed by`로 통일.
+- 2026-03-14: Daily 09:00 draft cron should no longer emit topic-only seeds. It must generate a near-post-ready detailed draft package (title variants, picked title, TL;DR, full body, CTA, benchmark candidates) and reflect the latest prior-night instructions captured in local HF/playbook notes before reporting to topic 1114.
