@@ -30,6 +30,7 @@
 ### Automation candidates (ops)
 - Daily/3h digest류는 launchd(plist)로 고정 주기 운영, 실패 시 알림.
 - 대량 백로그 처리/triage류는 Ralph Loop로 라우팅.
+- 재시작/장애 후 복귀 시에는 death-aware recovery scan을 통해 중단된 토픽 미션 및 누락 공지를 확인.
 
 ## Where to record
 - 진행중 작업: `context/handoff/INDEX.md` + 개별 HF
@@ -40,6 +41,12 @@
 - Canonical policy source lives in `context/heukmyo-squad/playbook/` (GitHub canonical docs).
 - Workspace-local operating references for ops are:
   - `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md`
+  - `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_EXAMPLES_V0_1.md`
+- For technical/ops requests, add optional extension fields when useful:
+  - `Affected scope`
+  - `Failure mode`
+- 재시작/모델 전환/서비스 변경은 human gate로 남긴다.
+UKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md`
   - `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_EXAMPLES_V0_1.md`
 - For technical/ops requests, add optional extension fields when useful:
   - `Affected scope`
