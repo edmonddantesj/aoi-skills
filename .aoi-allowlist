@@ -9,6 +9,7 @@ scripts/
 skills/private/
 artifacts/skill_builds/
 memory/
+agents/strategist/
 _staging/backups/random/
 TOOLS.md
 MEMORY.md
