@@ -64,3 +64,6 @@ This separation prevents the editorial topic from filling with low-level operati
 - Source memory: `memory/2026-03-11.md`
 - Existing x-post playbook: `context/topics/x-post_PLAYBOOK_V0_1.md`
 - Existing HF: `context/handoff/HF_x-post.md`
+- `context/handoff/HF_xpost_ralph_transfer_20260314.md`
+- `context/research/x-post/XPOST_RALPH_TRANSFER_AUDIT_2026-03-14.md`
+- `ops/items/TASK-20260314-XPOST-RLP-01.md`

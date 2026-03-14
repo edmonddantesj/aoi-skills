@@ -22,10 +22,15 @@
 1. 현재 활성 후보와 마감일을 checkpoint에 갱신.
 2. 보류된 항목은 이유와 재개 조건을 적는다.
 3. 제출 준비 중인 건은 HF로 분리해 패키지 누락을 막는다.
+4. delegated execution track:
+   - parent: `ops/items/TASK-20260314-HACKATHONS-RLP-01.md`
+   - scout/deadline: `ops/items/TASK-20260314-HACKATHONS-RLP-02.md`
+   - benchmark/signal/synthesis: `ops/items/TASK-20260314-HACKATHONS-RLP-03.md`
 
 ## Key files
 - Playbook: `context/topics/hackathons_PLAYBOOK_V0_1.md`
-- Handoff: (없음)
+- Handoff: `context/handoff/HF_hackathons_ralph_transfer_20260314.md`
+- Audit note: `context/research/hackathons/HACKATHONS_RALPH_TRANSFER_AUDIT_2026-03-14.md`
 - Topic map: `context/telegram_topics/thread_topic_map.json`
 
 ## Restore instructions

@@ -73,3 +73,6 @@ The following work is Ralph-loop-shaped and should be operated from Topic 68:
 - Source memory: `memory/2026-03-11.md`
 - Existing playbook seed: `context/topics/hackathons_PLAYBOOK_V0_1.md`
 - Sprint backlog: `context/ralph_loop/SPRINT_LOOP_BACKLOG_V0_1.md`
+- `context/handoff/HF_hackathons_ralph_transfer_20260314.md`
+- `context/research/hackathons/HACKATHONS_RALPH_TRANSFER_AUDIT_2026-03-14.md`
+- `ops/items/TASK-20260314-HACKATHONS-RLP-01.md`

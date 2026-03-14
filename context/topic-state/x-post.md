@@ -22,10 +22,15 @@
 1. 회차별 후보3+초안1 결과 또는 실패 원인을 checkpoint에 남긴다.
 2. 룰 변경 시 playbook 즉시 갱신.
 3. 문제 생기면 launchd 로그와 artifacts를 함께 확인.
+4. delegated execution track:
+   - parent: `ops/items/TASK-20260314-XPOST-RLP-01.md`
+   - discovery/filter/extract: `ops/items/TASK-20260314-XPOST-RLP-02.md`
+   - packet/blocker/return: `ops/items/TASK-20260314-XPOST-RLP-03.md`
 
 ## Key files
 - Playbook: `context/topics/x-post_PLAYBOOK_V0_1.md`
-- Handoff: `context/handoff/HF_x-post.md`
+- Handoff: `context/handoff/HF_x-post.md`, `context/handoff/HF_xpost_ralph_transfer_20260314.md`
+- Audit note: `context/research/x-post/XPOST_RALPH_TRANSFER_AUDIT_2026-03-14.md`
 - Automation: `context/automation/launchd/com.aoineco.xpost.tick.plist`
 - Logs/Evidence: `logs/launchd/xpost_tick.log`, `artifacts/x-post/`
 
