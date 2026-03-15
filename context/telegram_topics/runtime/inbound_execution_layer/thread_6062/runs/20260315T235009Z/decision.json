@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "schema": "openclaw.telegram.inbound_execution_decision.v0_1",
+  "timestamp": 1773618609,
+  "thread_id": 6062,
+  "slug": "cat-strategic",
+  "text_norm": "그럼 원래 여기서 하던 작업 이어서 진행해줘.",
+  "mode": "single",
+  "owner": "청묘",
+  "secondary": null,
+  "reason": "execution_weighted_single_owner",
+  "confidence": 0.88,
+  "delegate": {
+    "should_delegate": true,
+    "trigger_reason": "execution_keyword",
+    "skip_reason": null
+  },
+  "context": {
+    "primary": "청묘",
+    "collaborators": [
+      "흑묘",
+      "에드몽"
+    ],
+    "reply_target_agent": null,
+    "night": false
+  },
+  "chat_id": "telegram:-1003732040608",
+  "run_key": "20260315T235009Z"
+}

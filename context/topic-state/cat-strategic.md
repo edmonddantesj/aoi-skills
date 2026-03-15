@@ -14,6 +14,9 @@
 - `repos/aoi-skills/skills/aoi-squad-orchestrator-lite` 구현 자산을 prewipe backup에서 복구했고 `npm test` 15/15 통과.
 - mock dispatch를 topic `6062`와 topic `60`에 각각 재실행해 runtime path 분리와 repeated-run artifact 누적을 확인.
 - `~/.openclaw/aoi/squad_runtime/planner-builder-reviewer/events.jsonl`에서 runId별 event trail 유지 확인.
+- 신규 프로토타입 `openclaw-telegram-topics-router/scripts/inbound_execution_layer.py` 추가.
+- inbound 메시지를 `mode/owner/secondary/reason/confidence/delegate` 형태로 판정하고 topic-local runtime artifact로 남기는 얇은 실행층 초안 작성.
+- `cat-strategic(6062)` 기준 현재 요청(`그럼 원래 여기서 하던 작업 이어서 진행해줘.`)은 `mode=single`, `owner=청묘`, `reason=execution_weighted_single_owner`로 판정됨.
 
 ## Decisions locked
 - 무태그 → 청묘/흑묘 둘 다 답변 가능.
@@ -44,8 +47,8 @@
 - topic-local orchestrator artifact를 Telegram 실사용 로그/edgecase와 어떻게 연결할지
 
 ## Next actions
-1. topic 6062 기준으로 inbound 라우팅 판단 결과(`single/dual/silent`, owner, reason)를 남기는 실행층 초안 설계.
-2. `mock_orchestrator_dispatch.py` 이후 단계에서 실제 topic-local state/event linkage를 더 촘촘히 붙이는 보강안 작성.
+1. `inbound_execution_layer.py`와 cooldown / dispatch / orchestrator run을 하나의 combined runner로 연결.
+2. router 판단 결과와 orchestrator run이 같은 `run_key`/ledger pointer를 공유하도록 artifact linkage 보강.
 3. distributed blackcat cutover 전 체크리스트를 재정렬하고 remote blocker만 별도 분리.
 
 ## Key files
