@@ -1,43 +1,15 @@
 # Ralph Loop Task Ledger
 
-Generated_at(UTC): 2026-03-12T10:31:40Z
+Generated_at(UTC): 2026-03-15T14:10:00Z
 
-## RL-20260306-029 [P0] (doing) — Phase 2 SSOT 완성본 복구 (S-DNA Protocol)
+## RL-20260306-029 [P0] (blocked) — Phase 2 SSOT 완성본 복구 (S-DNA Protocol)
 - labels: ralph-loop, ssot, recovery, opus, phase2
-- owner: 청묘
-- updated_at: 2026-03-06T12:11:24Z
-- acceptance:
-
-
-
-## RL-20260312-030 [P0] (doing) — [L2] hackathons transfer 기반 Scout/Deadline/Benchmark small-task 카드화
-- labels: ralph-loop, hackathons, transfer, scout, benchmark, decomposition
 - owner: 청정
-- updated_at: 2026-03-12T00:00:00Z
+- updated_at: 2026-03-15T14:10:00Z
 - acceptance:
-  - Scout / Deadline Sweep / Benchmark / Signal / Synthesis 태스크 형태를 SSOT에 명시
-  - 각 태스크가 proof-first 산출물 경로 또는 기록 위치를 가진다
-  - 해커톤 토픽 고유 업무와 Ralph Loop 반복운영 업무의 경계가 명확하다
 - proof:
-  - context/ralph-loop-hackathons-transfer-2026-03-11.md
-  - context/topics/hackathons_PLAYBOOK_V0_1.md
-- notes: 복구한 transfer note를 기준으로 해커톤 업무를 반복 가능한 작은 태스크로 분해. event room(hackathons)과 ops room(ralph-loop) 분리를 실운영에 반영.
-
-
-## RL-20260312-031 [P0] (doing) — [L2] x-post transfer 기반 ops decomposition: discovery/filter/extract/packet
-- labels: ralph-loop, x-post, transfer, ops, decomposition, throughput
-- owner: 청정
-- updated_at: 2026-03-12T00:00:00Z
-- acceptance:
-  - Discovery run / Anti-dup filter / Quote extraction / Draft packet / Failure logging 5개 태스크 축을 정리
-  - 자동 게시 금지, 수동 복붙 정책 유지
-  - 운영 노이즈와 편집 최종본이 topic 수준에서 분리된다
-- proof:
-  - context/ralph-loop-x-post-ops-transfer-2026-03-12.md
-  - context/topics/x-post_PLAYBOOK_V0_1.md
-  - context/handoff/HF_x-post.md
-- notes: x-post는 editorial room, Ralph Loop는 ops room으로 고정. 반복 실행 노이즈를 랄프루프로 끌어와 small-task throughput으로 재가동.
-
+  - context/opus_phases/PHASE_2_SDNA_PROTOCOL_V0_2.md (missing as of 2026-03-15)
+- notes: 실물 증빙 파일(context/opus_phases/PHASE_2_SDNA_PROTOCOL_V0_2.md) 부재. 허수 WIP 제거를 위해 blocked(missing-proof)로 전환.
 
 ## RL-20260306-010 [P0] (todo) — [OPUS4.6] Alpha Oracle V6 실행 타이밍 자동 계산 로직 SSOT+테스트 설계
 - labels: ralph-loop, inbox-dev, db-loss, fineng, alpha-oracle
@@ -49,7 +21,6 @@ Generated_at(UTC): 2026-03-12T10:31:40Z
   - 백테스트/시뮬용 테스트 케이스 최소 10개 제시
 - notes: 고정 스케줄(:50) 폐기. 수익률/리스크 최적 타이밍 계산. 입력/제약/중단조건(circuit breaker) 명세 + 테스트 가능한 형태로 SSOT화.
 
-
 ## RL-20260306-020 [P0] (todo) — [GPT-5.3 Spark] NO_STATE 결손 제거: state 스켈레톤 생성기 + idempotent sync 안정화
 - labels: ralph-loop, inbox-dev, db-loss, state, notion-sync
 - owner: 청기
@@ -60,7 +31,6 @@ Generated_at(UTC): 2026-03-12T10:31:40Z
   - 재실행 시 부작용 없는 idempotent 보장
 - notes: Notion sync digest에서 보고된 NO_STATE 결손을 자동 생성으로 해결. 증분 동기화 깨짐 방지.
 
-
 ## RL-20260306-021 [P0] (todo) — [GPT-5.3 Spark] Ralph Loop ledger를 'DB 대체'로 강화: 상태전이/중복방지/필터/검색
 - labels: ralph-loop, inbox-dev, db-loss, ledger
 - owner: 청비
@@ -70,7 +40,6 @@ Generated_at(UTC): 2026-03-12T10:31:40Z
   - 중복키 정책(id/slug) 명시 및 검증
   - 필터링/검색 CLI or jq recipe 제공
 - notes: DB 유실 대응: ledger.json을 단일 SSOT로 강화(상태전이 규칙, 중복 방지, 간편 조회).
-
 
 ## RL-20260306-026 [P0] (todo) — [GPT-5.3 Spark] 토픽/워크스트림 태스크 중복·충돌 방지 가드(ledger slug/fingerprint + locks) + topics-router 스킬 업데이트
 - labels: ralph-loop, inbox-dev, db-loss, ledger, ops, dedup, locking, telegram-topics-router
@@ -83,7 +52,6 @@ Generated_at(UTC): 2026-03-12T10:31:40Z
   - 샘플: 동일 locks를 가진 2개 태스크가 동시에 IN_PROGRESS 되지 않음을 증빙
 - notes: 토픽별 병렬 진행 중 중복 태스크/동일 파일 수정 충돌 방지. ledger v0.2에 slug/fingerprint/locks/owner rules 추가 + validator로 FAIL-CLOSED. openclaw-telegram-topics-router 스킬에도 workstream lock SSOT+audit/claim/release 스크립트 추가.
 
-
 ## RL-20260306-027 [P0] (todo) — [GPT-5.3 Spark] OpenClaw Setup Helper v0.2: 설치/업데이트 체크 + 스킬 설치 환경 구성 + 채널(텔레/디코/슬랙) 연결 가이드(질문-응답형)
 - labels: ralph-loop, inbox-dev, ops, bootstrap, onboard, windows, macos, skill
 - owner: 청기
@@ -95,7 +63,6 @@ Generated_at(UTC): 2026-03-12T10:31:40Z
   - "자동으로 진행할까?" 질문-응답 후에만 exec 실행(옵션)
   - v0.2.0 .skill 릴리즈 + 3개 OS 시나리오 테스트 로그(Windows/WSL, macOS)
 - notes: openclaw-bootstrap-helper 확장. 기본=안전모드(명령 출력). 사용자에게 자동 실행 여부 질문 후 진행. OS별(Win/mac) 설치/업데이트 명령 생성 + 필요한 툴체인(curl/unzip/python3) 준비 + 채널별 onboard 체크리스트/블로커 요약.
-
 
 ## RL-20260306-028 [P0] (todo) — [GPT-5.3 Spark] 토픽 간 태스크 핸드오프 + 우선순위 큐 + 병렬 디스패처(locks/WIP) + 자동 실행(L1/L2, L3 승인) + 토픽별 결과 리포트
 - labels: ralph-loop, inbox-dev, ops, queue, dispatcher, telegram-topics-router, dedup, locking, automation
@@ -114,14 +81,12 @@ Generated_at(UTC): 2026-03-12T10:31:40Z
 
 Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
 
-
 ## RL-20260308-BASEBATCHES-001 [P0] (todo) — [P0] Base Batches 3/9 제출 패키지 완성
 - labels: basebatches, submit, vercel, video, proof
-- owner: 청묘
+- owner: None
 - updated_at: 2026-03-07T22:39:07Z
 - acceptance:
-
-
+- notes: 
 
 ## RL-20260312-032 [P0] (todo) — [L1] Ralph Loop를 scan-centric에서 small-task throughput 모드로 재전환
 - labels: ralph-loop, ops, queue, throughput, wip, recovery
@@ -137,35 +102,6 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - context/ralph_loop/SPRINT_LOOP_BACKLOG_V0_1.md
 - notes: 현재 daily scan/drift/state-save는 살아 있으나 실행 큐 소화력이 낮다. doing/done 이벤트를 늘리기 위한 운영 규칙과 카드 흐름 재고정 작업.
 
-
-## RL-20260312-033 [P1] (doing) — [L2] longform intake triage를 Ralph Loop small-packet 루프로 전환
-- labels: ralph-loop, longform, transfer, intake, triage, decomposition
-- owner: 청정
-- updated_at: 2026-03-12T10:30:00Z
-- acceptance:
-  - longform transfer note가 존재한다
-  - longform은 content room, Ralph Loop는 intake/queue room으로 분리된다
-  - 대형 longform 입력을 small packet 단위로 처리하는 규칙이 고정된다
-- proof:
-  - context/ralph-loop-longform-transfer-2026-03-12.md
-  - context/topics/longform_PLAYBOOK_V0_1.md
-- notes: 긴 문서를 그대로 backlog에 쌓지 않고, full read / summary-first / quotes-only / defer 로 나누는 intake triage 루프를 Ralph Loop로 끌어온다.
-
-
-## RL-20260312-034 [P1] (doing) — [L2] bazaar proof-first backlog slicing을 Ralph Loop checkpoint 루프로 반영
-- labels: ralph-loop, bazaar, transfer, checkpoint, proof-first, backlog
-- owner: 청정
-- updated_at: 2026-03-12T10:31:00Z
-- acceptance:
-  - bazaar transfer note가 존재한다
-  - bazaar는 build room, Ralph Loop는 decomposition/checkpoint room으로 분리된다
-  - today / blocker / next 형태 checkpoint 규칙이 반영된다
-- proof:
-  - context/ralph-loop-bazaar-transfer-2026-03-12.md
-  - context/topics/bazaar_PLAYBOOK_V0_1.md
-- notes: Bazaar build room의 구현 백로그를 Ralph Loop에서 proof-first small task로 쪼개고 checkpoint packet으로 관리한다.
-
-
 ## RL-20260306-001 [P1] (todo) — ACP Dispatch #002 package 준비 (001 포맷 상속 + preflight 재구축)
 - labels: ralph-loop, acp, dispatch
 - owner: 청비
@@ -175,7 +111,6 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - preflight 스크립트(금칙어/파일명/내부문서 차단) 구현 및 PASS 증빙
   - onepager EN/KR + preface + 역할별 리포트 초안 생성
 - notes: Spec repo는 복구(aoineco-acp-dispatch-spec). Drafts/preflight repo는 미확인/부재 → workspace scripts로 재구축 필요.
-
 
 ## RL-20260306-011 [P1] (todo) — [OPUS4.6] Nexus Oracle Ω 베이지안 로그-오즈 합산 + veto(HOLD) 룰 재정의
 - labels: ralph-loop, inbox-dev, db-loss, fineng, oracle
@@ -187,7 +122,6 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - 출력 템플릿(결정+근거+리스크) 표준화
 - notes: 멀티 에이전트 verdict를 로그오즈로 합산. conf<0.55 HOLD 등 veto + drawdown guard 정리.
 
-
 ## RL-20260306-012 [P1] (todo) — [OPUS4.6] EV/odds 기반 운영지표(예: Limitless shadow digest) 계산/정규화 규칙 SSOT
 - labels: ralph-loop, inbox-dev, db-loss, fineng, limitless
 - owner: 청뇌
@@ -197,7 +131,6 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - 결측/이상치 처리 규칙
   - 산출물 포맷(12라인 digest) 고정
 - notes: odds/EV 산출, 결측 처리, 샘플링/주기, 모델 폴백과 리스크 한도 연결.
-
 
 ## RL-20260306-022 [P1] (todo) — [GPT-5.3 Spark] '현재를 저장(SAVE NOW)'를 런타임 트리거로 연결 (명령어→스크립트 실행)
 - labels: ralph-loop, inbox-dev, db-loss, save-now
@@ -209,7 +142,6 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - 실제 실행 1회 증빙(sha/manifest)
 - notes: scripts/save_now.sh는 존재. 사용자 문구/명령으로 자동 실행되게 라우터/워처 레이어에 연결.
 
-
 ## RL-20260306-023 [P1] (todo) — [GPT-5.3 Spark] Notion mirror 증분 업서트: last_edited 기반 변경분만 재생성
 - labels: ralph-loop, inbox-dev, db-loss, notion-mirror
 - owner: 청기
@@ -219,7 +151,6 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - 변경분만 파일 재생성
   - 커밋 노이즈 감소 확인
 - notes: scripts/notion_mirror_sync.py 현재는 최신N. 변경분만 갱신하도록 state.json 고도화.
-
 
 ## RL-20260306-024 [P1] (todo) — [GPT-5.3 Spark] aoi-notion-mirror 자동 commit/push 파이프라인 + 커밋 메시지 표준
 - labels: ralph-loop, inbox-dev, db-loss, notion-mirror, github
@@ -231,7 +162,6 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - 실패 시 알림/로그
 - notes: 미러를 private repo에 지속 반영. 배치 커밋/푸시 및 실패 알림.
 
-
 ## RL-20260306-025 [P1] (todo) — [GPT-5.3 Spark] ACP Dispatch preflight 스크립트 workspace 재구축 (금칙어/파일명/증빙 체크)
 - labels: ralph-loop, inbox-dev, db-loss, acp, dispatch, preflight
 - owner: 청기
@@ -242,6 +172,57 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - PASS/FAIL 리포트 출력 + 증빙 저장
 - notes: drafts repo 부재로 workspace에 재구축 필요. public-safe 게이트 강제.
 
+## RL-20260312-033 [P1] (todo) — [L2] longform intake triage를 Ralph Loop small-packet 루프로 전환
+- labels: ralph-loop, longform, transfer, intake, triage, decomposition
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - longform transfer note가 존재한다
+  - longform은 content room, Ralph Loop는 intake/queue room으로 분리된다
+  - 대형 longform 입력을 small packet 단위로 처리하는 규칙이 고정된다
+- proof:
+  - context/ralph-loop-longform-transfer-2026-03-12.md
+  - context/topics/longform_PLAYBOOK_V0_1.md
+- notes: 루프 설계 문서는 존재하나 반복 실행 산출물 증거가 부족해 backlog로 복귀. 실제 intake packet 카드로 분해 필요.
+
+## RL-20260312-034 [P1] (todo) — [L2] bazaar proof-first backlog slicing을 Ralph Loop checkpoint 루프로 반영
+- labels: ralph-loop, bazaar, transfer, checkpoint, proof-first, backlog
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - bazaar transfer note가 존재한다
+  - bazaar는 build room, Ralph Loop는 decomposition/checkpoint room으로 분리된다
+  - today / blocker / next 형태 checkpoint 규칙이 반영된다
+- proof:
+  - context/ralph-loop-bazaar-transfer-2026-03-12.md
+  - context/topics/bazaar_PLAYBOOK_V0_1.md
+- notes: bazaar transfer/체크포인트 규칙은 정리됐지만 실제 doing은 세부 backlog slice/checkpoint 카드가 맡아야 함. 상위는 backlog 복귀.
+
+## RL-20260315-036 [P1] (todo) — [L2] Hackathons Scout/Deadline/Benchmark 첫 실행 카드 생성
+- labels: ralph-loop, hackathons, transfer, scout, deadline, benchmark, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - Scout / Deadline Sweep / Benchmark 중 최소 3개 실행카드가 분리된다
+  - 각 카드에 proof 경로 또는 source ref가 붙는다
+  - hackathons topic과 Ralph Loop의 경계가 유지된다
+- proof:
+  - context/ralph-loop-hackathons-transfer-2026-03-11.md
+  - context/topics/hackathons_PLAYBOOK_V0_1.md
+- notes: RL-20260312-030 후속 실행 카드. Scout / Deadline Sweep / Benchmark를 첫 실행 가능한 small-task로 발행.
+
+## RL-20260315-037 [P1] (todo) — [L2] x-post discovery/filter/extract/packet 첫 실행 카드 생성
+- labels: ralph-loop, x-post, transfer, discovery, filter, extract, packet, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - discovery / anti-dup / quote extraction / draft packet 중 최소 3개 실행카드가 생긴다
+  - auto-post 금지 정책이 유지된다
+  - 각 카드에 proof ref가 존재한다
+- proof:
+  - context/ralph-loop-x-post-ops-transfer-2026-03-12.md
+  - context/topics/x-post_PLAYBOOK_V0_1.md
+- notes: RL-20260312-031 후속 실행 카드. discovery/filter/extract/packet을 실제 처리 가능한 small-task로 분리.
 
 ## RL-20260312-035 [P2] (todo) — [L1] random 혼재 이슈를 Ralph Loop triage 기준으로 분류/배출
 - labels: ralph-loop, random, triage, routing, cleanup
@@ -256,4 +237,56 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - context/topic-state/random.md
 - notes: random 전체를 먹지 않고, 반복 운영형/교차 토픽형 이슈만 Ralph Loop로 끌어와 tracked artifact로 바꾸는 규칙 정리.
 
+## RL-20260315-038 [P2] (todo) — [L1] longform intake packet 첫 배치 발행
+- labels: ralph-loop, longform, transfer, intake, packet, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - 최소 2개 이상의 longform packet 카드가 발행된다
+  - 각 카드가 intake decision(full read / summary-first / quotes-only / defer)를 가진다
+- proof:
+  - context/ralph-loop-longform-transfer-2026-03-12.md
+  - context/topics/longform_PLAYBOOK_V0_1.md
+- notes: RL-20260312-033 후속. full read / summary-first / quotes-only / defer 규칙에 따라 첫 packet 배치를 생성.
+
+## RL-20260315-039 [P2] (todo) — [L1] bazaar checkpoint/backlog-slice small-task 발행
+- labels: ralph-loop, bazaar, transfer, checkpoint, backlog-slice, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - 최소 2개 이상의 bazaar slice/checkpoint 카드가 발행된다
+  - today / blocker / next 형식 또는 proof route가 명시된다
+- proof:
+  - context/ralph-loop-bazaar-transfer-2026-03-12.md
+  - context/topics/bazaar_PLAYBOOK_V0_1.md
+- notes: RL-20260312-034 후속. Bazaar build room의 상위 진행을 today / blocker / next와 backlog slice 단위로 분리.
+
+## RL-20260312-030 [P0] (done) — [L2] hackathons transfer 기반 Scout/Deadline/Benchmark small-task 카드화
+- labels: ralph-loop, hackathons, transfer, scout, benchmark, decomposition
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - Scout / Deadline Sweep / Benchmark / Signal / Synthesis 태스크 형태를 SSOT에 명시
+  - 각 태스크가 proof-first 산출물 경로 또는 기록 위치를 가진다
+  - 해커톤 토픽 고유 업무와 Ralph Loop 반복운영 업무의 경계가 명확하다
+- proof:
+  - context/topics/hackathons_PLAYBOOK_V0_1.md
+  - context/ralph-loop-hackathons-transfer-2026-03-11.md
+  - context/handoff/HF_hackathons_ralph_transfer_20260314.md
+- notes: transfer note/playbook 기반 상위 구조 정리는 완료로 간주. 실제 반복 실행은 하위 small-task 카드로 분리.
+
+## RL-20260312-031 [P0] (done) — [L2] x-post transfer 기반 ops decomposition: discovery/filter/extract/packet
+- labels: ralph-loop, x-post, transfer, ops, decomposition, throughput
+- owner: 청정
+- updated_at: 2026-03-15T14:10:00Z
+- acceptance:
+  - Discovery run / Anti-dup filter / Quote extraction / Draft packet / Failure logging 5개 태스크 축을 정리
+  - 자동 게시 금지, 수동 복붙 정책 유지
+  - 운영 노이즈와 편집 최종본이 topic 수준에서 분리된다
+- proof:
+  - context/topics/x-post_PLAYBOOK_V0_1.md
+  - context/ralph-loop-x-post-ops-transfer-2026-03-12.md
+  - context/handoff/HF_xpost_ralph_transfer_20260314.md
+  - context/handoff/HF_x-post.md
+- notes: x-post 운영 구조 정의는 완료. 이후 반복 실행은 discovery/filter/extract/packet 하위 카드로 소화.
 

@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-03-12T10:32:00Z",
+  "generated_at": "2026-03-15T14:10:00Z",
   "items": [
     {
       "id": "RL-20260306-001",
@@ -363,7 +363,7 @@
     {
       "id": "RL-20260306-029",
       "title": "Phase 2 SSOT 완성본 복구 (S-DNA Protocol)",
-      "status": "doing",
+      "status": "blocked",
       "priority": "P0",
       "labels": [
         "ralph-loop",
@@ -372,15 +372,17 @@
         "opus",
         "phase2"
       ],
-      "owner": null,
-      "notes": "",
+      "owner": "청정",
+      "notes": "실물 증빙 파일(context/opus_phases/PHASE_2_SDNA_PROTOCOL_V0_2.md) 부재. 허수 WIP 제거를 위해 blocked(missing-proof)로 전환.",
       "acceptance": {
         "criteria": [],
-        "proof": []
+        "proof": [
+          "context/opus_phases/PHASE_2_SDNA_PROTOCOL_V0_2.md (missing as of 2026-03-15)"
+        ]
       },
       "links": {},
       "created_at": "2026-03-06T12:11:24Z",
-      "updated_at": "2026-03-06T12:11:24Z"
+      "updated_at": "2026-03-15T14:10:00Z"
     },
     {
       "id": "RL-20260308-BASEBATCHES-001",
@@ -407,7 +409,7 @@
     {
       "id": "RL-20260312-030",
       "title": "[L2] hackathons transfer 기반 Scout/Deadline/Benchmark small-task 카드화",
-      "status": "doing",
+      "status": "done",
       "priority": "P0",
       "labels": [
         "ralph-loop",
@@ -418,7 +420,7 @@
         "decomposition"
       ],
       "owner": "청정",
-      "notes": "복구한 transfer note를 기준으로 해커톤 업무를 반복 가능한 작은 태스크로 분해. event room(hackathons)과 ops room(ralph-loop) 분리를 실운영에 반영.",
+      "notes": "transfer note/playbook 기반 상위 구조 정리는 완료로 간주. 실제 반복 실행은 하위 small-task 카드로 분리.",
       "acceptance": {
         "criteria": [
           "Scout / Deadline Sweep / Benchmark / Signal / Synthesis 태스크 형태를 SSOT에 명시",
@@ -426,18 +428,19 @@
           "해커톤 토픽 고유 업무와 Ralph Loop 반복운영 업무의 경계가 명확하다"
         ],
         "proof": [
+          "context/topics/hackathons_PLAYBOOK_V0_1.md",
           "context/ralph-loop-hackathons-transfer-2026-03-11.md",
-          "context/topics/hackathons_PLAYBOOK_V0_1.md"
+          "context/handoff/HF_hackathons_ralph_transfer_20260314.md"
         ]
       },
       "links": {},
       "created_at": "2026-03-12T00:00:00Z",
-      "updated_at": "2026-03-12T00:00:00Z"
+      "updated_at": "2026-03-15T14:10:00Z"
     },
     {
       "id": "RL-20260312-031",
       "title": "[L2] x-post transfer 기반 ops decomposition: discovery/filter/extract/packet",
-      "status": "doing",
+      "status": "done",
       "priority": "P0",
       "labels": [
         "ralph-loop",
@@ -448,7 +451,7 @@
         "throughput"
       ],
       "owner": "청정",
-      "notes": "x-post는 editorial room, Ralph Loop는 ops room으로 고정. 반복 실행 노이즈를 랄프루프로 끌어와 small-task throughput으로 재가동.",
+      "notes": "x-post 운영 구조 정의는 완료. 이후 반복 실행은 discovery/filter/extract/packet 하위 카드로 소화.",
       "acceptance": {
         "criteria": [
           "Discovery run / Anti-dup filter / Quote extraction / Draft packet / Failure logging 5개 태스크 축을 정리",
@@ -456,14 +459,15 @@
           "운영 노이즈와 편집 최종본이 topic 수준에서 분리된다"
         ],
         "proof": [
-          "context/ralph-loop-x-post-ops-transfer-2026-03-12.md",
           "context/topics/x-post_PLAYBOOK_V0_1.md",
+          "context/ralph-loop-x-post-ops-transfer-2026-03-12.md",
+          "context/handoff/HF_xpost_ralph_transfer_20260314.md",
           "context/handoff/HF_x-post.md"
         ]
       },
       "links": {},
       "created_at": "2026-03-12T00:00:00Z",
-      "updated_at": "2026-03-12T00:00:00Z"
+      "updated_at": "2026-03-15T14:10:00Z"
     },
     {
       "id": "RL-20260312-032",
@@ -499,7 +503,7 @@
     {
       "id": "RL-20260312-033",
       "title": "[L2] longform intake triage를 Ralph Loop small-packet 루프로 전환",
-      "status": "doing",
+      "status": "todo",
       "priority": "P1",
       "labels": [
         "ralph-loop",
@@ -510,7 +514,7 @@
         "decomposition"
       ],
       "owner": "청정",
-      "notes": "긴 문서를 그대로 backlog에 쌓지 않고, full read / summary-first / quotes-only / defer 로 나누는 intake triage 루프를 Ralph Loop로 끌어온다.",
+      "notes": "루프 설계 문서는 존재하나 반복 실행 산출물 증거가 부족해 backlog로 복귀. 실제 intake packet 카드로 분해 필요.",
       "acceptance": {
         "criteria": [
           "longform transfer note가 존재한다",
@@ -524,12 +528,12 @@
       },
       "links": {},
       "created_at": "2026-03-12T10:30:00Z",
-      "updated_at": "2026-03-12T10:30:00Z"
+      "updated_at": "2026-03-15T14:10:00Z"
     },
     {
       "id": "RL-20260312-034",
       "title": "[L2] bazaar proof-first backlog slicing을 Ralph Loop checkpoint 루프로 반영",
-      "status": "doing",
+      "status": "todo",
       "priority": "P1",
       "labels": [
         "ralph-loop",
@@ -540,7 +544,7 @@
         "backlog"
       ],
       "owner": "청정",
-      "notes": "Bazaar build room의 구현 백로그를 Ralph Loop에서 proof-first small task로 쪼개고 checkpoint packet으로 관리한다.",
+      "notes": "bazaar transfer/체크포인트 규칙은 정리됐지만 실제 doing은 세부 backlog slice/checkpoint 카드가 맡아야 함. 상위는 backlog 복귀.",
       "acceptance": {
         "criteria": [
           "bazaar transfer note가 존재한다",
@@ -554,7 +558,7 @@
       },
       "links": {},
       "created_at": "2026-03-12T10:31:00Z",
-      "updated_at": "2026-03-12T10:31:00Z"
+      "updated_at": "2026-03-15T14:10:00Z"
     },
     {
       "id": "RL-20260312-035",
@@ -584,6 +588,127 @@
       "links": {},
       "created_at": "2026-03-12T10:32:00Z",
       "updated_at": "2026-03-12T10:32:00Z"
+    },
+    {
+      "id": "RL-20260315-036",
+      "title": "[L2] Hackathons Scout/Deadline/Benchmark 첫 실행 카드 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "hackathons",
+        "transfer",
+        "scout",
+        "deadline",
+        "benchmark",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "RL-20260312-030 후속 실행 카드. Scout / Deadline Sweep / Benchmark를 첫 실행 가능한 small-task로 발행.",
+      "acceptance": {
+        "criteria": [
+          "Scout / Deadline Sweep / Benchmark 중 최소 3개 실행카드가 분리된다",
+          "각 카드에 proof 경로 또는 source ref가 붙는다",
+          "hackathons topic과 Ralph Loop의 경계가 유지된다"
+        ],
+        "proof": [
+          "context/ralph-loop-hackathons-transfer-2026-03-11.md",
+          "context/topics/hackathons_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:10:00Z",
+      "updated_at": "2026-03-15T14:10:00Z"
+    },
+    {
+      "id": "RL-20260315-037",
+      "title": "[L2] x-post discovery/filter/extract/packet 첫 실행 카드 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "x-post",
+        "transfer",
+        "discovery",
+        "filter",
+        "extract",
+        "packet",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "RL-20260312-031 후속 실행 카드. discovery/filter/extract/packet을 실제 처리 가능한 small-task로 분리.",
+      "acceptance": {
+        "criteria": [
+          "discovery / anti-dup / quote extraction / draft packet 중 최소 3개 실행카드가 생긴다",
+          "auto-post 금지 정책이 유지된다",
+          "각 카드에 proof ref가 존재한다"
+        ],
+        "proof": [
+          "context/ralph-loop-x-post-ops-transfer-2026-03-12.md",
+          "context/topics/x-post_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:10:00Z",
+      "updated_at": "2026-03-15T14:10:00Z"
+    },
+    {
+      "id": "RL-20260315-038",
+      "title": "[L1] longform intake packet 첫 배치 발행",
+      "status": "todo",
+      "priority": "P2",
+      "labels": [
+        "ralph-loop",
+        "longform",
+        "transfer",
+        "intake",
+        "packet",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "RL-20260312-033 후속. full read / summary-first / quotes-only / defer 규칙에 따라 첫 packet 배치를 생성.",
+      "acceptance": {
+        "criteria": [
+          "최소 2개 이상의 longform packet 카드가 발행된다",
+          "각 카드가 intake decision(full read / summary-first / quotes-only / defer)를 가진다"
+        ],
+        "proof": [
+          "context/ralph-loop-longform-transfer-2026-03-12.md",
+          "context/topics/longform_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:10:00Z",
+      "updated_at": "2026-03-15T14:10:00Z"
+    },
+    {
+      "id": "RL-20260315-039",
+      "title": "[L1] bazaar checkpoint/backlog-slice small-task 발행",
+      "status": "todo",
+      "priority": "P2",
+      "labels": [
+        "ralph-loop",
+        "bazaar",
+        "transfer",
+        "checkpoint",
+        "backlog-slice",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "RL-20260312-034 후속. Bazaar build room의 상위 진행을 today / blocker / next와 backlog slice 단위로 분리.",
+      "acceptance": {
+        "criteria": [
+          "최소 2개 이상의 bazaar slice/checkpoint 카드가 발행된다",
+          "today / blocker / next 형식 또는 proof route가 명시된다"
+        ],
+        "proof": [
+          "context/ralph-loop-bazaar-transfer-2026-03-12.md",
+          "context/topics/bazaar_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:10:00Z",
+      "updated_at": "2026-03-15T14:10:00Z"
     }
   ]
 }
