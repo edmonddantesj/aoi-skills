@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-03-15T14:10:00Z",
+  "generated_at": "2026-03-15T14:20:00Z",
   "items": [
     {
       "id": "RL-20260306-001",
@@ -592,7 +592,7 @@
     {
       "id": "RL-20260315-036",
       "title": "[L2] Hackathons Scout/Deadline/Benchmark 첫 실행 카드 생성",
-      "status": "todo",
+      "status": "doing",
       "priority": "P1",
       "labels": [
         "ralph-loop",
@@ -604,7 +604,7 @@
         "small-task"
       ],
       "owner": "청정",
-      "notes": "RL-20260312-030 후속 실행 카드. Scout / Deadline Sweep / Benchmark를 첫 실행 가능한 small-task로 발행.",
+      "notes": "하위 실행 카드 3종(Scout / Deadline Sweep / Benchmark) 생성으로 전환 시작.",
       "acceptance": {
         "criteria": [
           "Scout / Deadline Sweep / Benchmark 중 최소 3개 실행카드가 분리된다",
@@ -618,12 +618,12 @@
       },
       "links": {},
       "created_at": "2026-03-15T14:10:00Z",
-      "updated_at": "2026-03-15T14:10:00Z"
+      "updated_at": "2026-03-15T14:20:00Z"
     },
     {
       "id": "RL-20260315-037",
       "title": "[L2] x-post discovery/filter/extract/packet 첫 실행 카드 생성",
-      "status": "todo",
+      "status": "doing",
       "priority": "P1",
       "labels": [
         "ralph-loop",
@@ -636,7 +636,7 @@
         "small-task"
       ],
       "owner": "청정",
-      "notes": "RL-20260312-031 후속 실행 카드. discovery/filter/extract/packet을 실제 처리 가능한 small-task로 분리.",
+      "notes": "하위 실행 카드 4종(discovery / anti-dup / quote extraction / draft packet) 생성으로 전환 시작.",
       "acceptance": {
         "criteria": [
           "discovery / anti-dup / quote extraction / draft packet 중 최소 3개 실행카드가 생긴다",
@@ -650,7 +650,7 @@
       },
       "links": {},
       "created_at": "2026-03-15T14:10:00Z",
-      "updated_at": "2026-03-15T14:10:00Z"
+      "updated_at": "2026-03-15T14:20:00Z"
     },
     {
       "id": "RL-20260315-038",
@@ -709,6 +709,192 @@
       "links": {},
       "created_at": "2026-03-15T14:10:00Z",
       "updated_at": "2026-03-15T14:10:00Z"
+    },
+    {
+      "id": "RL-20260315-040",
+      "title": "[L2] Hackathons Scout card v1 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "hackathons",
+        "scout",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "새/관련 해커톤 후보를 스캔하고 deadline/theme/eligibility/prize/infra-fit을 기록하는 반복 카드.",
+      "acceptance": {
+        "criteria": [
+          "후보 3개 이상을 동일 포맷으로 기록할 수 있는 카드 구조가 존재한다",
+          "proof link / source ref 필드가 포함된다"
+        ],
+        "proof": [
+          "context/ralph-loop-hackathons-transfer-2026-03-11.md",
+          "context/topics/hackathons_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:20:00Z",
+      "updated_at": "2026-03-15T14:20:00Z"
+    },
+    {
+      "id": "RL-20260315-041",
+      "title": "[L2] Hackathons Deadline Sweep card v1 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "hackathons",
+        "deadline",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "가까운 마감 기회를 urgency/fit 기준으로 정렬하고 blocker를 표시하는 반복 카드.",
+      "acceptance": {
+        "criteria": [
+          "urgency / fit / blocker 필드가 존재한다",
+          "제출 room과 ops room 경계가 유지된다"
+        ],
+        "proof": [
+          "context/ralph-loop-hackathons-transfer-2026-03-11.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:20:00Z",
+      "updated_at": "2026-03-15T14:20:00Z"
+    },
+    {
+      "id": "RL-20260315-042",
+      "title": "[L2] Hackathons Benchmark card v1 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "hackathons",
+        "benchmark",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "강한 수상작/레포에서 judging hook, demo shape, proof style을 뽑아 재사용 포인트로 남기는 카드.",
+      "acceptance": {
+        "criteria": [
+          "demo shape / judging hook / stack / proof style 필드가 존재한다",
+          "source repo 또는 proof ref가 필수다"
+        ],
+        "proof": [
+          "context/ralph-loop-hackathons-transfer-2026-03-11.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:20:00Z",
+      "updated_at": "2026-03-15T14:20:00Z"
+    },
+    {
+      "id": "RL-20260315-043",
+      "title": "[L2] x-post Discovery run card v1 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "x-post",
+        "discovery",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "후보 소스를 읽기 전용으로 훑고 candidate proof를 남기는 반복 카드.",
+      "acceptance": {
+        "criteria": [
+          "candidate source / reason / proof 필드가 존재한다",
+          "읽기 전용/수동 게시 정책이 유지된다"
+        ],
+        "proof": [
+          "context/ralph-loop-x-post-ops-transfer-2026-03-12.md",
+          "context/topics/x-post_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:20:00Z",
+      "updated_at": "2026-03-15T14:20:00Z"
+    },
+    {
+      "id": "RL-20260315-044",
+      "title": "[L2] x-post Anti-dup filter card v1 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "x-post",
+        "anti-dup",
+        "filter",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "KR 재유통/중복 케이스를 걸러내고 rejection reason을 남기는 반복 카드.",
+      "acceptance": {
+        "criteria": [
+          "rejection reason 필드가 존재한다",
+          "중복 제거 근거가 남는다"
+        ],
+        "proof": [
+          "context/topics/x-post_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:20:00Z",
+      "updated_at": "2026-03-15T14:20:00Z"
+    },
+    {
+      "id": "RL-20260315-045",
+      "title": "[L2] x-post Quote extraction card v1 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "x-post",
+        "quote",
+        "extract",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "원문 인용 1~3줄과 링크/컨텍스트를 안정적으로 뽑는 반복 카드.",
+      "acceptance": {
+        "criteria": [
+          "quote text / source url / fallback extraction ref가 존재한다"
+        ],
+        "proof": [
+          "context/topics/x-post_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:20:00Z",
+      "updated_at": "2026-03-15T14:20:00Z"
+    },
+    {
+      "id": "RL-20260315-046",
+      "title": "[L2] x-post Draft packet assembly card v1 생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "x-post",
+        "draft-packet",
+        "small-task"
+      ],
+      "owner": "청정",
+      "notes": "후보3 + 선정1 + 인용박스를 editorial room으로 넘기기 위한 반복 packet 카드.",
+      "acceptance": {
+        "criteria": [
+          "후보3 + 선정1 + 인용박스 구조가 고정된다",
+          "auto-post 금지 문구가 유지된다"
+        ],
+        "proof": [
+          "context/topics/x-post_PLAYBOOK_V0_1.md",
+          "context/ralph-loop-x-post-ops-transfer-2026-03-12.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-15T14:20:00Z",
+      "updated_at": "2026-03-15T14:20:00Z"
     }
   ]
 }

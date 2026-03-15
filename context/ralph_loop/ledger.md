@@ -1,6 +1,6 @@
 # Ralph Loop Task Ledger
 
-Generated_at(UTC): 2026-03-15T14:10:00Z
+Generated_at(UTC): 2026-03-15T14:20:00Z
 
 ## RL-20260306-029 [P0] (blocked) — Phase 2 SSOT 완성본 복구 (S-DNA Protocol)
 - labels: ralph-loop, ssot, recovery, opus, phase2
@@ -10,6 +10,32 @@ Generated_at(UTC): 2026-03-15T14:10:00Z
 - proof:
   - context/opus_phases/PHASE_2_SDNA_PROTOCOL_V0_2.md (missing as of 2026-03-15)
 - notes: 실물 증빙 파일(context/opus_phases/PHASE_2_SDNA_PROTOCOL_V0_2.md) 부재. 허수 WIP 제거를 위해 blocked(missing-proof)로 전환.
+
+## RL-20260315-036 [P1] (doing) — [L2] Hackathons Scout/Deadline/Benchmark 첫 실행 카드 생성
+- labels: ralph-loop, hackathons, transfer, scout, deadline, benchmark, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:20:00Z
+- acceptance:
+  - Scout / Deadline Sweep / Benchmark 중 최소 3개 실행카드가 분리된다
+  - 각 카드에 proof 경로 또는 source ref가 붙는다
+  - hackathons topic과 Ralph Loop의 경계가 유지된다
+- proof:
+  - context/ralph-loop-hackathons-transfer-2026-03-11.md
+  - context/topics/hackathons_PLAYBOOK_V0_1.md
+- notes: 하위 실행 카드 3종(Scout / Deadline Sweep / Benchmark) 생성으로 전환 시작.
+
+## RL-20260315-037 [P1] (doing) — [L2] x-post discovery/filter/extract/packet 첫 실행 카드 생성
+- labels: ralph-loop, x-post, transfer, discovery, filter, extract, packet, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:20:00Z
+- acceptance:
+  - discovery / anti-dup / quote extraction / draft packet 중 최소 3개 실행카드가 생긴다
+  - auto-post 금지 정책이 유지된다
+  - 각 카드에 proof ref가 존재한다
+- proof:
+  - context/ralph-loop-x-post-ops-transfer-2026-03-12.md
+  - context/topics/x-post_PLAYBOOK_V0_1.md
+- notes: 하위 실행 카드 4종(discovery / anti-dup / quote extraction / draft packet) 생성으로 전환 시작.
 
 ## RL-20260306-010 [P0] (todo) — [OPUS4.6] Alpha Oracle V6 실행 타이밍 자동 계산 로직 SSOT+테스트 설계
 - labels: ralph-loop, inbox-dev, db-loss, fineng, alpha-oracle
@@ -198,31 +224,84 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - context/topics/bazaar_PLAYBOOK_V0_1.md
 - notes: bazaar transfer/체크포인트 규칙은 정리됐지만 실제 doing은 세부 backlog slice/checkpoint 카드가 맡아야 함. 상위는 backlog 복귀.
 
-## RL-20260315-036 [P1] (todo) — [L2] Hackathons Scout/Deadline/Benchmark 첫 실행 카드 생성
-- labels: ralph-loop, hackathons, transfer, scout, deadline, benchmark, small-task
+## RL-20260315-040 [P1] (todo) — [L2] Hackathons Scout card v1 생성
+- labels: ralph-loop, hackathons, scout, small-task
 - owner: 청정
-- updated_at: 2026-03-15T14:10:00Z
+- updated_at: 2026-03-15T14:20:00Z
 - acceptance:
-  - Scout / Deadline Sweep / Benchmark 중 최소 3개 실행카드가 분리된다
-  - 각 카드에 proof 경로 또는 source ref가 붙는다
-  - hackathons topic과 Ralph Loop의 경계가 유지된다
+  - 후보 3개 이상을 동일 포맷으로 기록할 수 있는 카드 구조가 존재한다
+  - proof link / source ref 필드가 포함된다
 - proof:
   - context/ralph-loop-hackathons-transfer-2026-03-11.md
   - context/topics/hackathons_PLAYBOOK_V0_1.md
-- notes: RL-20260312-030 후속 실행 카드. Scout / Deadline Sweep / Benchmark를 첫 실행 가능한 small-task로 발행.
+- notes: 새/관련 해커톤 후보를 스캔하고 deadline/theme/eligibility/prize/infra-fit을 기록하는 반복 카드.
 
-## RL-20260315-037 [P1] (todo) — [L2] x-post discovery/filter/extract/packet 첫 실행 카드 생성
-- labels: ralph-loop, x-post, transfer, discovery, filter, extract, packet, small-task
+## RL-20260315-041 [P1] (todo) — [L2] Hackathons Deadline Sweep card v1 생성
+- labels: ralph-loop, hackathons, deadline, small-task
 - owner: 청정
-- updated_at: 2026-03-15T14:10:00Z
+- updated_at: 2026-03-15T14:20:00Z
 - acceptance:
-  - discovery / anti-dup / quote extraction / draft packet 중 최소 3개 실행카드가 생긴다
-  - auto-post 금지 정책이 유지된다
-  - 각 카드에 proof ref가 존재한다
+  - urgency / fit / blocker 필드가 존재한다
+  - 제출 room과 ops room 경계가 유지된다
+- proof:
+  - context/ralph-loop-hackathons-transfer-2026-03-11.md
+- notes: 가까운 마감 기회를 urgency/fit 기준으로 정렬하고 blocker를 표시하는 반복 카드.
+
+## RL-20260315-042 [P1] (todo) — [L2] Hackathons Benchmark card v1 생성
+- labels: ralph-loop, hackathons, benchmark, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:20:00Z
+- acceptance:
+  - demo shape / judging hook / stack / proof style 필드가 존재한다
+  - source repo 또는 proof ref가 필수다
+- proof:
+  - context/ralph-loop-hackathons-transfer-2026-03-11.md
+- notes: 강한 수상작/레포에서 judging hook, demo shape, proof style을 뽑아 재사용 포인트로 남기는 카드.
+
+## RL-20260315-043 [P1] (todo) — [L2] x-post Discovery run card v1 생성
+- labels: ralph-loop, x-post, discovery, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:20:00Z
+- acceptance:
+  - candidate source / reason / proof 필드가 존재한다
+  - 읽기 전용/수동 게시 정책이 유지된다
 - proof:
   - context/ralph-loop-x-post-ops-transfer-2026-03-12.md
   - context/topics/x-post_PLAYBOOK_V0_1.md
-- notes: RL-20260312-031 후속 실행 카드. discovery/filter/extract/packet을 실제 처리 가능한 small-task로 분리.
+- notes: 후보 소스를 읽기 전용으로 훑고 candidate proof를 남기는 반복 카드.
+
+## RL-20260315-044 [P1] (todo) — [L2] x-post Anti-dup filter card v1 생성
+- labels: ralph-loop, x-post, anti-dup, filter, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:20:00Z
+- acceptance:
+  - rejection reason 필드가 존재한다
+  - 중복 제거 근거가 남는다
+- proof:
+  - context/topics/x-post_PLAYBOOK_V0_1.md
+- notes: KR 재유통/중복 케이스를 걸러내고 rejection reason을 남기는 반복 카드.
+
+## RL-20260315-045 [P1] (todo) — [L2] x-post Quote extraction card v1 생성
+- labels: ralph-loop, x-post, quote, extract, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:20:00Z
+- acceptance:
+  - quote text / source url / fallback extraction ref가 존재한다
+- proof:
+  - context/topics/x-post_PLAYBOOK_V0_1.md
+- notes: 원문 인용 1~3줄과 링크/컨텍스트를 안정적으로 뽑는 반복 카드.
+
+## RL-20260315-046 [P1] (todo) — [L2] x-post Draft packet assembly card v1 생성
+- labels: ralph-loop, x-post, draft-packet, small-task
+- owner: 청정
+- updated_at: 2026-03-15T14:20:00Z
+- acceptance:
+  - 후보3 + 선정1 + 인용박스 구조가 고정된다
+  - auto-post 금지 문구가 유지된다
+- proof:
+  - context/topics/x-post_PLAYBOOK_V0_1.md
+  - context/ralph-loop-x-post-ops-transfer-2026-03-12.md
+- notes: 후보3 + 선정1 + 인용박스를 editorial room으로 넘기기 위한 반복 packet 카드.
 
 ## RL-20260312-035 [P2] (todo) — [L1] random 혼재 이슈를 Ralph Loop triage 기준으로 분류/배출
 - labels: ralph-loop, random, triage, routing, cleanup
