@@ -35,15 +35,15 @@ Verify that this topic can act as a realistic internal proving ground for:
 - [x] final state closes cleanly (`mode=idle`, `currentTurn=null`)
 
 ## Phase C — Isolation / repeated use
-- [ ] same topic repeated runs do not corrupt state
-- [ ] different topics can be isolated by runtime path
-- [ ] repeated run preserves auditability via runId/event trail
+- [x] same topic repeated runs do not corrupt state
+- [x] different topics can be isolated by runtime path
+- [x] repeated run preserves auditability via runId/event trail
 
 ## Phase D — Failure injection
-- [ ] stale lock recovery observed
-- [ ] broken `state.json` fallback observed
-- [ ] malformed last event line tolerated
-- [ ] watchdog timeout preemption observed
+- [x] stale lock recovery observed
+- [x] broken `state.json` fallback observed
+- [x] malformed last event line tolerated
+- [x] watchdog timeout preemption observed
 
 ## Go / No-Go
 ### GO minimum
@@ -60,4 +60,6 @@ Verify that this topic can act as a realistic internal proving ground for:
 
 ## Notes
 - This checklist is for internal alpha only.
+- 2026-03-16 KST revalidation completed after prewipe restore check.
+- Revalidated with: `npm test` in `repos/aoi-skills/skills/aoi-squad-orchestrator-lite`, live `mock_orchestrator_dispatch.py` runs for topic `6062` and topic `60`, and existing runtime proof under `~/.openclaw/aoi/squad_runtime/planner-builder-reviewer/`.
 - Do not package for beta until GO minimum is satisfied.

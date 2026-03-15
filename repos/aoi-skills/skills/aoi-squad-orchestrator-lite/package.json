@@ -1,0 +1,22 @@
+{
+  "name": "aoi-squad-orchestrator-lite",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "aoi-squad": "./skill.js"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:commands": "vitest run tests/orchestrator/commands",
+    "test:integration": "vitest run tests/orchestrator/integration",
+    "test:repository": "vitest run tests/orchestrator/repository",
+    "test:unit": "vitest run tests/orchestrator/unit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

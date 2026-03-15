@@ -1,0 +1,9 @@
+{
+  "name": "aoi-squad-orchestrator-lite",
+  "version": "0.1.1",
+  "description": "AOI Squad Orchestrator (Lite): preset-based multi-role orchestration with stable pseudonym team names (public-safe MVP).",
+  "author": "Aoineco & Co.",
+  "license": "MIT",
+  "tags": ["orchestration", "product", "team", "workflow"],
+  "sdna": "AOI-2026-0215-SDNA-SQUAD01"
+}
