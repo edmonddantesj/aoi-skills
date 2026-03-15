@@ -31,6 +31,9 @@ This is a lightweight index of canonical SSOT docs in `context/`.
 ## Ops / Community
 - Community Activity Log — Live-Sync (auto-archive) protocol: `context/ops/COMMUNITY_ACTIVITY_LOG_LIVE_SYNC_PROTOCOL_V0_1.md`
 - Ralph Loop — business-wide application policy (execution mode): `context/ops/RALPH_LOOP_BUSINESS_WIDE_APPLICATION_POLICY_V0_1.md`
+- Execution continuity / no-responsibility-bounce policy: `context/ops/EXECUTION_CONTINUITY_AND_NO_RESPONSIBILITY_BOUNCE_POLICY_V0_1.md`
+- Escalation intake protocol: `context/ops/ESCALATION_INTAKE_PROTOCOL_V0_1.md`
+- Escalation index: `context/escalations/INDEX.md`
 - Antigravity — Ralph Loop adoption notes (Context reset / .agent/ / Proof-first): `context/ops/ANTIGRAVITY_RALPH_LOOP_ADOPTION_NOTES_V0_1.md`
 - V6/Limitless Ops Spec: `context/limitless/LIMITLESS_V6_OPS_SPEC_V0_1.md`
 
