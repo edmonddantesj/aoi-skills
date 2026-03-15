@@ -1,13 +1,17 @@
 # Seoul Childcare / Kids Activity DB Progress — 2026-03-15
 
 ## 이번 턴에서 한 일
-- 워크스페이스 내 기존 `seoul_kidscafe_list.csv`, `seoul_kidscafe_priority.json` 원본을 탐색했지만 현재 경로에서는 찾지 못함.
-- 그래서 우선 **PDF 후보군으로 언급된 시설 중 공식 사이트에서 예약/신청 흐름이 보이는 곳**을 대상으로 1차 라벨링 초안을 생성함.
-- 결과 CSV 생성: `artifacts/seoul_childcare/seoul_childcare_integrated_candidates_draft_2026-03-15.csv`
+- 초기에는 워크스페이스 내 기존 `seoul_kidscafe_list.csv`, `seoul_kidscafe_priority.json` 원본을 찾지 못해, 우선 **PDF 후보군으로 언급된 시설 중 공식 사이트에서 예약/신청 흐름이 보이는 곳**을 대상으로 1차 라벨링 초안을 생성함.
+- 이후 prewipe 백업(`/Volumes/Aoineco/macmini-prewipe-backup-2026-03-15-094159`)에서 원본을 찾아 복구함.
+- 결과 파일 생성:
+  - `artifacts/seoul_childcare/seoul_childcare_integrated_candidates_draft_2026-03-15.csv`
+  - `artifacts/seoul_childcare/childplay_integrated_db_draft_2026-03-15.csv`
+  - `artifacts/seoul_childcare/childplay_integrated_db_draft_2026-03-15.json`
 
 ## 현재 상태
-- 서울형 키즈카페 116개 원본: **미복구**
+- 서울형 키즈카페 원본: **복구 완료**
 - PDF 후보군 기반 통합 초안: **생성 완료**
+- childplay용 통합 DB 초안: **생성 완료**
 - 라벨링 기준
   - `예약가능`: 공식 사이트에서 관람/입장/체험 예약 페이지 확인
   - `신청가능`: 교육/프로그램/행사 단위 신청 페이지 중심
@@ -32,3 +36,12 @@
 
 ## 비고
 - 이번 초안은 **운영/제품 설계용 가설 DB**에 가깝고, 실제 공개 전에는 링크 유효성/휴관/대상연령을 재검증해야 함.
+
+
+## 업데이트 — 원본 복구 후 통합 DB 생성
+- `seoul_kidscafe_list.csv` 복구본과 PDF 후보군 초안을 병합해 `childplay_integrated_db_draft_2026-03-15.csv/json` 생성
+- 현재 총 항목 수: 129
+- 그룹별
+  - 서울형키즈카페: 121
+  - 서울 어린이 체험시설: 8
+- 라벨별: {'예약가능': 124, '단순안내': 5}
