@@ -14,8 +14,18 @@ set -euo pipefail
 #   SNAP=state_snapshot__20260306_160843 ./scripts/state_snapshot_upload_github.sh
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-STATE_DIR="$ROOT_DIR/artifacts/state_saves"
+WS_DIR="${AOI_WORKSPACE_ROOT:-$HOME/.openclaw/workspace}"
+if [[ -d "$WS_DIR/artifacts/state_saves" ]]; then
+  STATE_DIR="$WS_DIR/artifacts/state_saves"
+else
+  STATE_DIR="$ROOT_DIR/artifacts/state_saves"
+fi
 REPO="edmonddantesj/aoi-state-saves"
+
+if ! command -v gh >/dev/null 2>&1; then
+  echo "WARN: gh CLI not found; local snapshot exists but GitHub upload skipped" >&2
+  exit 3
+fi
 
 SNAP_BASENAME="${SNAP:-}"
 
