@@ -1,0 +1,17 @@
+{
+  "name": "ACP Dispatch Issue 002",
+  "series": "ACP Dispatch",
+  "issue": "002",
+  "date": "2026-03-07",
+  "author": "Aoineco",
+  "language": ["en", "ko"],
+  "topics": ["acp", "agent-commerce", "bought-and-analyzed", "proof-first"],
+  "entrypoints": {
+    "onepager_en": "./ACP_DISPATCH_002__onepager__bought_and_analyzed__AOINECO_$NECO.md",
+    "onepager_kr": "./ACP_DISPATCH_002__onepager__bought_and_analyzed__AOINECO_$NECO_KR.md",
+    "preface": "./ACP_DISPATCH_002__preface__AOINECO_$NECO.md"
+  },
+  "reports_glob": "./ACP_DISPATCH_002__*.md",
+  "public_safe": true,
+  "notes": "No secrets. Posting is L3 approval only."
+}
