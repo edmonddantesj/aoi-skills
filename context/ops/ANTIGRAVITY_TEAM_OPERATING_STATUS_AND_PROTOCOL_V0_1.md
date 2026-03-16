@@ -40,10 +40,12 @@ OpenClaw와 병행하는 운영 체계를 고정한다.
 
 ### Interpretation
 Antigravity is beyond pure experiment stage, because login/auth/browser/workspace traces are all real.
+A repo-local mini task loop was also validated end-to-end: repo open → agent review → safe task proposal → dependency install → file edit → structured report.
 However, it is not yet safe to classify as primary mission-critical dependency due to multiple runtime exceptions.
 
 So current operating interpretation is:
 - usable for real work
+- suitable for active auxiliary team use
 - useful for IDE-local execution loops
 - should not yet be the sole critical path for business-critical delivery
 
