@@ -49,7 +49,10 @@
   - compact / context-loss 복구 포인트 규칙
   - 장기화 / 다산출물 / 교차연결 작업의 HF 분리 규칙
   - “나중에 기억” 금지 + tracked artifact 전환 규칙
-- 남은 일은 random 자체를 더 키우는 게 아니라, 새 장기 작업이 들어올 때 즉시 HF 또는 Ralph Loop로 분기하는 운영 일관성을 유지하는 것.
+- 신규 tracked execution 생성:
+  - `context/handoff/HF_topic81_internal_qa_reservation_discovery_202603.md`
+  - `context/checklists/TOPIC81_INTERNAL_QA_RESERVATION_DISCOVERY_CHECKLIST_V0_1.md`
+- 해당 작업은 외부 테스트 전 내부 QA(실예약 링크 / 필터 / 추천 / 중복·이상항목 정리) 축으로 추적 시작.
 - A/B export divergence 및 전사정책 일반론은 random 직접 규칙과 분리해 HF에서 추적 중이다.
 
 ## Next

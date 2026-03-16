@@ -23,3 +23,4 @@
 - `HF_acp_dispatch_002_202603.md` — ACP(topic 50): Dispatch #002 (Bought & Analyzed) 오늘 투고 가능한 패키지 준비
 - `HF_ralph_loop_drift_integrity_restore_20260308.md` — ralph-loop: 스캔/크론 상태저장 + drift 무결성 체크/자동복구(L2)
 - `HF_random_playbook_hardening_20260312.md` — topic81(random): compact/context-loss 복구 규칙 즉시 반영 + 남은 검증 항목 추적
+- `HF_topic81_internal_qa_reservation_discovery_202603.md` — topic81(random): 예약 링크/필터/추천/중복 정리 내부 QA tracked execution
