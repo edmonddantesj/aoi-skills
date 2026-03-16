@@ -2,31 +2,28 @@
 
 전사 정정 공지.
 
-직전 공지에서 팀원 표기 기준을 잘못 올린 부분이 있어 바로 정정한다.
-
-전사 canonical roster 표기는 **Notion Squad HQ 기준**으로만 해석한다.
-특히:
-- 청령은 `청령(Oracle)`이 맞다.
-- `Blue-Command` 같은 `Blue-*` 명칭은 writer/persona/profile 전용 축이며, 전사 canonical roster 표기가 아니다.
+팀원 명칭/영문명 reference는 Notion `🧭 Aoineco & Co. Squad HQ`의 roster table 원문 기준으로 다시 확정한다.
+이전 공지 중 일부 표기가 혼선이 있었고, HQ 표 직접 재조회 기준으로 아래가 현재 canonical이다.
 
 ### Canonical 12-team roster
-- 청묘 — CEO / Operator
 - 청령(Oracle) — Chief of Staff
-- 청음 — Community
-- 청검 — Security
-- 청비 — Knowledge
-- 청섬 — Builder
-- 청안 — Scout
-- 청뇌 — Strategist
-- 청기 — DevOps
-- 청성 — Growth
-- 청정 — Maintainer
-- 청약 — Risk
+- 청음(Blue_Sound) — Community/Artist
+- 청검(Blue-Blade) — Security Guard
+- 청비(Blue-Record) — Knowledge Master
+- 청섬(Blue-Flash) — Builder
+- 청안(Blue-Eye) — Scout
+- 청뇌(Blue-Brain) — Strategist
+- 청기(Blue-Gear) — DevOps/Sentry
+- 청성(Blue-Growth) — Marketer
+- 청묘(Aoineco) — CEO / Main
+- 청약(Blue-Med) — Risk / Circuit Breaker
+- 청정(Blue-Maintainer) — Maintenance Engineer
 
 ### 운영 원칙
-1. 전사 roster는 HQ 기준 표기를 따른다.
-2. writer/persona/profile 전용 English Name(`Blue-*`)은 전사 canonical roster 표기로 쓰지 않는다.
-3. 이름/역할이 헷갈리면 추측하지 말고 HQ 또는 아래 SSOT를 먼저 확인한다.
+1. 전사 roster는 HQ 표 원문 기준으로만 해석한다.
+2. 이름/영문명/역할이 헷갈리면 추측하지 말고 HQ 또는 아래 SSOT를 먼저 확인한다.
+3. 문서/공지/핸드오프에는 가능하면 `한글명(영문명)` 형식을 사용한다.
+4. HQ 표와 다른 seed/profile 문서가 충돌하면 HQ가 우선한다.
 
 ### 기준 SSOT
 - `context/ops/SQUAD_ROSTER_CANONICAL_NAMES_AND_ROLE_REFERENCE_V0_1.md`
