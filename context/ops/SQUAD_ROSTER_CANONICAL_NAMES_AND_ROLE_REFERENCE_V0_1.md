@@ -35,10 +35,10 @@ Primary source: Notion page `🧭 Aoineco & Co. Squad HQ` (`3049c616-de86-81a3-8
 - 파견된 서브 팀원은 이름/역할이 불명확하면 추측하지 말고 HQ / 본 문서를 기준으로 확인한다.
 
 ### Dispatch / mention rule
-- 한글 팀원명(예: 청령, 청뇌, 청섬)을 기본 canonical name으로 사용한다.
-- 영문 역할명(CoS, Strategist, Builder 등)은 보조 reference로 사용한다.
-- 문서/공지/핸드오프에서는 가능하면 `한글명(영문역할)` 형태를 권장한다.
-  - 예: 청령(CoS), 청뇌(Strategist), 청섬(Builder)
+- 한글 팀원명을 기본 canonical name으로 사용한다.
+- 괄호 안에는 영문 역할명이 아니라 **English Name / Codename**을 붙인다.
+- 문서/공지/핸드오프에서는 가능하면 `한글명(English Name)` 형태를 권장한다.
+  - 예: 청령(Blue-Command), 청뇌(Blue-Brain), 청약(Blue-Med)
 
 ## Canonical source hierarchy
 1. Notion `🧭 Aoineco & Co. Squad HQ`
@@ -50,6 +50,11 @@ Primary source: Notion page `🧭 Aoineco & Co. Squad HQ` (`3049c616-de86-81a3-8
 1. Squad HQ 확인
 2. 본 문서 확인
 3. 그래도 애매하면 청령(CoS)에게 배정/명칭 확인 요청
+
+## Notes
+- Heukmyo Squad는 separate surface이며 main HQ spine과 구분한다.
+- 본 문서는 Aoineco main 12-team roster 기준 canonical naming reference다.
+명칭 확인 요청
 
 ## Notes
 - Heukmyo Squad는 separate surface이며 main HQ spine과 구분한다.
