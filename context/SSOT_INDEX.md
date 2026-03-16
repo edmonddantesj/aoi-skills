@@ -36,6 +36,7 @@ This is a lightweight index of canonical SSOT docs in `context/`.
 - Escalation index: `context/escalations/INDEX.md`
 - Squad roster canonical names / role reference: `context/ops/SQUAD_ROSTER_CANONICAL_NAMES_AND_ROLE_REFERENCE_V0_1.md`
 - Antigravity — Ralph Loop adoption notes (Context reset / .agent/ / Proof-first): `context/ops/ANTIGRAVITY_RALPH_LOOP_ADOPTION_NOTES_V0_1.md`
+- Antigravity — team operating status / protocol: `context/ops/ANTIGRAVITY_TEAM_OPERATING_STATUS_AND_PROTOCOL_V0_1.md`
 - V6/Limitless Ops Spec: `context/limitless/LIMITLESS_V6_OPS_SPEC_V0_1.md`
 
 ## Limitless / V6
