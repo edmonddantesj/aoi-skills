@@ -74,6 +74,34 @@ Request ID: `TASK-{YYYYMMDD}-{LANE}-{SLUG}-{NN}`
 - Full productization only after internal repeatability is proven
 - Do not prematurely productize
 
+## v0.2 Changes
+
+### What changed from v0.1
+
+**1. Canonical path split**
+- v0.1: all files flat in `requests/`
+- v0.2: `support/requests/` / `support/results/` / `support/closed/`
+- Reason: REQUEST + RESULT + CLOSE mixed in one dir caused confusion when scanning
+
+**2. Partial close rule explicit**
+- v0.1: partial close existed but handling was implicit
+- v0.2: `Remaining` + `Follow-up request` required; state never silently upgraded
+- Reason: real run (STITCH_MCP PoC) revealed partial close is common, needs clear rules
+
+**3. Watcher script added**
+- v0.2: `scripts/watcher.py` — scans canonical paths, detects OPEN/WORKING requests
+- Reason: no signal when executor picks up a request → WORKING state transition now explicit
+- v0.1 gap: REQUEST → WORKING had no marker; now executor updates state field
+
+**4. Triage rules formalized**
+- v0.2: field check + human gate scan + scope check + reference check documented in `references/watcher.md`
+- Reason: v0.1 triage was implicit; v0.2 makes it checkable
+
+### Real run findings (TASK-20260317-INBOXDEV-STITCH-MCP-POC-01)
+- Partial close + human gate blocker was the most natural outcome — not an edge case
+- `requests/` flat structure mixed REQUEST/RESULT/CLOSE immediately — split confirmed needed
+- watcher correctly detected OPEN state on the REQUEST file — confirms value of state field
+
 ## v0.1 Close Criteria (from request spec)
 
 - [x] Skill created with SKILL.md
