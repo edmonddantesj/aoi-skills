@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "schema": "openclaw.telegram.inbound_execution_decision.v0_1",
+  "timestamp": 1773767072,
+  "thread_id": 6062,
+  "slug": "cat-strategic",
+  "text_norm": "V6 사령탑 동기화 오디션 재시작하라냥!",
+  "mode": "single",
+  "owner": "청묘",
+  "secondary": null,
+  "reason": "default_primary_fallback",
+  "confidence": 0.61,
+  "delegate": {
+    "should_delegate": true,
+    "trigger_reason": "default_primary_fallback",
+    "skip_reason": null
+  },
+  "context": {
+    "primary": "청묘",
+    "collaborators": [
+      "흑묘",
+      "에드몽"
+    ],
+    "reply_target_agent": null,
+    "night": false
+  },
+  "run_key": "20260317T170432Z"
+}
