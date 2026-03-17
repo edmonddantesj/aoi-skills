@@ -2248,7 +2248,8 @@
       "age_parsed_manual": true,
       "category_tag": "박물관/문화",
       "score_v2": 72,
-      "rank_v2": 61
+      "rank_v2": 61,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 119,
@@ -2268,7 +2269,8 @@
       "age_parsed_manual": true,
       "category_tag": "박물관/문화",
       "score_v2": 65,
-      "rank_v2": 104
+      "rank_v2": 104,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 120,
@@ -2289,7 +2291,8 @@
       "age_max": 12,
       "category_tag": "박물관/문화",
       "score_v2": 65,
-      "rank_v2": 105
+      "rank_v2": 105,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 121,
@@ -2310,7 +2313,8 @@
       "age_max": 12,
       "category_tag": "박물관/문화",
       "score_v2": 59,
-      "rank_v2": 112
+      "rank_v2": 112,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 122,
@@ -2330,7 +2334,8 @@
       "age_parsed_manual": true,
       "category_tag": "과학/체험",
       "score_v2": 65,
-      "rank_v2": 106
+      "rank_v2": 106,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 123,
@@ -2350,7 +2355,8 @@
       "age_parsed_manual": true,
       "category_tag": "안전체험",
       "score_v2": 65,
-      "rank_v2": 107
+      "rank_v2": 107,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 124,
@@ -2370,7 +2376,8 @@
       "age_parsed_manual": true,
       "category_tag": "안전체험",
       "score_v2": 65,
-      "rank_v2": 108
+      "rank_v2": 108,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 125,
@@ -2391,7 +2398,8 @@
       "age_max": 12,
       "category_tag": "안전체험",
       "score_v2": 65,
-      "rank_v2": 109
+      "rank_v2": 109,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 126,
@@ -2412,7 +2420,8 @@
       "age_max": 12,
       "category_tag": "안전체험",
       "score_v2": 59,
-      "rank_v2": 113
+      "rank_v2": 113,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 127,
@@ -2433,7 +2442,8 @@
       "age_max": 12,
       "category_tag": "안전체험",
       "score_v2": 59,
-      "rank_v2": 114
+      "rank_v2": 114,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 128,
@@ -2451,8 +2461,10 @@
       "age_min": 7,
       "age_max": 13,
       "category_tag": "박물관/문화",
-      "score_v2": 47,
-      "rank_v2": 119
+      "score_v2": 0,
+      "rank_v2": 119,
+      "qa_flag": "DUPLICATE_OF_121",
+      "qa_action": "EXCLUDE"
     },
     {
       "rank": 130,
@@ -2471,7 +2483,8 @@
       "age_max": 12,
       "category_tag": "과학/체험",
       "score_v2": 65,
-      "rank_v2": 110
+      "rank_v2": 110,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 131,
@@ -2491,8 +2504,10 @@
       "age_min": 0,
       "age_max": 12,
       "category_tag": "키즈카페",
-      "score_v2": 53,
-      "rank_v2": 117
+      "score_v2": 23,
+      "rank_v2": 117,
+      "qa_flag": "BROAD_DISTRICT_NOT_SINGLE_VENUE",
+      "qa_action": "DEMOTE"
     },
     {
       "rank": 132,
@@ -2513,7 +2528,8 @@
       "age_max": 12,
       "category_tag": "자연/환경",
       "score_v2": 65,
-      "rank_v2": 111
+      "rank_v2": 111,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     },
     {
       "rank": 133,
@@ -2534,7 +2550,8 @@
       "age_max": 12,
       "category_tag": "키즈카페",
       "score_v2": 47,
-      "rank_v2": 120
+      "rank_v2": 120,
+      "capacity_note": "수용인원 공개 미기재 (운영 기관별 상이)"
     }
   ],
   "filter_meta": {
