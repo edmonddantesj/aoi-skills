@@ -1,0 +1,21 @@
+{
+  "schema": "openclaw.telegram.topic_trace_summary.v0_1",
+  "thread_id": 6062,
+  "generated_at": "2026-03-17T04:34:46Z",
+  "run_count": 1,
+  "runs": [
+    {
+      "run_key": "20260317T043022Z",
+      "slug": "cat-strategic",
+      "mode": "single",
+      "owner": "청묘",
+      "reason": "execution_weighted_single_owner",
+      "confidence": 0.88,
+      "text_norm": "이어서 해야지",
+      "pipeline_complete": true,
+      "orch_ok": true,
+      "orch_skipped": null,
+      "orch_skip_reason": null
+    }
+  ]
+}

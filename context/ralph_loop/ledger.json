@@ -20,11 +20,27 @@
           "preflight 스크립트(금칙어/파일명/내부문서 차단) 구현 및 PASS 증빙",
           "onepager EN/KR + preface + 역할별 리포트 초안 생성"
         ],
-        "proof": []
+        "proof": [
+          {
+            "type": "combined_runner_run",
+            "run_key": "20260317T043022Z",
+            "thread_id": 6062,
+            "slug": "cat-strategic",
+            "mode": "single",
+            "owner": "청묘",
+            "reason": "execution_weighted_single_owner",
+            "confidence": 0.88,
+            "pipeline_complete": true,
+            "orch_ok": true,
+            "orch_skipped": null,
+            "trace_path": "/Users/mercedes/.openclaw/workspace/context/telegram_topics/runtime/combined_runner/thread_6062/latest/trace.json",
+            "linked_at": "2026-03-17T04:35:29Z"
+          }
+        ]
       },
       "links": {},
       "created_at": "2026-03-05T20:24:41Z",
-      "updated_at": "2026-03-05T20:24:41Z"
+      "updated_at": "2026-03-17T04:35:29Z"
     },
     {
       "id": "RL-20260306-010",

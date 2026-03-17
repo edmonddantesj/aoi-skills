@@ -1,0 +1,24 @@
+{
+  "schema": "openclaw.telegram.ledger_linkage.v0_1",
+  "thread_id": 6062,
+  "run_key": "20260317T043022Z",
+  "slug": "cat-strategic",
+  "proof_entry": {
+    "type": "combined_runner_run",
+    "run_key": "20260317T043022Z",
+    "thread_id": 6062,
+    "slug": "cat-strategic",
+    "mode": "single",
+    "owner": "청묘",
+    "reason": "execution_weighted_single_owner",
+    "confidence": 0.88,
+    "pipeline_complete": true,
+    "orch_ok": true,
+    "orch_skipped": null,
+    "trace_path": "/Users/mercedes/.openclaw/workspace/context/telegram_topics/runtime/combined_runner/thread_6062/latest/trace.json",
+    "linked_at": "2026-03-17T04:35:29Z"
+  },
+  "ledger_item_id": "RL-20260306-001",
+  "matched": true,
+  "dry_run": false
+}
