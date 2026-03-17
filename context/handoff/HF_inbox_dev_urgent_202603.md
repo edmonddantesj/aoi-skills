@@ -1,6 +1,6 @@
 # HF: Inbox-dev 긴급개발 (Topic 585) — DB/State loss + BaseBatches 데모
 
-- **Status:** ACTIVE
+- **Status:** DONE ✅ 2026-03-17
 - **Owner:** 청묘 (+ 관련팀: 청령/oracle, 청섬/builder)
 - **Last updated:** 2026-03-08 05:47 KST
 - **Where:** Telegram group topic **inbox-dev=585** (참조: topic map `context/telegram_topics/thread_topic_map.json`)
