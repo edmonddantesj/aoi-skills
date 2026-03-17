@@ -1,0 +1,1051 @@
+{
+  "meta": {
+    "total": 132,
+    "alive": 122,
+    "redirect": 2,
+    "dead": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "rank": 1,
+      "name": "서울형키즈카페 시립 한성백제박물관점 (서울백제어린이박물관)",
+      "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260212124817770687",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 2,
+      "name": "서울형 키즈카페 중구 을지로동점(노리몽땅)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JG251201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 3,
+      "name": "서울형 키즈카페 영등포구 대림2동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YF231001&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 4,
+      "name": "서울형 키즈카페 송파구 장지동점(하하호호놀이터 송파구5호점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SP251101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 5,
+      "name": "서울형 키즈카페 시립 뚝섬자벌레점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GJ240401&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 6,
+      "name": "서울형 키즈카페 서초구 양재1동점(서리풀노리학교 양재1동점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SC231201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 7,
+      "name": "서울형 키즈카페 성북구 보문동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SB251201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 8,
+      "name": "서울형 키즈카페 중구 중림동점(노리몽땅)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JG240301&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 9,
+      "name": "서울형 키즈카페 강동구 성내1동점(아이·맘 강동)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GD240101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 10,
+      "name": "서울형 키즈카페 관악구 신사동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GA251101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 11,
+      "name": "서울형 키즈카페 동작구 대방동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ230701&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 12,
+      "name": "서울형 키즈카페 동작구 사당3동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ241203&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 13,
+      "name": "서울형 키즈카페 서초구 서초1동점(서리풀노리학교 서초1동점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SC240801&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 14,
+      "name": "서울형 키즈카페 성동구 금호2·3가동점(금호 키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SD221201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 15,
+      "name": "서울형 키즈카페 중랑구 망우본동점(중랑실내놀이터 양원)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JR240501&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 16,
+      "name": "서울형키즈카페 시립 옴팡점",
+      "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251118144705678859",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 17,
+      "name": "서울형 키즈카페 동작구 사당2동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ251003&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 18,
+      "name": "서울형 키즈카페 동작구 상도1동2호점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ241204&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 19,
+      "name": "서울형 키즈카페 동작구 상도2동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ241202&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 20,
+      "name": "서울형 키즈카페 서초구 방배2동점(서리풀노리학교 방배2동점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SC240404&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 21,
+      "name": "서울형 키즈카페 중구 신당동점(노리몽땅)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JG250301&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 22,
+      "name": "서울형 키즈카페 강남구 대치1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GN251201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 23,
+      "name": "서울형 키즈카페 강남구 역삼1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GN240902&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 24,
+      "name": "서울형 키즈카페 강동구 암사1동점(아이·맘 강동)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GD230202&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 25,
+      "name": "서울형 키즈카페 금천구 시흥1동 나래랑키즈랑점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=KC240902&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 26,
+      "name": "서울형 키즈카페 금천구 아이세상놀이터점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=KC240901&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 27,
+      "name": "서울형 키즈카페 도봉구 창3동점(우당탕탕 숲속대탐험)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DB241101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 28,
+      "name": "서울형키즈카페 동대문구 장안1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DM250304&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 29,
+      "name": "서울형키즈카페 동대문구 제기동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DM250301&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 30,
+      "name": "서울형 키즈카페 동작구 상도3동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ221102&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 31,
+      "name": "서울형 키즈카페 동작구 흑석동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ241006&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 32,
+      "name": "서울형 키즈카페 서초구 양재1동2호점(서리풀노리학교 양재1동2호점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SC251201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 33,
+      "name": "서울형 키즈카페 양천구 목3동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC260201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 34,
+      "name": "서울형 키즈카페 영등포구 신길4동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YF241001&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 35,
+      "name": "서울형 키즈카페 강동구 고덕2동점(아이·맘 강동)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GD230201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 36,
+      "name": "서울형 키즈카페 강동구 상일2동점(아이·맘 강동)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GD231201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 37,
+      "name": "서울형 키즈카페 강동구 성내2동점(아이·맘 강동)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GD250601&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 38,
+      "name": "서울형 키즈카페 동작구 사당1동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ260201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 39,
+      "name": "서울형 키즈카페 동작구 상도4동 2호점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ241004&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 40,
+      "name": "서울형 키즈카페 성동구 성수1가1동점(성수 키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SD240701&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 41,
+      "name": "서울형 키즈카페 송파구 방이2동점(하하호호놀이터 송파구4호점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SP250402&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 42,
+      "name": "서울형 키즈카페 양천구 목4동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC250201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 43,
+      "name": "서울형 키즈카페 양천구 신월5동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC251204&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 44,
+      "name": "서울형 키즈카페 중구 장충점(노리몽땅)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JG250701&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 45,
+      "name": "서울형 키즈카페 중랑구 면목4동점(중랑실내놀이터 면목4동점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JR220801&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 46,
+      "name": "서울형 키즈카페 시립 화곡점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GS241101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 47,
+      "name": "서울형 키즈카페 관악구 난곡동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GA240101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 48,
+      "name": "서울형 키즈카페 관악구 난향동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GA241201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 49,
+      "name": "서울형 키즈카페 관악구 보라매동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GA241203&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 50,
+      "name": "서울형 키즈카페 광진구 중곡3동점(꾸미팡팡 놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GJ230202&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 51,
+      "name": "서울형 키즈카페 동작구 상도4동 1호점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ240701&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 52,
+      "name": "서울형 키즈카페 동작구 신대방1동점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ241008&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 53,
+      "name": "서울형 키즈카페 마포구 상암동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=MP230802&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 54,
+      "name": "서울형 키즈카페 은평구 불광2동점(은평아이맘놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=EP250601&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 55,
+      "name": "서울형 키즈카페 은평구 수색동점(은평아이맘놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=EP250301&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 56,
+      "name": "서울형 키즈카페 자양4동 1호점(꾸미팡팡 놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GJ240902&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 57,
+      "name": "서울형 키즈카페 도봉구 쌍문2동점(쌍문별 탐험대)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DB241103&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 58,
+      "name": "서울형 키즈카페 서대문구 북가좌1동점(다정다감 키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SM240501&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 59,
+      "name": "서울형 키즈카페 성북구 종암동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SB240801&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 60,
+      "name": "서울형 키즈카페 중랑구 면목5동점 (중랑실내놀이터 늘푸른공원점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JR251102&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 61,
+      "name": "서울형 키즈카페 강서구 화곡3동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GS240802&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 62,
+      "name": "서울형 키즈카페 구로구 구로4동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GR250201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 63,
+      "name": "서울형 키즈카페 도봉구 방학1동점1호점(오르봉내리봉)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DB231201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 64,
+      "name": "서울형 키즈카페 서대문구 홍제1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SM260101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 65,
+      "name": "서울형 키즈카페 성북구 정릉3동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SB240903&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 66,
+      "name": "서울형 키즈카페 송파구 잠실근린공원점(하하호호놀이터 송파구1호점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SP240401&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 67,
+      "name": "서울형 키즈카페 양천구 신정7동 2호점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC251003&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 68,
+      "name": "서울형 키즈카페 묵2동점 (중랑실내놀이터 묵동 장미마을점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JR250504&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 69,
+      "name": "서울형 키즈카페 관악구 행운동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GA250301&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 70,
+      "name": "서울형 키즈카페 성북구 성북동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SB240902&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 71,
+      "name": "서울형 키즈카페 송파구 여성문화회관점(하하호호놀이터 송파구2호점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SP250301&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 72,
+      "name": "서울형 키즈카페 송파구 위례동점(하하호호놀이터 송파구3호점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SP250401&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 73,
+      "name": "서울형 키즈카페 용산구 후암동점(후암 초록숲 키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YS241201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 74,
+      "name": "서울형 키즈카페 양천구 신월3동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC250202&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 75,
+      "name": "서울형 키즈카페 강서구 화곡4동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GS241201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 76,
+      "name": "서울형 키즈카페 시립 1호점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ230901&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 77,
+      "name": "서울형 키즈카페 마포구 서강동１호점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=MP251201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 78,
+      "name": "서울형 키즈카페 양천구 신정7동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC221101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 79,
+      "name": "서울형키즈카페 용산구한강로동점(용산도담도담실내놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YS231001&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 80,
+      "name": "서울형 키즈카페 종로구 혜화동점(종로 혜명 아이들 상상놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JN220501&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 81,
+      "name": "서울형 키즈카페 서대문구 홍제3동점(키즈땅놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SM250101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 82,
+      "name": "서울형 키즈카페 강서구 발산1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GS230801&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 83,
+      "name": "서울형 키즈카페 동대문구 답십리1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DM250103&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 84,
+      "name": "서울형 키즈카페 동대문구 회기동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DM250102&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 85,
+      "name": "서울형 키즈카페 성북구 정릉2동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SB240702&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 86,
+      "name": "서울형 키즈카페 양천구 신트리공원점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC250603&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 87,
+      "name": "서울형 키즈카페 중랑구 망우본동 2호점(중랑실내놀이터 망우역점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JR250401&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 88,
+      "name": "서울형 키즈카페 강동구 상일2동 2호점(아이·맘 강동)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GD250101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 89,
+      "name": "서울형 키즈카페 도봉구 창1동점(숲속유람선 뚜뚜)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DB231202&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 90,
+      "name": "서울형 키즈카페 양천구 신정4동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC250501&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 91,
+      "name": "서울형 키즈카페 중랑구 망우본동 3호점(중랑실내놀이터 망우본동 주민센터점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=JR251101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 92,
+      "name": "서울형 키즈카페 시립 아리수나라점",
+      "url": "https://arisu.seoul.go.kr/home/sub?menukey=7534",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 93,
+      "name": "서울형 키즈카페 구로구 개봉1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GR241001&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 94,
+      "name": "서울형 키즈카페 노원구 중평공원점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=NW240701&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 95,
+      "name": "서울형 키즈카페 도봉구 방학1동2호점(오밀조밀숲, 놀다람)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DB250401&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 96,
+      "name": "서울형 키즈카페 동작구 상도1동 1호점(동작키즈카페)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ241201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 97,
+      "name": "서울형 키즈카페 시립 보라매공원점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DJ250901&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 98,
+      "name": "서울형 키즈카페 서대문구 남가좌1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SM241101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 99,
+      "name": "서울형 키즈카페 서대문구 천연동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SM250102&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 100,
+      "name": "서울형 키즈카페 송파구 어린이문화회관점(하하호호놀이터 송파구6호점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SP260102&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 101,
+      "name": "서울형 키즈카페 강북구 번3동점(강북구 'PLAY ON')",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GB230601&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 102,
+      "name": "서울형 키즈카페 강북구 송천동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GB251001&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 103,
+      "name": "서울형 키즈카페 관악구 은천동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GA250401&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 104,
+      "name": "서울형 키즈카페 자양4동 2호점(꾸미팡팡 놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GJ240903&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 105,
+      "name": "서울형 키즈카페 구로구 신도림동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=GR250505&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 106,
+      "name": "서울형 키즈카페 도봉구 도봉2동2호점(HOLA(올라) PLAY GROUND)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DB241102&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 107,
+      "name": "서울형 키즈카페 동대문구 새샘공원점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=DM250901&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 108,
+      "name": "서울형 키즈카페 마포구 쌍룡산근린공원점(염리동)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=MP260201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 109,
+      "name": "서울형 키즈카페 서대문구 BABY 남가좌1동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SM251101&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 110,
+      "name": "서울형 키즈카페 서초구 문화예술공원점(서리풀노리학교 문화예술공원점)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SC231001&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 111,
+      "name": "서울형 키즈카페 성북구 벌집어린이공원점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=SB240201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 112,
+      "name": "서울형 키즈카페 시립 목동점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC231201&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 113,
+      "name": "서울형 키즈카페 은평구 응암1동점(은평아이맘놀이터)",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=EP250501&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 114,
+      "name": "서울형 키즈카페 시립 공예마을점",
+      "url": "https://craftmuseum.seoul.go.kr/chimsm/exhibit/plan/view/178",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 115,
+      "name": "서울형 키즈카페 양천구 오목공원점",
+      "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do?q_fcltyId=YC231206&q_fcltyStle=2001",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 116,
+      "name": "서울형 키즈카페 시립 서울상상나라점",
+      "url": "https://www.seoulchildrensmuseum.org",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 117,
+      "name": "서울형키즈카페 시립 팔각당점",
+      "url": "http://palgakdangcafe.com/",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 118,
+      "name": "국립중앙박물관 어린이박물관",
+      "url": "https://www.museum.go.kr/MUSEUM/contents/M0104010000.do?schM=child&act=intro",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 119,
+      "name": "국립민속박물관 어린이박물관",
+      "url": "https://www.nfm.go.kr/kids/nfmkid/exhibition/selectReserveView.do",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 120,
+      "name": "서울백제어린이박물관",
+      "url": "",
+      "status": "NO_URL"
+    },
+    {
+      "rank": 121,
+      "name": "서울역사박물관 어린이박물관",
+      "url": "",
+      "status": "NO_URL"
+    },
+    {
+      "rank": 122,
+      "name": "국립어린이과학관",
+      "url": "https://www.csc.go.kr/new1/reservation/reservation_person.jsp",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 123,
+      "name": "광나루안전체험관",
+      "url": "https://fire.seoul.go.kr/gwangnaru/main/main.do",
+      "status": "REDIRECT",
+      "code": 200,
+      "final_url": "https://fire.seoul.go.kr/gwangnaru"
+    },
+    {
+      "rank": 124,
+      "name": "보라매안전체험관",
+      "url": "https://fire.seoul.go.kr/boramea/main/main.do",
+      "status": "REDIRECT",
+      "code": 200,
+      "final_url": "https://fire.seoul.go.kr/boramae"
+    },
+    {
+      "rank": 125,
+      "name": "마곡안전체험관",
+      "url": "",
+      "status": "NO_URL"
+    },
+    {
+      "rank": 126,
+      "name": "키즈오토파크(서울)",
+      "url": "",
+      "status": "NO_URL"
+    },
+    {
+      "rank": 127,
+      "name": "목동재난체험관",
+      "url": "",
+      "status": "NO_URL"
+    },
+    {
+      "rank": 128,
+      "name": "서울역사 어린이박물관",
+      "url": "https://museum.seoul.go.kr/chd/exhibition/exhibitionResv.jsp",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 130,
+      "name": "서울상상나라",
+      "url": "https://www.seoulchildrensmuseum.org/reservation/individualregistration.do",
+      "status": "ALIVE",
+      "code": 200,
+      "final_url": ""
+    },
+    {
+      "rank": 131,
+      "name": "서울형 키즈카페",
+      "url": "",
+      "status": "NO_URL"
+    },
+    {
+      "rank": 132,
+      "name": "아리수나라",
+      "url": "",
+      "status": "NO_URL"
+    },
+    {
+      "rank": 133,
+      "name": "어린이대공원 팔각당 키즈카페",
+      "url": "",
+      "status": "NO_URL"
+    }
+  ]
+}

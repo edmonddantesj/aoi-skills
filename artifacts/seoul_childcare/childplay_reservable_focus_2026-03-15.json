@@ -2,7 +2,9 @@
   "meta": {
     "generated_at": "2026-03-15 Asia/Seoul",
     "total": 132,
-    "description": "예약가능 시설 중심 테스트용 subset"
+    "description": "예약가능 시설 중심 테스트용 subset",
+    "manual_patch_date": "2026-03-17",
+    "manual_patch_count": 8
   },
   "items": [
     {
@@ -1681,9 +1683,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "무료/유료추정",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250710180134484031",
       "guide_url": "",
-      "score": 72
+      "score": 72,
+      "manual_patch": true,
+      "patch_note": "주말/공휴일만 사전예약, 평일 자유관람"
     },
     {
       "rank": 121,
@@ -1695,9 +1699,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "무료",
-      "reservation_url": "",
+      "reservation_url": "https://museum.seoul.go.kr/chd/exhibition/exhibitionResv.jsp",
       "guide_url": "",
-      "score": 72
+      "score": 72,
+      "manual_patch": true,
+      "patch_note": "서울역사박물관 자체 예약 시스템"
     },
     {
       "rank": 122,
@@ -1751,9 +1757,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "무료",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/service/selectViewWReservation.do?rsv_svc_id=S230317091704572330",
       "guide_url": "",
-      "score": 66
+      "score": 66,
+      "manual_patch": true,
+      "patch_note": "매월 1일 다음달 오픈, 6세 이상"
     },
     {
       "rank": 126,
@@ -1765,9 +1773,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "무료",
-      "reservation_url": "",
+      "reservation_url": "http://kidsautopark.org/seoul",
       "guide_url": "",
-      "score": 66
+      "score": 66,
+      "manual_patch": true,
+      "patch_note": "공식 홈페이지 직접 예약, 6~7세/초등 1~3"
     },
     {
       "rank": 127,
@@ -1779,9 +1789,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "무료",
-      "reservation_url": "",
+      "reservation_url": "https://www.mokdongdstc.com/reservation/",
       "guide_url": "",
-      "score": 66
+      "score": 66,
+      "manual_patch": true,
+      "patch_note": "체험관 자체 예약, 2개월 전 매월 1일 오픈"
     },
     {
       "rank": 128,
@@ -1821,9 +1833,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "유료",
-      "reservation_url": "",
+      "reservation_url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do",
       "guide_url": "",
-      "score": 50
+      "score": 50,
+      "manual_patch": true,
+      "patch_note": "매주 화요일 9시 다음주 예약 오픈"
     },
     {
       "rank": 132,
@@ -1835,9 +1849,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "무료",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220817185508865035",
       "guide_url": "",
-      "score": 50
+      "score": 50,
+      "manual_patch": true,
+      "patch_note": "서울 아리수본부 / yeyak 예약, 3~9세"
     },
     {
       "rank": 133,
@@ -1849,9 +1865,11 @@
       "age": "유아초등",
       "capacity": "",
       "price": "유료",
-      "reservation_url": "",
+      "reservation_url": "https://m.booking.naver.com/booking/13/bizes/search?keyword=%ED%8C%94%EA%B0%81%EB%8B%B9%ED%82%A4%EC%A6%88%EC%B9%B4%ED%8E%98",
       "guide_url": "",
-      "score": 50
+      "score": 50,
+      "manual_patch": true,
+      "patch_note": "네이버 예약 또는 현장접수, 3~8세, 3천원"
     }
   ]
 }
