@@ -44,10 +44,11 @@
       "theme_keyword": "전통문화",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.nfm.go.kr/children/default.do",
+      "reservation_url": "https://www.nfm.go.kr/children/default.do",
       "evidence_note": "page17 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "국립중앙박물관 어린이박물관",
@@ -60,26 +61,29 @@
       "theme_keyword": "문화유산",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.museum.go.kr/site/child/reserve/list",
+      "reservation_url": "https://www.museum.go.kr/site/child/home",
       "evidence_note": "page17 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "서대문형무소역사관",
       "category": "역사문화",
       "region": "서대문구",
-      "label": "단순안내",
+      "label": "신청가능",
       "reservation_required": "N/확인필요",
       "price_note": "유료",
       "target_age_note": "유아초등",
       "theme_keyword": "독립운동",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.sscmc.or.kr/newhistory/",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260305221139917796",
       "evidence_note": "page17 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "교육프로그램 yeyak 예약"
     },
     {
       "facility_name": "서울교육박물관",
@@ -125,9 +129,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250710180134484031",
       "evidence_note": "page17 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "서울생활사박물관",
@@ -172,10 +177,11 @@
       "theme_keyword": "도시역사",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://museum.seoul.go.kr/chd/index.do",
+      "reservation_url": "https://museum.seoul.go.kr/chd/exhibition/exhibitionResv.jsp",
       "evidence_note": "page17 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "용산역사박물관",
@@ -213,17 +219,19 @@
       "facility_name": "전쟁기념관 어린이박물관",
       "category": "역사문화",
       "region": "용산구",
-      "label": "단순안내",
+      "label": "예약가능",
       "reservation_required": "N/확인필요",
       "price_note": "무료",
       "target_age_note": "유아초등",
       "theme_keyword": "전쟁평화",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.warmemo.or.kr/",
+      "reservation_url": "https://www.warmemo.or.kr/NEW/eduinfo/EduProgram.asp",
       "evidence_note": "page17 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "온라인 사전예약 필수, 무료, 월요일 휴관"
     },
     {
       "facility_name": "청계천박물관",
@@ -316,26 +324,29 @@
       "theme_keyword": "과학기술",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.csc.go.kr/",
+      "reservation_url": "https://www.csc.go.kr/reservation/reservList.do",
       "evidence_note": "page18 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "국립항공박물관",
       "category": "과학탐구",
       "region": "강서구",
-      "label": "단순안내",
+      "label": "예약가능",
       "reservation_required": "N/확인필요",
       "price_note": "일부유료",
       "target_age_note": "유아초등",
       "theme_keyword": "항공기술",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.aviation.or.kr/",
+      "reservation_url": "https://www.aviation.or.kr/program/programList.do",
       "evidence_note": "page18 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "체험프로그램 사전예약, 만3세+ 어린이공항체험"
     },
     {
       "facility_name": "기생충박물관",
@@ -357,17 +368,19 @@
       "facility_name": "노원수학문화관",
       "category": "과학탐구",
       "region": "노원구",
-      "label": "단순안내",
+      "label": "신청가능",
       "reservation_required": "N/확인필요",
       "price_note": "유료",
       "target_age_note": "유아초등",
       "theme_keyword": "놀이수학",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.nowonsc.or.kr/",
+      "reservation_url": "https://reservation.nowonsc.kr/",
       "evidence_note": "page18 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "상설 자유관람, 교육프로그램은 노원시설공단 예약"
     },
     {
       "facility_name": "서대문자연사박물관",
@@ -389,49 +402,55 @@
       "facility_name": "서울로봇인공지능과학관",
       "category": "과학탐구",
       "region": "도봉구",
-      "label": "단순안내",
+      "label": "예약가능",
       "reservation_required": "N/확인필요",
       "price_note": "일부유료",
       "target_age_note": "유아초등",
       "theme_keyword": "미래기술",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://science.seoul.go.kr/RAIM/",
+      "reservation_url": "https://science.seoul.go.kr/RAIM/content.do?key=2412270005&menuTy=sc_reserve",
       "evidence_note": "page18 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "100% 사전예약제, yeyak 또는 자체 시스템"
     },
     {
       "facility_name": "서울시립과학관",
       "category": "과학탐구",
       "region": "노원구",
-      "label": "단순안내",
+      "label": "신청가능",
       "reservation_required": "N/확인필요",
       "price_note": "무료",
       "target_age_note": "유아초등",
       "theme_keyword": "과학기술",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://science.seoul.go.kr/",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250104161332335748",
       "evidence_note": "page18 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "상설전시 자유관람, 프로그램은 yeyak 예약"
     },
     {
       "facility_name": "서울에너지드림센터",
       "category": "과학탐구",
       "region": "마포구",
-      "label": "단순안내",
+      "label": "예약가능",
       "reservation_required": "N/확인필요",
       "price_note": "무료",
       "target_age_note": "유아초등",
       "theme_keyword": "탄소중립",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.i-se.co.kr/",
+      "reservation_url": "https://www.i-se.co.kr/service02",
       "evidence_note": "page18 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "프로그램 홈페이지 예약, 5세이상, 무료"
     },
     {
       "facility_name": "서울퓨처랩",
@@ -453,17 +472,19 @@
       "facility_name": "서울하수도과학관",
       "category": "과학탐구",
       "region": "성동구",
-      "label": "단순안내",
+      "label": "예약가능",
       "reservation_required": "N/확인필요",
       "price_note": "무료",
       "target_age_note": "유아초등",
       "theme_keyword": "물재생",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.sssmuseum.org/",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220414110832633810",
       "evidence_note": "page18 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "개인 전시관람 사전예약, 프로그램 yeyak"
     },
     {
       "facility_name": "국립경찰박물관",
@@ -508,10 +529,11 @@
       "theme_keyword": "금융경제",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.fss.or.kr/",
+      "reservation_url": "https://www.fss.or.kr/edu/eduMain.do",
       "evidence_note": "page19 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "대법원 법원전시관",
@@ -549,17 +571,19 @@
       "facility_name": "유니세프 어린이지구촌체험관",
       "category": "사회직업",
       "region": "마포구",
-      "label": "단순안내",
+      "label": "예약가능",
       "reservation_required": "N/확인필요",
       "price_note": "무료",
       "target_age_note": "유아초등",
       "theme_keyword": "아동인권",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://unicefkidspro.or.kr/",
+      "reservation_url": "https://unicefkidspro.or.kr/reservation",
       "evidence_note": "page19 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "사전예약제, 무료, 어린이 대상"
     },
     {
       "facility_name": "청소년경찰학교(서울)",
@@ -573,9 +597,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://www.police.go.kr/www/open/youth_school.jsp",
       "evidence_note": "page19 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "한국은행 화폐박물관",
@@ -620,10 +645,11 @@
       "theme_keyword": "방송언론",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://office.kbs.co.kr/kbstour/",
+      "reservation_url": "https://office.kbs.co.kr/kbstour/",
       "evidence_note": "page19 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "국립국악원",
@@ -700,10 +726,11 @@
       "theme_keyword": "창작공예",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://craftmuseum.seoul.go.kr/",
+      "reservation_url": "https://craftmuseum.seoul.go.kr/edReserve/eduReservList.do",
       "evidence_note": "page19 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "서울시립미술관",
@@ -780,42 +807,47 @@
       "theme_keyword": "친환경",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.seoulsewage.or.kr/",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220817185508865035",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "서울새활용플라자",
       "category": "자연환경",
       "region": "성동구",
-      "label": "단순안내",
+      "label": "신청가능",
       "reservation_required": "N/확인필요",
       "price_note": "무료",
       "target_age_note": "유아초등",
       "theme_keyword": "업사이클링",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.seoulup.or.kr/",
+      "reservation_url": "https://www.seoulup.or.kr/edu/index.do",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "체험교육 프로그램 예약"
     },
     {
       "facility_name": "서울식물원",
       "category": "자연환경",
       "region": "강서구",
-      "label": "단순안내",
+      "label": "예약가능",
       "reservation_required": "N/확인필요",
       "price_note": "유료",
       "target_age_note": "유아초등",
       "theme_keyword": "식물정원",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://botanicpark.seoul.go.kr/",
+      "reservation_url": "https://botanicpark.seoul.go.kr/front/park/reservation/reservationMain.do",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true,
+      "patch_note": "온실 입장 예약, 어린이 체험프로그램 별도"
     },
     {
       "facility_name": "아리수나라",
@@ -829,9 +861,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220817185508865035",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "청계천 생태학교",
@@ -845,9 +878,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251218110200454070",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "키즈마린파크",
@@ -893,9 +927,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220719214046976373",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "구로재난안전체험장",
@@ -909,9 +944,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220817185508865035",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "롯데스위트파크",
@@ -940,10 +976,11 @@
       "theme_keyword": "통합안전",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://magoksafety.kr/",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230317091704572330",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "목동재난체험관",
@@ -956,10 +993,11 @@
       "theme_keyword": "재난대비",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.mokdongdstc.com/",
+      "reservation_url": "https://www.mokdongdstc.com/reservation/",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "보라매안전체험관",
@@ -973,9 +1011,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260304150547561591",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "키즈오토파크(서울)",
@@ -989,9 +1028,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "http://kidsautopark.org/seoul",
       "evidence_note": "page20 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "서울상상나라",
@@ -1004,10 +1044,11 @@
       "theme_keyword": "창의놀이",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.seoulchildrensmuseum.org/reserve/reserveList.do",
+      "reservation_url": "https://www.seoulchildrensmuseum.org/main",
       "evidence_note": "page21 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "서울아이발달지원센터",
@@ -1020,10 +1061,11 @@
       "theme_keyword": "성장지원",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.seouldc.or.kr/",
+      "reservation_url": "https://www.seouldc.or.kr/user/reservation/index.do",
       "evidence_note": "page21 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "서울형 키즈카페",
@@ -1036,10 +1078,11 @@
       "theme_keyword": "창의놀이",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://umppa.seoul.go.kr/",
+      "reservation_url": "https://umppa.seoul.go.kr/icare/user/kidsCafeResve/BD_selectKidsCafeResveCal.do",
       "evidence_note": "page21 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "어깨동무스토리움",
@@ -1068,10 +1111,11 @@
       "theme_keyword": "창의놀이",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://www.sisul.or.kr/open_content/childrenpark/",
+      "reservation_url": "https://m.booking.naver.com/booking/13/bizes/search?keyword=%ED%8C%94%EA%B0%81%EB%8B%B9%ED%82%A4%EC%A6%88%EC%B9%B4%ED%8E%98",
       "evidence_note": "page21 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "더불어숲 체험학습장",
@@ -1116,10 +1160,11 @@
       "theme_keyword": "레저-산악",
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
-      "guide_url": "",
-      "reservation_url": "",
+      "guide_url": "https://mountainseoul.or.kr/",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220817185508865035",
       "evidence_note": "page21 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "스마트 스포츠체험관",
@@ -1149,9 +1194,10 @@
       "source_bucket": "서울미래아이365 PDF 전수 후보군(OCR)",
       "official_domain": "",
       "guide_url": "",
-      "reservation_url": "",
+      "reservation_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220817185508865035",
       "evidence_note": "page21 OCR",
-      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보"
+      "status_note": "2025-08 기준 공식홈페이지 기반 안내서 OCR 전수후보",
+      "url_patched": true
     },
     {
       "facility_name": "국립어린이청소년도서관",
