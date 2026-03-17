@@ -12,6 +12,9 @@
 - 2026-03-16: 청뇌 에스컬레이션을 받아, 승인된 L1/L2 작업을 `원하면`식 문장으로 되돌리거나 STATUS 뒤 실제 실행/아티팩트 없이 멈추는 패턴을 전사 운영 위반으로 고정하는 공지 초안을 작성했다.
 - Canonical policy drafted: `context/ops/EXECUTION_CONTINUITY_AND_NO_RESPONSIBILITY_BOUNCE_POLICY_V0_1.md`
 - Announcement draft created: `context/telegram_topics/ANNOUNCEMENTS_DRAFT_2026-03-16_EXECUTION_CONTINUITY_AND_NO_RESPONSIBILITY_BOUNCE.md`
+- 2026-03-17: Topic 71 Archive UI Agent postmortem 기준으로 proof-first / yellow-lane / fatigue-handoff 운영 규칙을 canonical policy로 추가했고, 대응 공지 초안을 작성했다.
+- Added canonical policy: `context/ops/PROOF_FIRST_YELLOW_LANE_AND_FATIGUE_HANDOFF_POLICY_V0_1.md`
+- Added announcement draft: `context/telegram_topics/ANNOUNCEMENTS_DRAFT_2026-03-17_TOPIC71_PROOF_FIRST_YELLOW_LANE_POLICY.md`
 - 커뮤니티 Auto-Archive의 Live-Sync 원칙상, 게시 후 최종 URL을 활동 로그에 남기는 것이 장기 규칙이다. Source: MEMORY.md#L28-L31
 
 ## Decisions locked

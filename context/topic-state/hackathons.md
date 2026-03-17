@@ -9,9 +9,10 @@
 - 해커톤 후보 발굴부터 제출 패키징/데모/레포 정리까지 “제출 가능한 형태”를 유지한다.
 
 ## Latest checkpoint
-- 해커톤 중에는 스코프 크립을 막고, 기록/티켓화 후 종료 48h 트리아지로 넘기는 원칙이 제안·채택된 바 있다. Source: memory/2026-03-05.md#L193-L215
-- Base Batches 제출 전략은 백로그 나열보다 1페이지 wedge spec과 golden path/safety 압축이 우선이다. Source: memory/2026-03-05.md#L485-L503
-- 핵심은 활성 후보/보류 사유/deadline/증빙 경로를 명시해 바로 제출 모드로 이어붙일 수 있게 하는 것이다.
+- Topic 71 Archive UI Agent 해커톤 시도 postmortem 기준으로, 제출 실패의 핵심 원인을 `Gemini 자체`가 아니라 `page-context fidelity + proof discipline failure`로 고정했다.
+- 새 canonical policy를 추가했다: `context/ops/PROOF_FIRST_YELLOW_LANE_AND_FATIGUE_HANDOFF_POLICY_V0_1.md`
+- 앞으로 hackathons lane은 `proof-first / yellow-lane locked / blocker-first / fatigue-handoff / capability packaging`을 기본 규칙으로 사용한다.
+- 특히 unstable live path를 main lane에 오래 남기지 않고, visible triad demo와 fallback submission path를 final stretch 전에 잠그는 것을 운영 기본값으로 삼는다.
 
 ## Decisions locked
 - 제출물 패키지(문서/데모/링크/스크린샷) 템플릿 고정.

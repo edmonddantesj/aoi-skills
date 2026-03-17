@@ -24,6 +24,7 @@ Keep the split.
 ## Open Issues
 - no concrete active candidate/deadline packet attached yet
 - benchmark/signal output is structurally ready but not yet populated with a current run
+- deadline execution policy was hardened on 2026-03-17; future pushes must honor proof-first / yellow-lane lock / fatigue-handoff discipline
 
 ## Next Actions
 1. run scout/deadline sweep on next active queue
