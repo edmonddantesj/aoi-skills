@@ -1,0 +1,60 @@
+{
+  "schema": "openclaw.telegram.combined_runner_trace.v0_1",
+  "run_key": "20260317T171059Z",
+  "chat_id": "telegram:-1003732040608",
+  "thread_id": 6062,
+  "slug": "cat-strategic",
+  "decision": {
+    "ok": true,
+    "schema": "openclaw.telegram.inbound_execution_decision.v0_1",
+    "timestamp": 1773767459,
+    "thread_id": 6062,
+    "slug": "cat-strategic",
+    "text_norm": "V6 사령탑 최종 승인 오디션 진행하라냥!",
+    "mode": "single",
+    "owner": "청묘",
+    "secondary": null,
+    "reason": "execution_weighted_single_owner",
+    "confidence": 0.88,
+    "delegate": {
+      "should_delegate": true,
+      "trigger_reason": "execution_keyword",
+      "skip_reason": null
+    },
+    "context": {
+      "primary": "청묘",
+      "collaborators": [
+        "흑묘",
+        "에드몽"
+      ],
+      "reply_target_agent": null,
+      "night": false
+    },
+    "run_key": "20260317T171059Z"
+  },
+  "orchestrator": {
+    "ok": true,
+    "slug": "cat-strategic",
+    "primary": "청묘",
+    "collaborators": [
+      "흑묘",
+      "에드몽"
+    ],
+    "dispatch_path": "/Users/mercedes/.openclaw/workspace/context/telegram_topics/runtime/combined_runner/thread_6062/runs/20260317T171059Z/orchestrator_dispatch.json",
+    "stdout_path": "/Users/mercedes/.openclaw/workspace/context/telegram_topics/runtime/combined_runner/thread_6062/runs/20260317T171059Z/orchestrator_stdout.json",
+    "stderr_path": "/Users/mercedes/.openclaw/workspace/context/telegram_topics/runtime/combined_runner/thread_6062/runs/20260317T171059Z/orchestrator_stderr.log",
+    "returncode": 0,
+    "dry_run": true,
+    "proposal": {
+      "run_key": "20260317T171059Z",
+      "proposal": {
+        "asset_id": "SOL",
+        "action": "BUY",
+        "logic_proof": "https://vault.aoineco.ai/v6/invest/analysis/003-final-success",
+        "confidence": 0.99
+      },
+      "valid": true
+    }
+  },
+  "pipeline_complete": true
+}
