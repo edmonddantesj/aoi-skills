@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "schema": "openclaw.telegram.inbound_execution_decision.v0_1",
+  "timestamp": 1773765720,
+  "thread_id": 6062,
+  "slug": "cat-strategic",
+  "text_norm": "V6 사령탑 첫 가동 오디션 실행하라냥!",
+  "mode": "single",
+  "owner": "청묘",
+  "secondary": null,
+  "reason": "execution_weighted_single_owner",
+  "confidence": 0.88,
+  "delegate": {
+    "should_delegate": true,
+    "trigger_reason": "execution_keyword",
+    "skip_reason": null
+  },
+  "context": {
+    "primary": "청묘",
+    "collaborators": [
+      "흑묘",
+      "에드몽"
+    ],
+    "reply_target_agent": null,
+    "night": false
+  },
+  "run_key": "20260317T164200Z"
+}
