@@ -2,6 +2,7 @@
 import fs from "fs";
 import os from "os";
 import path from "path";
+import { execFileSync } from "child_process";
 
 const SCHEMA_VERSION = "aoi.squad.report.v0.1";
 const ORCHESTRATOR_STATE_VERSION = 1;
@@ -271,16 +272,91 @@ const STUB_OUTPUTS = {
   Reviewer: (task) => `Reviewed output for: ${task}`
 };
 
+// --- llm reasoning provider (single-operator; host-independent) -------------
+const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
+const ANTHROPIC_VERSION = "2023-06-01";
+const DEFAULT_LLM_MODEL = "claude-opus-4-8";
+const LLM_MAX_TOKENS = 1024;
+
+const ROLE_SYSTEM = {
+  Planner: "You are the Planner of a small AI agent squad. Interpret the task and produce a concise plan: priorities, constraints, and the key steps. Be concrete and brief.",
+  Executor: "You are the Builder/Executor of a small AI agent squad. Produce a concrete draft or implementation outline that follows the plan. Be concrete and brief.",
+  Reviewer: "You are the Reviewer of a small AI agent squad. Review the work for correctness, risks, and missing steps; propose fixes. Be concrete and brief."
+};
+
+// Decouple "how reasoning is authorized" (credential source) from "who reasons"
+// (provider). All three sources are host-agnostic: apikey/oauth need NO OpenClaw;
+// host-broker is a generic subprocess contract (OpenClaw is just one possible
+// broker). Secrets come from env only — never hardcoded, never written to proof.
+function resolveLlmConfig() {
+  const model = process.env.AOI_SQUAD_MODEL || DEFAULT_LLM_MODEL;
+  const beta = process.env.AOI_SQUAD_ANTHROPIC_BETA || "";
+  const explicit = process.env.AOI_SQUAD_CRED; // optional: apikey | oauth | host
+
+  const wantHost = explicit === "host" || (!explicit && !!process.env.AOI_SQUAD_HOST_BROKER);
+  const wantOauth = explicit === "oauth" || (!explicit && !!process.env.ANTHROPIC_OAUTH_TOKEN);
+  const wantApikey = explicit === "apikey" || (!explicit && !!process.env.ANTHROPIC_API_KEY);
+
+  if (wantHost) {
+    const broker = process.env.AOI_SQUAD_HOST_BROKER;
+    if (!broker) throw new Error("reasoningProvider 'llm' source=host needs AOI_SQUAD_HOST_BROKER: a command that reads {model,system,task} JSON on stdin and prints the reasoning text on stdout. This is the host-brokered path (e.g. OpenClaw holds the credentials; the skill never does).");
+    return { source: "host", model, broker };
+  }
+  if (wantOauth) {
+    const token = process.env.ANTHROPIC_OAUTH_TOKEN;
+    if (!token) throw new Error("reasoningProvider 'llm' source=oauth needs ANTHROPIC_OAUTH_TOKEN (an OAuth access token). If your account/token requires a beta header, set AOI_SQUAD_ANTHROPIC_BETA.");
+    return { source: "oauth", model, token, beta };
+  }
+  if (wantApikey) {
+    const key = process.env.ANTHROPIC_API_KEY;
+    if (!key) throw new Error("reasoningProvider 'llm' source=apikey needs ANTHROPIC_API_KEY.");
+    return { source: "apikey", model, key, beta };
+  }
+  throw new Error("reasoningProvider 'llm' needs a credential source. Set ONE of: ANTHROPIC_API_KEY (apikey), ANTHROPIC_OAUTH_TOKEN (oauth), or AOI_SQUAD_HOST_BROKER (host-brokered, e.g. OpenClaw). Use --provider stub for deterministic CI/proof runs.");
+}
+
+function hostBrokerReason(cfg, system, task) {
+  const payload = JSON.stringify({ model: cfg.model, system, task });
+  const parts = cfg.broker.split(" ").filter(Boolean);
+  const out = execFileSync(parts[0], parts.slice(1), { input: payload, encoding: "utf8", maxBuffer: 16 * 1024 * 1024 });
+  const text = String(out).trim();
+  if (!text) throw new Error("Host broker returned no text.");
+  return text;
+}
+
+async function llmReason(cfg, role, objective, task) {
+  const system = `${ROLE_SYSTEM[role] || `You are the ${role}.`} Objective: ${objective}`;
+  if (cfg.source === "host") return hostBrokerReason(cfg, system, task);
+
+  const headers = { "content-type": "application/json", "anthropic-version": ANTHROPIC_VERSION };
+  if (cfg.source === "oauth") headers["authorization"] = `Bearer ${cfg.token}`;
+  else headers["x-api-key"] = cfg.key;
+  if (cfg.beta) headers["anthropic-beta"] = cfg.beta;
+
+  const body = { model: cfg.model, max_tokens: LLM_MAX_TOKENS, system, messages: [{ role: "user", content: task }] };
+  const res = await fetch(ANTHROPIC_URL, { method: "POST", headers, body: JSON.stringify(body) });
+  if (!res.ok) {
+    const errText = await res.text().catch(() => "");
+    throw new Error(`Anthropic API ${res.status}: ${errText.slice(0, 300)}`);
+  }
+  const data = await res.json();
+  const out = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("").trim();
+  if (!out) throw new Error("Anthropic API returned no text content.");
+  return out;
+}
+
 // G4 reasoning-provider seam: the orchestration loop stays deterministic; only
 // the role *output* comes from a pluggable provider. `stub` (default) returns
 // fixed strings (byte-identical to prior behavior -> proof/CI determinism kept).
-// `llm` is the real-reasoning provider, intentionally NOT wired yet (needs
-// model/key/cost decisions); selecting it fails loudly rather than faking.
+// `llm` is the real-reasoning provider (single-operator), authorized via a
+// host-agnostic credential source (apikey | oauth | host-broker). `llm` runs
+// are non-deterministic and flagged as such in the proof.
 function makeReasoner(name) {
   if (name === "stub") {
     return {
       name: "stub",
       deterministic: true,
+      credentialSource: null,
       reason(role, _objective, task) {
         const fn = STUB_OUTPUTS[role];
         return fn ? fn(task) : `(stub) ${role} output for: ${task}`;
@@ -288,12 +364,20 @@ function makeReasoner(name) {
     };
   }
   if (name === "llm") {
-    throw new Error("reasoningProvider 'llm' not wired yet (G4 follow-up: model + key + cost). Use --provider stub for now.");
+    const cfg = resolveLlmConfig();
+    return {
+      name: "llm",
+      deterministic: false,
+      credentialSource: cfg.source,
+      async reason(role, objective, task) {
+        return llmReason(cfg, role, objective, task);
+      }
+    };
   }
   throw new Error(`Unknown reasoningProvider: ${name} (allowed: stub, llm)`);
 }
 
-function runOrchestratorPreset(preset, task, teamNames, reasoner) {
+async function runOrchestratorPreset(preset, task, teamNames, reasoner) {
   ensureRuntimeDir(preset);
   const runId = makeRunId();
   const statePath = runtimeFile(preset, "state.json");
@@ -319,7 +403,7 @@ function runOrchestratorPreset(preset, task, teamNames, reasoner) {
   const reviewerName = teamNames[reviewerKey];
 
   const outputs = [];
-  outputs.push({ nickname: plannerName, role: "Planner", objective: "Interpret the task and set the plan.", output: reasoner.reason("Planner", "Interpret the task and set the plan.", task), reasoningProvider: reasoner.name, artifacts: [] });
+  outputs.push({ nickname: plannerName, role: "Planner", objective: "Interpret the task and set the plan.", output: await reasoner.reason("Planner", "Interpret the task and set the plan.", task), reasoningProvider: reasoner.name, artifacts: [] });
 
   state = handoffState(state, "planner", "executor", "spec_ready");
   writeJson(statePath, state);
@@ -334,7 +418,7 @@ function runOrchestratorPreset(preset, task, teamNames, reasoner) {
     severity: "info",
     data: { from: "planner", to: "executor", reason: "spec_ready" }
   });
-  outputs.push({ nickname: executorName, role: "Executor", objective: "Produce the main draft.", output: reasoner.reason("Executor", "Produce the main draft.", task), reasoningProvider: reasoner.name, artifacts: [] });
+  outputs.push({ nickname: executorName, role: "Executor", objective: "Produce the main draft.", output: await reasoner.reason("Executor", "Produce the main draft.", task), reasoningProvider: reasoner.name, artifacts: [] });
 
   state = handoffState(state, "executor", "reviewer", "implementation_done");
   writeJson(statePath, state);
@@ -349,7 +433,7 @@ function runOrchestratorPreset(preset, task, teamNames, reasoner) {
     severity: "info",
     data: { from: "executor", to: "reviewer", reason: "implementation_done" }
   });
-  outputs.push({ nickname: reviewerName, role: "Reviewer", objective: "Review correctness and risks.", output: reasoner.reason("Reviewer", "Review correctness and risks.", task), reasoningProvider: reasoner.name, artifacts: [] });
+  outputs.push({ nickname: reviewerName, role: "Reviewer", objective: "Review correctness and risks.", output: await reasoner.reason("Reviewer", "Review correctness and risks.", task), reasoningProvider: reasoner.name, artifacts: [] });
 
   state = closeState(state, `Completed preset '${preset}' on task: ${task}`);
   writeJson(statePath, state);
@@ -365,14 +449,14 @@ function runOrchestratorPreset(preset, task, teamNames, reasoner) {
     data: { outcome: "approved", summary: state.summary }
   });
 
-  return { runId, statePath, eventsPath, outputs, finalState: state, reasoningProvider: reasoner.name, deterministic: reasoner.deterministic };
+  return { runId, statePath, eventsPath, outputs, finalState: state, reasoningProvider: reasoner.name, deterministic: reasoner.deterministic, credentialSource: reasoner.credentialSource || null };
 }
 
 function mdEscape(s) {
   return String(s ?? "").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function cmdRun(args) {
+async function cmdRun(args) {
   const preset = args.preset;
   const task = args.task || "";
   if (!preset) return fail("Missing --preset");
@@ -387,7 +471,7 @@ function cmdRun(args) {
   const reasoner = makeReasoner(providerName);
 
   const started = nowIso();
-  const orchestration = runOrchestratorPreset(preset, task, teamNames, reasoner);
+  const orchestration = await runOrchestratorPreset(preset, task, teamNames, reasoner);
   const ended = nowIso();
   const runId = orchestration.runId;
 
@@ -417,6 +501,7 @@ function cmdRun(args) {
       ended_at: ended,
       reasoning_provider: orchestration.reasoningProvider,
       deterministic: orchestration.deterministic,
+      ...(orchestration.credentialSource ? { credential_source: orchestration.credentialSource } : {}),
       limits: {
         max_roles: 3,
         max_turns: 6,
@@ -452,7 +537,7 @@ function cmdRun(args) {
   jsonOut(out);
 }
 
-function main() {
+async function main() {
   const argv = process.argv.slice(2);
   const cmd = argv[0];
   const sub = argv[1];
@@ -462,7 +547,7 @@ function main() {
     if (cmd === "preset" && sub === "list") return cmdPresetList();
     if (cmd === "team" && sub === "show") return cmdTeamShow(args);
     if (cmd === "team" && sub === "rename") return cmdTeamRename(args);
-    if (cmd === "run") return cmdRun(parseArgs(argv.slice(1)));
+    if (cmd === "run") return await cmdRun(parseArgs(argv.slice(1)));
 
     return fail("Unknown command", {
       usage: [
@@ -477,4 +562,4 @@ function main() {
   }
 }
 
-main();
+main().catch((e) => fail(e?.message || String(e)));
