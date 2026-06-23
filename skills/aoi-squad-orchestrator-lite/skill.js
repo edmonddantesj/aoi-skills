@@ -4,6 +4,7 @@ import os from "os";
 import path from "path";
 
 const SCHEMA_VERSION = "aoi.squad.report.v0.1";
+const ORCHESTRATOR_STATE_VERSION = 1;
 
 const PRESETS = {
   "planner-builder-reviewer": {
@@ -154,6 +155,219 @@ function nowIso() {
   return new Date().toISOString();
 }
 
+function makeRunId() {
+  return `run_${Date.now()}`;
+}
+
+function makeEventId(suffix) {
+  return `evt_${Date.now()}_${suffix}`;
+}
+
+function orchestratorRoot() {
+  return path.join(os.homedir(), ".openclaw", "aoi", "squad_runtime");
+}
+
+function runtimeFile(preset, name) {
+  return path.join(orchestratorRoot(), preset, name);
+}
+
+function ensureRuntimeDir(preset) {
+  fs.mkdirSync(path.join(orchestratorRoot(), preset), { recursive: true });
+}
+
+function writeJson(file, obj) {
+  ensureDir(file);
+  fs.writeFileSync(file, JSON.stringify(obj, null, 2) + "\n", "utf8");
+}
+
+function appendJsonl(file, obj) {
+  ensureDir(file);
+  fs.appendFileSync(file, JSON.stringify(obj) + "\n", "utf8");
+}
+
+function createInitialOrchestratorState(runId, task) {
+  const now = nowIso();
+  return {
+    version: ORCHESTRATOR_STATE_VERSION,
+    revision: 1,
+    updatedAt: now,
+    runId,
+    mode: "active",
+    currentTurn: {
+      turnId: "turn_1",
+      owner: "planner",
+      status: "in_progress",
+      startedAt: now,
+      lastProgressAt: now,
+      deadlineAt: null,
+      leaseVersion: 1
+    },
+    sharedContext: {
+      goal: task,
+      constraints: [],
+      inputs: [task],
+      artifacts: []
+    },
+    agents: {
+      planner: { status: "active", lastSeenAt: now, lastTurnId: "turn_1" },
+      executor: { status: "idle", lastSeenAt: null, lastTurnId: null },
+      reviewer: { status: "idle", lastSeenAt: null, lastTurnId: null }
+    },
+    allocation: {
+      strategy: "single-owner-per-turn",
+      override: null
+    },
+    flags: {
+      blocked: false,
+      needsReview: false,
+      handoffRequested: false
+    },
+    lastDecision: {
+      selectedAgent: "planner",
+      reason: "task_intake",
+      at: now
+    }
+  };
+}
+
+function handoffState(state, from, to, reason) {
+  const now = nowIso();
+  const next = JSON.parse(JSON.stringify(state));
+  next.revision += 1;
+  next.updatedAt = now;
+  next.currentTurn.owner = to;
+  next.currentTurn.leaseVersion += 1;
+  next.currentTurn.lastProgressAt = now;
+  next.currentTurn.status = to === "reviewer" ? "in_review" : "in_progress";
+  next.agents[from].status = "idle";
+  next.agents[from].lastSeenAt = now;
+  next.agents[from].lastTurnId = next.currentTurn.turnId;
+  next.agents[to].status = "active";
+  next.agents[to].lastSeenAt = now;
+  next.agents[to].lastTurnId = next.currentTurn.turnId;
+  next.flags.needsReview = to === "reviewer";
+  next.lastDecision = { selectedAgent: to, reason, at: now };
+  return next;
+}
+
+function closeState(state, summary) {
+  const now = nowIso();
+  const next = JSON.parse(JSON.stringify(state));
+  next.revision += 1;
+  next.updatedAt = now;
+  next.mode = "idle";
+  next.flags.blocked = false;
+  next.flags.needsReview = false;
+  next.flags.handoffRequested = false;
+  next.lastDecision = { selectedAgent: "reviewer", reason: "turn_closed:approved", at: now };
+  next.currentTurn = null;
+  next.summary = summary;
+  return next;
+}
+
+const STUB_OUTPUTS = {
+  Planner: (task) => `Plan established for: ${task}`,
+  Executor: (task) => `Drafted execution outline for: ${task}`,
+  Reviewer: (task) => `Reviewed output for: ${task}`
+};
+
+// G4 reasoning-provider seam: the orchestration loop stays deterministic; only
+// the role *output* comes from a pluggable provider. `stub` (default) returns
+// fixed strings (byte-identical to prior behavior -> proof/CI determinism kept).
+// `llm` is the real-reasoning provider, intentionally NOT wired yet (needs
+// model/key/cost decisions); selecting it fails loudly rather than faking.
+function makeReasoner(name) {
+  if (name === "stub") {
+    return {
+      name: "stub",
+      deterministic: true,
+      reason(role, _objective, task) {
+        const fn = STUB_OUTPUTS[role];
+        return fn ? fn(task) : `(stub) ${role} output for: ${task}`;
+      }
+    };
+  }
+  if (name === "llm") {
+    throw new Error("reasoningProvider 'llm' not wired yet (G4 follow-up: model + key + cost). Use --provider stub for now.");
+  }
+  throw new Error(`Unknown reasoningProvider: ${name} (allowed: stub, llm)`);
+}
+
+function runOrchestratorPreset(preset, task, teamNames, reasoner) {
+  ensureRuntimeDir(preset);
+  const runId = makeRunId();
+  const statePath = runtimeFile(preset, "state.json");
+  const eventsPath = runtimeFile(preset, "events.jsonl");
+
+  let state = createInitialOrchestratorState(runId, task);
+  writeJson(statePath, state);
+  appendJsonl(eventsPath, {
+    eventId: makeEventId("run_started"),
+    type: "run_started",
+    at: nowIso(),
+    runId,
+    actor: "system",
+    revision: state.revision,
+    severity: "info",
+    data: { preset }
+  });
+
+  const plannerName = teamNames.planner || teamNames.researcher || teamNames.builder;
+  const executorKey = teamNames.executor ? "executor" : teamNames.writer ? "writer" : "builder";
+  const reviewerKey = teamNames.reviewer ? "reviewer" : teamNames.editor ? "editor" : "operator";
+  const executorName = teamNames[executorKey];
+  const reviewerName = teamNames[reviewerKey];
+
+  const outputs = [];
+  outputs.push({ nickname: plannerName, role: "Planner", objective: "Interpret the task and set the plan.", output: reasoner.reason("Planner", "Interpret the task and set the plan.", task), reasoningProvider: reasoner.name, artifacts: [] });
+
+  state = handoffState(state, "planner", "executor", "spec_ready");
+  writeJson(statePath, state);
+  appendJsonl(eventsPath, {
+    eventId: makeEventId("handoff_executor"),
+    type: "turn_handoff",
+    at: nowIso(),
+    runId,
+    actor: "planner",
+    turnId: "turn_1",
+    revision: state.revision,
+    severity: "info",
+    data: { from: "planner", to: "executor", reason: "spec_ready" }
+  });
+  outputs.push({ nickname: executorName, role: "Executor", objective: "Produce the main draft.", output: reasoner.reason("Executor", "Produce the main draft.", task), reasoningProvider: reasoner.name, artifacts: [] });
+
+  state = handoffState(state, "executor", "reviewer", "implementation_done");
+  writeJson(statePath, state);
+  appendJsonl(eventsPath, {
+    eventId: makeEventId("handoff_reviewer"),
+    type: "turn_handoff",
+    at: nowIso(),
+    runId,
+    actor: "executor",
+    turnId: "turn_1",
+    revision: state.revision,
+    severity: "info",
+    data: { from: "executor", to: "reviewer", reason: "implementation_done" }
+  });
+  outputs.push({ nickname: reviewerName, role: "Reviewer", objective: "Review correctness and risks.", output: reasoner.reason("Reviewer", "Review correctness and risks.", task), reasoningProvider: reasoner.name, artifacts: [] });
+
+  state = closeState(state, `Completed preset '${preset}' on task: ${task}`);
+  writeJson(statePath, state);
+  appendJsonl(eventsPath, {
+    eventId: makeEventId("turn_closed"),
+    type: "turn_closed",
+    at: nowIso(),
+    runId,
+    actor: "reviewer",
+    turnId: "turn_1",
+    revision: state.revision,
+    severity: "info",
+    data: { outcome: "approved", summary: state.summary }
+  });
+
+  return { runId, statePath, eventsPath, outputs, finalState: state, reasoningProvider: reasoner.name, deterministic: reasoner.deterministic };
+}
+
 function mdEscape(s) {
   return String(s ?? "").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
@@ -169,24 +383,29 @@ function cmdRun(args) {
   const teamNames = getOrInitTeam(db, preset);
   saveNames(db);
 
+  const providerName = args.provider || "stub";
+  const reasoner = makeReasoner(providerName);
+
   const started = nowIso();
+  const orchestration = runOrchestratorPreset(preset, task, teamNames, reasoner);
   const ended = nowIso();
-  const runId = `run_${Date.now()}`;
+  const runId = orchestration.runId;
 
   const team = PRESETS[preset].roles.map(r => {
     const nickname = teamNames[r.key];
+    const found = orchestration.outputs.find(o => o.nickname === nickname);
     return {
       nickname,
       role: r.archetype,
       objective: r.objective,
-      output: "(MVP placeholder) — integrate actual multi-agent reasoning in Pro/Max.",
-      artifacts: []
+      output: found?.output || "(no output)",
+      artifacts: found?.artifacts || []
     };
   });
 
   const oneLine = `Completed preset '${preset}' on task: ${task.slice(0, 80)}${task.length > 80 ? "…" : ""}`;
 
-  const reportMarkdown = `# AOI Squad Report (v0.1)\n- Preset: ${mdEscape(preset)}\n- Run: ${mdEscape(runId)}\n- Time: ${mdEscape(started)} → ${mdEscape(ended)}\n\n## Task\n${mdEscape(task)}\n\n## Team outputs\n${team.map(m => `### ${mdEscape(m.nickname)} (${mdEscape(m.role)})\n- Objective: ${mdEscape(m.objective)}\n- Output: ${mdEscape(m.output)}\n`).join("\n")}\n## Synthesis\n- One-line: ${mdEscape(oneLine)}\n- Decision:\n  - (placeholder)\n- Risks:\n  - (placeholder)\n- Next actions:\n  - [P1] Review and refine outputs (Owner: ${mdEscape(team[0].nickname)})\n- VCP Proof:\n  - (none)\n`;
+  const reportMarkdown = `# AOI Squad Report (v0.1)\n- Preset: ${mdEscape(preset)}\n- Run: ${mdEscape(runId)}\n- Time: ${mdEscape(started)} → ${mdEscape(ended)}\n- Runtime state: ${mdEscape(orchestration.statePath)}\n- Runtime events: ${mdEscape(orchestration.eventsPath)}\n\n## Task\n${mdEscape(task)}\n\n## Team outputs\n${team.map(m => `### ${mdEscape(m.nickname)} (${mdEscape(m.role)})\n- Objective: ${mdEscape(m.objective)}\n- Output: ${mdEscape(m.output)}\n`).join("\n")}\n## Synthesis\n- One-line: ${mdEscape(oneLine)}\n- Decision:\n  - Approved by reviewer\n- Risks:\n  - reasoning provider='${mdEscape(providerName)}'${providerName === "stub" ? " (deterministic placeholders — not real reasoning)" : ""}\n- Next actions:\n  - [P1] Extend command coverage and richer artifacts\n- VCP Proof:\n  - state.json written\n  - events.jsonl appended\n`;
 
   const out = {
     ok: true,
@@ -196,6 +415,8 @@ function cmdRun(args) {
       preset,
       started_at: started,
       ended_at: ended,
+      reasoning_provider: orchestration.reasoningProvider,
+      deterministic: orchestration.deterministic,
       limits: {
         max_roles: 3,
         max_turns: 6,
@@ -211,16 +432,19 @@ function cmdRun(args) {
     team,
     synthesis: {
       one_line_summary: oneLine,
-      decision: [],
-      risks: [],
+      decision: ["approved"],
+      risks: [providerName === "stub" ? "reasoning provider=stub (deterministic placeholders, not real reasoning)" : `reasoning provider=${providerName}`],
       next_actions: [
-        { action: "Review and refine outputs", owner: team[0].nickname, priority: "P1" }
+        { action: "Extend command coverage and richer artifacts", owner: team[0].nickname, priority: "P1" }
       ],
-      vcp_proof: []
+      vcp_proof: [
+        { kind: "file", path: orchestration.statePath },
+        { kind: "file", path: orchestration.eventsPath }
+      ]
     },
     report_markdown: reportMarkdown,
     meta: {
-      notes: ["This is a public-safe MVP skeleton."],
+      notes: ["This run is now backed by local orchestrator runtime files."],
       warnings: []
     }
   };
