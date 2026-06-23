@@ -2,6 +2,7 @@
 import fs from "fs";
 import os from "os";
 import path from "path";
+import crypto from "crypto";
 import { execFileSync } from "child_process";
 
 const SCHEMA_VERSION = "aoi.squad.report.v0.1";
@@ -184,6 +185,43 @@ function writeJson(file, obj) {
 function appendJsonl(file, obj) {
   ensureDir(file);
   fs.appendFileSync(file, JSON.stringify(obj) + "\n", "utf8");
+}
+
+function sha256(str) {
+  return crypto.createHash("sha256").update(str, "utf8").digest("hex");
+}
+
+// Persist real (llm) per-role reasoning as durable, hash-verified proof-bundle
+// members. Skipped for stub (deterministic placeholders, not real reasoning) so
+// stub output stays byte-identical. The manifest + members are what an honest
+// S-DNA L3 capability certification must require (provider=llm + verified bundle).
+function persistReasoningArtifacts(preset, runId, outputs, reasoner) {
+  if (reasoner.deterministic) return null;
+  const dir = runtimeFile(preset, path.join("reasoning", runId));
+  fs.mkdirSync(dir, { recursive: true });
+  const members = [];
+  for (const o of outputs) {
+    const fname = `${o.role.toLowerCase()}.md`;
+    const fpath = path.join(dir, fname);
+    const content = `# ${o.role} — ${o.nickname}\n\n## Objective\n${o.objective}\n\n## Reasoning (provider=${o.reasoningProvider})\n${o.output}\n`;
+    fs.writeFileSync(fpath, content, "utf8");
+    const digest = sha256(content);
+    o.artifacts.push({ kind: "reasoning", role: o.role, path: fpath, sha256: digest });
+    members.push({ role: o.role, path: fpath, sha256: digest });
+  }
+  const manifest = {
+    schema: "aoi.squad.reasoning_manifest.v0.1",
+    runId,
+    preset,
+    provider: reasoner.name,
+    credentialSource: reasoner.credentialSource || null,
+    createdAt: nowIso(),
+    members
+  };
+  const manifestPath = path.join(dir, "manifest.json");
+  const manifestStr = JSON.stringify(manifest, null, 2) + "\n";
+  fs.writeFileSync(manifestPath, manifestStr, "utf8");
+  return { dir, manifestPath, manifestSha256: sha256(manifestStr), count: members.length };
 }
 
 function createInitialOrchestratorState(runId, task) {
@@ -449,7 +487,9 @@ async function runOrchestratorPreset(preset, task, teamNames, reasoner) {
     data: { outcome: "approved", summary: state.summary }
   });
 
-  return { runId, statePath, eventsPath, outputs, finalState: state, reasoningProvider: reasoner.name, deterministic: reasoner.deterministic, credentialSource: reasoner.credentialSource || null };
+  const reasoningArtifacts = persistReasoningArtifacts(preset, runId, outputs, reasoner);
+
+  return { runId, statePath, eventsPath, outputs, finalState: state, reasoningProvider: reasoner.name, deterministic: reasoner.deterministic, credentialSource: reasoner.credentialSource || null, reasoningArtifacts };
 }
 
 function mdEscape(s) {
@@ -502,6 +542,12 @@ async function cmdRun(args) {
       reasoning_provider: orchestration.reasoningProvider,
       deterministic: orchestration.deterministic,
       ...(orchestration.credentialSource ? { credential_source: orchestration.credentialSource } : {}),
+      ...(orchestration.reasoningArtifacts ? { reasoning_artifacts: {
+        dir: orchestration.reasoningArtifacts.dir,
+        manifest_path: orchestration.reasoningArtifacts.manifestPath,
+        manifest_sha256: orchestration.reasoningArtifacts.manifestSha256,
+        count: orchestration.reasoningArtifacts.count
+      } } : {}),
       limits: {
         max_roles: 3,
         max_turns: 6,
@@ -524,7 +570,11 @@ async function cmdRun(args) {
       ],
       vcp_proof: [
         { kind: "file", path: orchestration.statePath },
-        { kind: "file", path: orchestration.eventsPath }
+        { kind: "file", path: orchestration.eventsPath },
+        ...(orchestration.reasoningArtifacts ? [
+          { kind: "file", path: orchestration.reasoningArtifacts.manifestPath },
+          ...orchestration.outputs.flatMap(o => o.artifacts.filter(a => a.kind === "reasoning").map(a => ({ kind: "file", path: a.path })))
+        ] : [])
       ]
     },
     report_markdown: reportMarkdown,
